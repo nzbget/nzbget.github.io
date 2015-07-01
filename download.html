@@ -23,32 +23,40 @@ permalink: download/index.html
   <div class="container">
 
 	<h2>Latest stable release</h2>
-	<h4>Version: 15.0</h4>
-	<h4>Release Date: May 19, 2015</h4>
-	<h4><a href="http://nzbget.net/forum/viewtopic.php?f=4&t=1976">Release Notes</a></h4>
-	<!--<p>Stable releases are recommended for new users and for users not having much time for possible error handling.</p>
+	<h4>Version: {{site.data.version.stable-version}}</h4>
+	<h4>Release Date: {{site.data.version.stable-date-text}}</h4>
+	<h4><a href="{{site.data.version.stable-release-notes}}">Release Notes</a></h4>
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+	<p>Stable releases are recommended for new users and for users not having much time for possible error handling.</p>
 
 	<h2>Latest testing release</h2>
-	<h4>Version: 15.0-r1286</h4>
-	<h4>Release Date: May 16, 2015</h4>
-	<h4><a href="http://nzbget.net/forum/viewtopic.php?f=4&t=1966">Release Notes</a></h4>
-	<p>Testing releases are recommended for experienced users familiar with NZBGet.</p>-->
+	<h4>Version: {{site.data.version.stable-version}}-{{site.data.version.testing-revision}}</h4>
+	<h4>Release Date: {{site.data.version.testing-date-text}}</h4>
+	<h4><a href="{{site.data.version.testing-release-notes}}">Release Notes</a></h4>
+	<p>Testing releases are recommended for experienced users familiar with NZBGet.</p>
+{% endif %}
 	
 	<h3>Windows</h3>
-	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-bin-win32-setup.exe">nzbget-15.0-bin-win32-setup.exe</a></p>
-	<!--<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-testing-r1286-bin-win32-setup.exe">nzbget-15.0-testing-r1286-bin-win32-setup.exe</a></p>-->
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-win32-setup.exe">nzbget-{{site.data.version.stable-version}}-bin-win32-setup.exe</a></p>
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-win32-setup.exe">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-win32-setup.exe</a></p>
+{% endif %}
 	<p>Windows XP and later, 32 or 64 Bit.</p>
 	<p>Manual: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-Windows">Installation on Windows</a>.</p>
 
 	<h3>Mac OS X</h3>
-	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-bin-osx.zip">nzbget-15.0-bin-osx.zip</a></p>
-	<!--<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-testing-r1286-bin-osx.zip">nzbget-15.0-testing-r1286-bin-osx.zip</a></p>-->
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-osx.zip">nzbget-{{site.data.version.stable-version}}-bin-osx.zip</a></p>
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-osx.zip">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-osx.zip</a></p>
+{% endif %}
 	<p>OS X 10.7 Lion and later, 64 Bit.</p>
 	<p>Manual: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-Mac">Installation on Mac</a>.</p>
 
 	<h3>Linux</h3>
-	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-bin-linux.run">nzbget-15.0-bin-linux.run</a></p>
-	<!--<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-testing-r1286-bin-linux.run">nzbget-15.0-testing-r1286-bin-linux.run</a></p>-->
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-linux.run">nzbget-{{site.data.version.stable-version}}-bin-linux.run</a></p>
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-linux.run">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-linux.run</a></p>
+{% endif %}
 	<p>Linux kernel 2.6 and later, x86 (32 or 64 Bit), ARM, MIPS, PowerPC.</p>
 	<p>Manual: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-Linux">Installation on Linux</a>.</p>
 
@@ -57,8 +65,10 @@ permalink: download/index.html
 	<p>Manuals: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-POSIX">Installation on POSIX</a>, <a href="https://github.com/nzbget/nzbget/wiki/Cross-compiling">Cross-compiling</a>.</p>
 
 	<h3>Source code</h3>
-	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-src.tar.gz">nzbget-15.0-src.tar.gz</a></p>
-	<!--<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-testing-r1286.tar.gz">nzbget-15.0-testing-r1286-tar.gz</a></p>-->
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-src.tar.gz">nzbget-{{site.data.version.stable-version}}-src.tar.gz</a></p>
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}.tar.gz">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-tar.gz</a></p>
+{% endif %}
 	<p>Source code includes configure and make files for POSIX and solution files for MS Visual Studio 2005 (or later).</p>
 
 	<h3>Latest development sources</h3>

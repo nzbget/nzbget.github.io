@@ -1,8 +1,10 @@
+---
+---
 NZBGet.VersionInfo = {
-	"stable-version": "15.0",
-	"stable-date": "2015-05-19",
-	"stable-download": "https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-bin-linux.run",
-	"testing-version": "15.0-testing-r1286",
-	"testing-date": "2015-05-16",
-	"testing-download": "http://sourceforge.net/projects/nzbget/files/nzbget-15.0-testing-r1286-bin-linux.run"
+	"stable-version": "{{site.data.version.stable-version}}",
+	"stable-date": "{{site.data.version.stable-date}}",
+	"stable-download": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-linux.run",
+	"testing-version": "{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}",
+	"testing-date": "{{site.data.version.testing-date}}", 
+	"testing-download": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-linux.run"
 }

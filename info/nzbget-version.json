@@ -1,9 +1,11 @@
+---
+---
 NZBGet.VersionInfo = {
-	"stable-version": "15.0",
-	"stable-date": "2015-05-19",
-	"stable-release-notes": "http://nzbget.net/forum/viewtopic.php?f=4&t=1976",
-	"testing-version": "15.0-testing-r1286",
-	"testing-date": "2015-05-16", 
-	"testing-release-notes": "http://nzbget.net/forum/viewtopic.php?f=4&t=1973",
+	"stable-version": "{{site.data.version.stable-version}}",
+	"stable-date": "{{site.data.version.stable-date}}",
+	"stable-release-notes": "{{site.data.version.stable-release-notes}}",
+	"testing-version": "{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}",
+	"testing-date": "{{site.data.version.testing-date}}", 
+	"testing-release-notes": "{{site.data.version.testing-release-notes}}",
 	"devel-release-notes": "https://github.com/nzbget/nzbget/commits/develop"
 }

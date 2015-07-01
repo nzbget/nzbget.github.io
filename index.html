@@ -22,8 +22,9 @@ permalink: index.html
       <span class="glyphicon glyphicon-cloud-download btn-icon"></span><span class="btn-title">Download NZBGet</span><span class="btn-comment">Windows, Mac, Linux</span></a>
 	  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7NCAT7FDRSH5C" class="btn btn-outline-inverse btn-lg"><span class="btn-title">Donate</span><span class="btn-comment">Support the development</span></a>
     </p>
-    <p class="version">Stable version: 15.0 (May 19, 2015)<br>
-     <!--Testing version: 15.0-r1286 (May 16, 2015)--></p>
+    <p class="version">Stable version: {{site.data.version.stable-version}} ({{site.data.version.stable-date-text}})<br>
+    {% if site.data.version.testing-version > site.data.version.stable-version %}
+     Testing version: {{site.data.version.testing-version}}-{{site.data.version.testing-revision}} ({{site.data.version.testing-date-text}}){% endif %}</p>
   </div>
 </main>
 
