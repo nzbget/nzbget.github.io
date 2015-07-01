@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<style type="text/css" media="screen">
+	  body {
+		background-color: #f1f1f1;
+		margin: 0;
+		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  }
+
+	  .container { margin: 50px auto 40px auto; width: 600px; text-align: center; display: none; }
+
+	  a { color: #4183c4; text-decoration: none; }
+	  a:hover { text-decoration: underline; }
+
+	  h1 { width: 800px; position:relative; left: -100px; letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px 0 50px 0; text-shadow: 0 1px 0 #fff; }
+	  p { color: rgba(0, 0, 0, 0.5); margin: 20px 0; line-height: 1.6; }
+
+      ul { list-style: none; margin: 25px 0; padding: 0; }
+      li { display: table-cell; font-weight: bold; width: 1%; }
+
+      #suggestions {
+        margin-top: 35px;
+        color: #ccc;
+      }
+      #suggestions a {
+        color: #666666;
+        font-weight: 200;
+        font-size: 14px;
+        margin: 0 10px;
+      }
+
+	</style>
+</head>
+
+	<body>
+		<div class="container" id="content">
+		<h1>404</h1>
+		<p><strong>File not found</strong></p>
+		<p>
+			The site does not contain the requested file.
+		</p>
+
+		<div id="suggestions">
+		<a href="/">Front Page</a> &mdash;
+		<a href="https://github.com/nzbget/nzbget">GitHub Project</a> &mdash;
+		<a href="https://github.com/nzbget/nzbget/wiki">Documentation</a>
+		</div>
+
+		</div>
+	</body>
+
+	<script language="javascript">
+		"use strict";
+
+		var redirects =  {
+			'Installation_on_Windows': 'https://github.com/nzbget/nzbget/wiki/Installation-on-Windows',
+			'Installation_on_Mac': 'https://github.com/nzbget/nzbget/wiki/Installation-on-Mac',
+			'Installation_on_Linux': 'https://github.com/nzbget/nzbget/wiki/Installation-on-Linux',
+			'Installation_on_POSIX': 'https://github.com/nzbget/nzbget/wiki/Installation-on-POSIX',
+			'Build_the_latest_development_version_from_svn': 'https://github.com/nzbget/nzbget/wiki/Build-the-latest-development-version',
+			'Cross_compiling': 'https://github.com/nzbget/nzbget/wiki/Cross-compiling',
+			'Packaging': 'https://github.com/nzbget/nzbget/wiki/Packaging',
+			'Performance_tips': 'https://github.com/nzbget/nzbget/wiki/Performance-tips',
+			'Choosing_a_cipher': 'https://github.com/nzbget/nzbget/wiki/Choosing-cipher',
+			'NZBGet_behind_other_web-server': 'https://github.com/nzbget/nzbget/wiki/NZBGet-behind-other-web-server',
+			'Catalog_of_post-processing_scripts': 'https://github.com/nzbget/nzbget/wiki/Catalog-of-post-processing-scripts',
+			'RSS': 'https://github.com/nzbget/nzbget/wiki/RSS',
+			'VideoSort': 'https://github.com/nzbget/VideoSort',
+			'Command_line_reference': 'https://github.com/nzbget/nzbget/wiki/Command-line-reference',
+			'Extension_scripts': 'https://github.com/nzbget/nzbget/wiki/Extension-scripts',
+			'RPC_API_reference': 'https://github.com/nzbget/nzbget/wiki/API',
+			'History_(ChangeLog)': 'https://github.com/nzbget/nzbget/releases',
+		};
+		
+		var url = window.location.href;
+		var re = /^https?:\/\/(.*)\/(.*)$/;
+		var m = re.exec(url);
+		var path = m ? m[2] : null;
+		var newPath = redirects[path];
+		if (newPath) {
+			// redirect to new address
+			window.location.href = newPath;
+		} else {
+			// show 404 page content
+			document.getElementById('content').style.display = 'block';
+			document.title = 'Page not found :: NZBGet';
+		}
+	</script>
+</html>
+
