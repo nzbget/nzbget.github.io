@@ -4,7 +4,6 @@
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
 	<style type="text/css" media="screen">
 	  body {
-		background-color: #f1f1f1;
 		margin: 0;
 		font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	  }
@@ -36,18 +35,21 @@
 
 	<body>
 		<div class="container" id="content">
-		<h1>404</h1>
-		<p><strong>File not found</strong></p>
-		<p>
-			The site does not contain the requested file.
-		</p>
+			<h1>404</h1>
+			<p><strong>File not found</strong></p>
+			<p>
+				The site does not contain the requested file.
+			</p>
 
-		<div id="suggestions">
-		<a href="/">Front Page</a> &mdash;
-		<a href="https://github.com/nzbget/nzbget">GitHub Project</a> &mdash;
-		<a href="https://github.com/nzbget/nzbget/wiki">Documentation</a>
+			<div id="suggestions">
+			<a href="/">Front Page</a> &mdash;
+			<a href="https://github.com/nzbget/nzbget">GitHub Project</a> &mdash;
+			<a href="https://github.com/nzbget/nzbget/wiki">Documentation</a>
+			</div>
 		</div>
-
+		<div id="loading">
+			<h1>&nbsp;</h1>
+			<p>Loading...</p>
 		</div>
 	</body>
 
@@ -88,6 +90,8 @@
 			window.location.href = newPath;
 		} else {
 			// show 404 page content
+			document.body.style.background = '#f1f1f1';
+			document.getElementById('loading').style.display = 'none';
 			document.getElementById('content').style.display = 'block';
 			document.title = 'Page not found :: NZBGet';
 		}
