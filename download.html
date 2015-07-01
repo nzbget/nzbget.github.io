@@ -1,58 +1,17 @@
+---
+permalink: download/index.html
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <title>NZBGet - Download</title>
-
-<!-- Meta, title, CSS, favicons, etc. -->
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="NZBGet - Download">
-<meta name="keywords" content="nzbget, nzb, usenet">
-<meta name="author" content="Andrey Prygunkov">
-
-<!-- Bootstrap core CSS -->
-<link href="/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Documentation extras -->
-<link href="/css/docs.css" rel="stylesheet">
-
-<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-<!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-<![endif]-->
-
-<!-- Favicons -->
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png">
-<link rel="shortcut icon" href="/images/favicon.ico">
-
+{% include meta.html %}
 </head>
 
 <body class="bs-docs-download">
 
-    <!-- Docs master nav -->
-    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/download">Download</a></li>
-        <li><a href="/documentation">Documentation</a></li>
-        <li><a href="/forum">Forum</a></li>
-        <li><a href="/history">History</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+{% include header.html %}
 
 <main class="bs-docs-masthead" id="content" role="main">
   <div class="container">
@@ -114,30 +73,7 @@
   
 </div>
 
-<!-- Footer ================================================== -->
-<footer class="bs-docs-footer" role="contentinfo">
-    <p>Designed, built and maintained by <a href="mailto:hugbug@users.sourceforge.net" target="_blank">Andrey Prygunkov</a>.</p>
-    <p>Licensed under <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html" target="_blank">GPLv2</a>.</p>
-    <ul class="bs-docs-footer-links muted">
-      <li><a href="/download">Download</a></li>
-      <li>&middot;</li>
-      <li><a href="/documentation">Documentation</a></li>
-      <li>&middot;</li>
-      <li><a href="/forum">Forum</a></li>
-      <li>&middot;</li>
-      <li><a href="/history">History</a></li>
-      <li>&middot;</li>
-      <li><a href="/donation">Donate</a></li>
-    </ul>
-  </div>
-</footer>
-
-
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-<script src="./js/bootstrap.min.js"></script>
+{% include footer.html %}
 
 <a href="https://github.com/nzbget/nzbget"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
