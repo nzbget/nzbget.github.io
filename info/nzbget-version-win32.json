@@ -1,0 +1,8 @@
+NZBGet.VersionInfo = {
+	"stable-version": "15.0",
+	"stable-date": "2015-05-19",
+	"stable-download": "https://github.com/nzbget/nzbget/releases/download/v15.0/nzbget-15.0-bin-win32-setup.exe",
+	"testing-version": "15.0-testing-r1286",
+	"testing-date": "2015-05-16",
+	"testing-download": "http://sourceforge.net/projects/nzbget/files/nzbget-15.0-testing-r1286-bin-win32-setup.exe"
+}
