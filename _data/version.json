@@ -2,10 +2,10 @@
 	"stable-version": "15.0",
 	"stable-date": "2015-05-19",
 	"stable-date-text": "May 19, 2015",
-	"stable-release-notes": "http://nzbget.net/forum/viewtopic.php?f=4&t=1976",
+	"stable-release-notes": "http://forum.nzbget.net/viewtopic.php?f=4&t=1976",
 	"testing-version": "15.0",
 	"testing-revision": "r1286",
 	"testing-date": "2015-05-16", 
 	"testing-date-text": "May 16, 2015",
-	"testing-release-notes": "http://nzbget.net/forum/viewtopic.php?f=4&t=1973"
+	"testing-release-notes": "http://forum.nzbget.net/viewtopic.php?f=4&t=1973"
 }
