@@ -16,6 +16,7 @@ var redirects =  {
 	'Extension_scripts': 'https://github.com/nzbget/nzbget/wiki/Extension-scripts',
 	'RPC_API_reference': 'https://github.com/nzbget/nzbget/wiki/API',
 	'History_(ChangeLog)': 'https://github.com/nzbget/nzbget/releases',
+	'Documentation': 'https://github.com/nzbget/nzbget/wiki',
 	'documentation': 'https://github.com/nzbget/nzbget/wiki',
 	'donation': 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7NCAT7FDRSH5C',
 	'history': 'https://github.com/nzbget/nzbget/releases',
