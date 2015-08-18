@@ -21,4 +21,5 @@ var redirects =  {
 	'donation': 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=7NCAT7FDRSH5C',
 	'history': 'https://github.com/nzbget/nzbget/releases',
 	'forum': 'http://nzbget.net/forum/index.php',
+	'Quick_filter': 'https://github.com/nzbget/nzbget/wiki/Quick-Filter'
 };
