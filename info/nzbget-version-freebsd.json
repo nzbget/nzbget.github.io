@@ -1,0 +1,12 @@
+---
+---
+NZBGet.VersionInfo = {
+	"stable-version": "{{site.data.version.stable-version}}",
+	"stable-date": "{{site.data.version.stable-date}}",
+	"stable-download": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-freebsd.run",
+	"stable-signature": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}.sig.txt",
+	"testing-version": "{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}",
+	"testing-date": "{{site.data.version.testing-date}}", 
+	"testing-download": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-freebsd.run",
+	"testing-signature": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}.sig.txt"
+}
