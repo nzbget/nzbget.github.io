@@ -60,7 +60,15 @@ permalink: download/index.html
 	<p>Linux kernel 2.6 and later, x86 (32 or 64 Bit), ARM, MIPS, PowerPC.</p>
 	<p>Manual: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-Linux">Installation on Linux</a>.</p>
 
-	<h3>Other POSIX systems (BSD, Linux, etc.)</h3>
+	<h3>FreeBSD</h3>
+<!--	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-freebsd.run">nzbget-{{site.data.version.stable-version}}-bin-freebsd.run</a></p> -->
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-freebsd.run">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-freebsd.run</a></p>
+{% endif %}
+	<p>FreeBSD 9.1 and later, x86 (64 Bit).</p>
+	<p>Manual: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-FreeBSD">Installation on FreeBSD</a>.</p>
+
+	<h3>Other POSIX systems</h3>
 	<p>Check the package repository of your OS. If you can't find NZBGet there or if you want a newer version please install from source code.</p>
 	<p>Manuals: <a href="https://github.com/nzbget/nzbget/wiki/Installation-on-POSIX">Installation on POSIX</a>, <a href="https://github.com/nzbget/nzbget/wiki/Cross-compiling">Cross-compiling</a>.</p>
 
@@ -69,7 +77,7 @@ permalink: download/index.html
 {% if site.data.version.testing-version > site.data.version.stable-version %}
 	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-src.tar.gz">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-src.tar.gz</a></p>
 {% endif %}
-	<p>Source code includes configure and make files for POSIX and solution files for MS Visual Studio 2005 (or later).</p>
+	<p>Source code includes configure and make files for POSIX and project files for MS Visual Studio.</p>
 
 	<h3>Latest development sources</h3>
 	<p>The latest development sources are available in <a href="https://github.com/nzbget/nzbget">GitHub repository</a>.</p>
