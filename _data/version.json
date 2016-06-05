@@ -4,8 +4,8 @@
 	"stable-date-text": "December 5, 2015",
 	"stable-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v16.4",
 	"testing-version": "17.0",
-	"testing-revision": "r1716",
-	"testing-date": "2016-05-21", 
-	"testing-date-text": "May 21, 2016",
-	"testing-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v17.0-r1716"
+	"testing-revision": "r1726",
+	"testing-date": "2016-06-05", 
+	"testing-date-text": "June 5, 2016",
+	"testing-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v17.0-r1726"
 }
