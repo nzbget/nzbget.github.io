@@ -1,8 +1,8 @@
 {
-	"stable-version": "17.1",
-	"stable-date": "2016-09-05",
-	"stable-date-text": "September 5, 2016",
-	"stable-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v17.1",
+	"stable-version": "18.0",
+	"stable-date": "2017-02-12",
+	"stable-date-text": "February 12, 2017",
+	"stable-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v18.0",
 	"testing-version": "18.0",
 	"testing-revision": "r1865",
 	"testing-date": "2017-01-27",
