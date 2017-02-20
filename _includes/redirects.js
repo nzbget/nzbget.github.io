@@ -22,5 +22,6 @@ var redirects =  {
 	'history': 'https://github.com/nzbget/nzbget/releases',
 	'forum': 'http://nzbget.net/forum/index.php',
 	'Quick_filter': 'https://github.com/nzbget/nzbget/wiki/Quick-Filter',
-	'cpp14': 'https://github.com/nzbget/nzbget/wiki/Prerequisites-for-C++-compiler'
+	'cpp14': 'https://github.com/nzbget/nzbget/wiki/Prerequisites-for-C++-compiler',
+	'Certificate_verification': 'https://github.com/nzbget/nzbget/wiki/TLS-certificate-verification'
 };
