@@ -4,8 +4,8 @@
 	"stable-date-text": "8 April 2017",
 	"stable-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v18.1",
 	"testing-version": "19.0",
-	"testing-revision": "r1991",
-	"testing-date": "2017-05-13",
-	"testing-date-text": "13 May 2017",
-	"testing-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v19.0-r1991"
+	"testing-revision": "r1999",
+	"testing-date": "2017-05-21",
+	"testing-date-text": "21 May 2017",
+	"testing-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v19.0-r1999"
 }
