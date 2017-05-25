@@ -545,3 +545,25 @@ h1[id] {
 .bs-docs-wiki {
   text-align: left;
 }
+
+.bs-docs-wiki table th, table td {
+  border: 1px solid #ddd !important;
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+
+.bs-docs-wiki table th {
+  background-color: #e5e5e5;
+}
+
+.bs-docs-wiki code.highlighter-rouge {
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
+.bs-docs-wiki pre code {
+  font-size: 14px;
+}

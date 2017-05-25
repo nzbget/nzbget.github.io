@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title  | replace: "_", " " }}</title>
     <meta name="description" content="{{ page.description | default: site.description | default: site.github.project_tagline }}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% include meta.html %}
