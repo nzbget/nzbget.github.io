@@ -1,4 +1,5 @@
 ---
+title: Documentation
 permalink: /documentation
 ---
 ## Introduction
@@ -20,7 +21,7 @@ permalink: /documentation
  - [TLS certificate verification](Certificate_verification)
 
 ## Usage
- - [Quick filter](Quick filter)
+ - [Quick filter](Quick_filter)
  - [Keyboard shortcuts](Keyboard_shortcuts)
  - [Catalog of post-processing scripts](Catalog_of_post-processing_scripts), also check sub-forum [Extension scripts](http://nzbget.net/forum/viewforum.php?f=8)
  - [RSS and duplicate check](RSS) - how to automate your downloads with RSS feeds

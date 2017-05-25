@@ -1,4 +1,5 @@
 ---
+title: Installation on Android emulator
 ---
 ## Preparing VM
 - First install Android into VirtualBox as explained in [How to Install Android in VirtualBox](http://www.howtogeek.com/164570/how-to-install-android-in-virtualbox/);

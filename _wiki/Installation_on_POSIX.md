@@ -1,13 +1,14 @@
 ---
+title: Installation on POSIX
 ---
 ## Prerequisites ##
 NZBGet is a cross-platform program which works on many platforms including many POSIX systems.
 
-This article explains how to compile NZBGet from sources on a POSIX system. For cross compiling tips please refer to [[Cross compiling]]. Linux users can use universal installer which includes precompiled binaries for many CPU architectures - see [[Installation on Linux]].
+This article explains how to compile NZBGet from sources on a POSIX system. For cross compiling tips please refer to [Cross compiling](Cross_compiling). Linux users can use universal installer which includes precompiled binaries for many CPU architectures - see [Installation on Linux](Installation_on_Linux).
 
 NZBGet absolutely needs the following libraries: 
 * libstdc++ (usually part of compiler)
-* [[libxml2|http://www.xmlsoft.org]]
+* [libxml2](http://www.xmlsoft.org)
 
 And the following libraries are optional: 
 
@@ -15,13 +16,13 @@ For curses-output-mode:
 * libcurses (usually part of commercial systems)
 
  or (better)
-* [[libncurses|http://invisible-island.net/ncurses]]
+* [libncurses](http://invisible-island.net/ncurses)
 
 For encrypted connections (TLS/SSL): 
-* [[GnuTLS|http://www.gnu.org/software/gnutls]]
+* [GnuTLS](http://www.gnu.org/software/gnutls)
 
  or 
-* [[OpenSSL|http://www.openssl.org]]
+* [OpenSSL](http://www.openssl.org)
 
 All these libraries are included in modern Linux distributions and should be available as installable packages. Please note that you also need the developer packages for these libraries too, they package names have often suffix "dev" or "devel". On other systems you may need to download the libraries at the given URLs and compile them (see hints below).
 
@@ -33,49 +34,42 @@ sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev -y
 ```
 
 ## Prerequisites for C++ compiler ##
-NZBGet uses modern C++ features and requires a C++ compiler supporting C++14 ISO standard. The configure-script performs a basic check and fails if C++ compiler doesn't provide required support. In special cases the check can be disabled (not recommended), see configure options below. For details see [[Prerequisites for C++ compiler|https://github.com/nzbget/nzbget/wiki/Prerequisites-for-C++-compiler]].
+NZBGet uses modern C++ features and requires a C++ compiler supporting C++14 ISO standard. The configure-script performs a basic check and fails if C++ compiler doesn't provide required support. In special cases the check can be disabled (not recommended), see configure options below. For details see [Prerequisites for C++ compiler](Prerequisites_for_C++ compiler).
 
 ## Compiling ##
-* download NZBGet source code from [[Download Page|http://nzbget.net/download]]
+* download NZBGet source code from [Download Page](download)
 * untar the nzbget-source via
-
  ```shell
 tar -zxf nzbget-VERSION-src.tar.gz 
  ```
 * change into nzbget-directory via
-
  ```shell
 cd nzbget-VERSION 
  ```
 * configure it via
-
  ```shell
 ./configure 
  ```
 maybe you have to tell configure, where to find some libraries, see Configure-options below.
 * compile it via
-
  ```shell
 make 
  ```
 * become root via
-
  ```shell
 su 
  ```
 * install it via
-
  ```shell
 make install 
-```
-
+ ```
  **NOTE**: if you want to spare some space on the drive you can install the stripped version (which is much smaller) of the binary instead:
  ```shell
 make install-strip
 ```
-The stripped version doesn't include any debugging symbols. You shouldn't do stripping if you compile the binary in debug mode (using *./configure --enable-debug*).
+ The stripped version doesn't include any debugging symbols. You shouldn't do stripping if you compile the binary in debug mode (using *./configure --enable-debug*).
 
-**NOTE**: if you do not have root-access or do not want to install the program system-wide, you can omit the install-step and copy the compiled binary "nzbget" into any location you want. 
+ **NOTE**: if you do not have root-access or do not want to install the program system-wide, you can omit the install-step and copy the compiled binary "nzbget" into any location you want. 
 
 ### Configure-options ###
 You may run configure with additional arguments: 
@@ -153,4 +147,4 @@ After the download of nzb-file is completed NZBget can call post-process-scripts
 
 NZBGet distribution comes with two example scripts.
 
-For more information see [[Post-processing scripts]] and [[Catalog of post-processing scripts]].
+For more information see [Post-processing scripts](Post-processing_scripts) and [Catalog of post-processing scripts](Catalog_of_post-processing_scripts).

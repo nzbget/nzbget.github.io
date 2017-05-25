@@ -1,14 +1,15 @@
 ---
+title: Installation on FreeBSD
 ---
 ## Installer for FreeBSD ##
-NZBGet's [[Download Page|http://nzbget.net/download]] provides installer for FreeBSD which includes precompiled binaries for CPU-architecture x86_64. These binaries require only FreeBSD 9.1 or later (but may work on older versions too) and do not have any other library dependencies.
+NZBGet's [Download Page](download) provides installer for FreeBSD which includes precompiled binaries for CPU-architecture x86_64. These binaries require only FreeBSD 9.1 or later (but may work on older versions too) and do not have any other library dependencies.
 
 Please report on forum if the installer doesn't work for you.
 
 **NOTE**: If you prefer to compile yourself see [[Installation on POSIX]].
 
 ## Automatic installation ##
-- Download the installer package from [[Download Page|http://nzbget.net/download]].
+- Download the installer package from [Download Page](download).
 You can download the installer via web-browser or directly on your device with the following command (that's one long command):
  ```
 wget -O - http://nzbget.net/info/nzbget-version-freebsd.json | \
@@ -19,13 +20,15 @@ wget -O - http://nzbget.net/info/nzbget-version-freebsd.json | \
 - If the above command fails use your web-browser to download the installer package, then put it on your device.
 
 - Start the installer from terminal (change the name of installer package file if necessary):
-
- <pre>sh nzbget-latest-bin-freebsd.run</pre>
+ ```
+sh nzbget-latest-bin-freebsd.run
+ ```
 
 ## Customized installation ##
 - By default NZBGet is installed into directory **nzbget** in the current directory. You can specify another directory using parameter **--destdir**:
-
- <pre>sh nzbget-latest-bin-freebsd.run --destdir /path/to/install/nzbget</pre>
+```
+sh nzbget-latest-bin-freebsd.run --destdir /path/to/install/nzbget
+```
 
 - If you want to extract all files included within installer use parameter **--unpack**. All files including binaries for all CPU architectures will be unpacked and no post-install configuration will be performed.
 

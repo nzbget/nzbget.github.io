@@ -1,4 +1,5 @@
 ---
+title: Installation on Linux
 ---
 ## Universal installer for Linux
 NZBGet's [Download Page](download) provides installer for Linux which includes precompiled binaries for many CPU types. These binaries require only Linux kernel 2.6 or later and do not have any other library dependencies. In practice that means the installer works on most Linux devices including desktop PCs, NAS, media players, WLAN routers, etc.

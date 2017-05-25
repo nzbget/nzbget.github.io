@@ -184,4 +184,4 @@ GnuTLS has a very different syntax to specify the ciphers to use. For example to
 Server1.Cipher=NONE:+VERS-TLS-ALL:+ARCFOUR-128:+RSA:+MD5:+COMP-ALL
 ```
 
-For detailed explanation what does it mean see [[Priority strings|http://gnutls.org/manual/html_node/Priority-Strings.html]] in GnuTLS documentation.
+For detailed explanation what does it mean see [Priority strings](http://gnutls.org/manual/html_node/Priority-Strings.html) in GnuTLS documentation.

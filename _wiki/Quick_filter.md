@@ -75,9 +75,9 @@ These fields are especially useful when combined with integer comparison operato
 
 ## API fields
 In addition to fields displayed in tables and special integer fields mentioned above, there are even more fields which can be used in search strings. Plain fields returned by the relevant API call can be used:
-- Downloads - fields returned by [[API-Method "listgroups"]];
-- History - fields returned by [[API-Method "history"]];
-- Messages - fields returned by [[API-Method "log"]].
+- Downloads - fields returned by [API-Method "listgroups"](api/listgroups);
+- History - fields returned by [API-Method "history"](api/history);
+- Messages - fields returned by [API-Method "log"](api/log).
 
 Examples for downloads:
 - `dupescore>100` - only downloads with duplicate score above 100;

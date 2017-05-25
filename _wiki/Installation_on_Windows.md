@@ -1,4 +1,5 @@
 ---
+title: Installation on Windows
 ---
 ## Installation ##
 - Download NZBGet setup for windows from [Download Page](download).
@@ -28,14 +29,14 @@ To remove (uninstall) the service:
     nzbget -remove
 
 ## Post-processing scripts ##
-Most scripts require *Python*. You need to download Python from http://www.python.org/ and install it. There are two versions of python: version 2.x and version 3.x. Version 2.x is the most widely used. All pp-scripts work with python 2.x. Some scripts may work with python 3.x but most will fail. 
+Most scripts require *Python*. You need to download Python from [www.python.org](http://www.python.org) and install it. There are two versions of python: version 2.x and version 3.x. Version 2.x is the most widely used. All pp-scripts work with python 2.x. Some scripts may work with python 3.x but most will fail. 
 
 Put scripts into ppscripts-folder (option *ScriptDir*). The scripts should then appear in NZBGet web-interface.
 
 Check [Catalog of post-processing scripts](Catalog_of_post-processing_scripts) and [Forum](forum).
 
 ## Restoring configuration ##
-If you want to reuse a configuration file from another NZBGet installation see [[Backup and restore settings]].
+If you want to reuse a configuration file from another NZBGet installation see [Backup and restore settings](Backup_and_restore_settings).
 
 ## Updates ##
 Version 15 supports automatic updates via web-interface: Settings -> SYSTEM -> Check for updates.
@@ -53,16 +54,16 @@ If you want to compile NZBGet for Windows yourself this information is for you.
 NZBGet can be compiled using MS Visual C++ 2015 (free Community edition is OK) or a newer version. The project file is provided. 
 
 To compile the program with TLS/SSL support you need one of the libraries:
-- [[OpenSSL|https://wiki.openssl.org/index.php/Binaries]]
+- [OpenSSL](https://wiki.openssl.org/index.php/Binaries)
 
    NOTE: depending on your OpenSSL version you may need to replace ssleay32MT.lib and
 libeay32MT.lib with libssl32MT.lib and libcrypto32MT.lib in project settings under Linker -> Input.
 
 or
-- [[GnuTLS|http://www.gnu.org/software/gnutls]].
+- [GnuTLS](http://www.gnu.org/software/gnutls).
 
 For gzip support in web-server and web-client:
-- [[zlib|http://www.zlib.net]].
+- [zlib](http://www.zlib.net).
 
 For regex support:
-- [[Regex for Windows|http://gnuwin32.sourceforge.net/packages/regex.htm]].
+- [Regex for Windows](http://gnuwin32.sourceforge.net/packages/regex.htm).

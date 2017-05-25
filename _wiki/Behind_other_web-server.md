@@ -1,4 +1,5 @@
 ---
+redirect_from: /NZBGet_behind_other_web-server
 ---
 ### Contents
 - [Apache](#apache)
