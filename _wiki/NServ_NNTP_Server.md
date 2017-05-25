@@ -1,8 +1,9 @@
 ---
+title: NServ NNTP server
 ---
 ## About NServ
 
-NServ is a simple NNTP server developed for [[functional testing]] of NZBGet.
+NServ is a simple NNTP server developed for [functional testing](Functional_testing) of NZBGet.
 
 Technically NServ is integrated into NZBGet as a sub-module. NServ is compiled during building process of NZBGet and can therefore be used on any platform supported by NZBGet. It's rather a small module without extra dependencies and you shouldn't worry about increased nzbget binary size.
 

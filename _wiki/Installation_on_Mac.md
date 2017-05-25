@@ -3,7 +3,7 @@ title: Installation on Mac
 ---
 ## Installation
 NZBGet is nicely packed as Mac OS X application. The installation is simple:
-- download NZBGet from [Download Page](download);
+- download NZBGet from [Download page](download);
 - unpack the downloaded app if it wasn't unpacked automatically by your browser;
 - start NZBGet.app.
 

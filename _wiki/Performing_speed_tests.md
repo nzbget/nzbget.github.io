@@ -1,6 +1,6 @@
 ---
 ---
-NZBGet contains a built-in [NNTP server](https://github.com/nzbget/nzbget/wiki/NServ-NNTP-Server) which can be used to perform download speed tests independent from your connection line speed. That may be useful to determine hardware capabilities.
+NZBGet contains a built-in [NNTP server](NServ_NNTP_server) which can be used to perform download speed tests independent from your connection line speed. That may be useful to determine hardware capabilities.
 
 This guide is oriented on Windows but it is applicable to other OS`es with path changes.
 
@@ -16,10 +16,10 @@ We use NZBGet as download client but you can test other clients too. As server w
 The client and server may run on the same computer or on two different machines. Since the server consumes computer resources (CPU and disk) that affects benchmark results. For best results use two computers with fast network connection like 10 Gigabit.
 
 ### Installing Client
-Install NZBGet on the computer which speed you are going to test. Use official installers from [NZBGet download page](http://nzbget.net/download). If you are going to test another download client you don't have to install NZBGet on the testing computer.
+Install NZBGet on the computer which speed you are going to test. Use official installers from [Download page](download). If you are going to test another download client you don't have to install NZBGet on the testing computer.
 
 ### Installing Server
-We use NZBGet as NNTP server. Install NZBGet on the server computer. If you use the same computer for both server and client then your probably already have NZBGet installed on the previous step. If you don't - download and install NZBGet using official installers from [NZBGet download page](http://nzbget.net/download). You don't have to configure it after installation.
+We use NZBGet as NNTP server. Install NZBGet on the server computer. If you use the same computer for both server and client then your probably already have NZBGet installed on the previous step. If you don't - download and install NZBGet using official installers from [Download page](download). You don't have to configure it after installation.
 
 ### Preparing test files
 You can use any large files for testing but for best results use a set of files previously downloaded from Usenet, some nzb with size of 4-10 GB. In Usenet files are usually splitted into rar-fragments of 50-200 MB. If you take one large file of several GB for testing this may affect the caching technique in the testing application (NZBGet or other) and the results may be less realistic.
@@ -79,7 +79,7 @@ The download should begin and you can now observe the download speed.
 
    To minimize that effect when testing NZBGet you can pause download, add nzb to queue, close the browser, bring the console window of NZBGet to the front and resume download by pressing "P" or via click on tray icon.
 
-3. Take a look at [Performance tips](https://github.com/nzbget/nzbget/wiki/Performance-tips) for NZBGet.
+3. Take a look at [Performance tips](Performance_tips) for NZBGet.
 
 4. Share your results with hardware details on [NZBGet forum](http://forum.nzbget.net/viewtopic.php?f=10&t=2707).
 

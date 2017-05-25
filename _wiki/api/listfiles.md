@@ -32,6 +32,6 @@ This method returns an array of structures with following fields:
 - **RemainingSizeHi** (int) - Remaining size in bytes, High 32-bits of 64-bit value.
 - **Paused** (bool) - "True" if file is paused.
 - **PostTime** (int) - Date/time when the file was posted to newsgroup (Time is in C/Unix format).
-- **Priority** (int) - **~~`v13.0`~~** Deprecated, use *MaxPriority* of the group (method [[listgroups|API-Method "listgroups"]]) instead.
+- **Priority** (int) - **~~`v13.0`~~** Deprecated, use *MaxPriority* of the group (method [listgroups](listgroups)) instead.
 - **ActiveDownloads** (int) - Number of active downloads for the file. With this filed can be determined what file(s) is (are) being currently downloaded.
 - **Progress** (int) - **`v15.0`** Download progress, a number in the range 0..1000. Divide it to 10 to get percent-value.

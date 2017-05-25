@@ -17,7 +17,7 @@ permalink: /documentation
  - [Backup and restore settings](Backup_and_restore_settings)
  - [Performance tips](Performance_tips) - get the most from your device
  - [Choosing cipher](Choosing_cipher) - how to improve TLS/SSL speed
- - [NZBGet behind other web-server](NZBGet_behind_other_web-server) - if you already have a web-server
+ - [Behind other web-server](Behind_other_web-server) - if you already have a web-server
  - [TLS certificate verification](Certificate_verification)
 
 ## Usage
@@ -31,11 +31,11 @@ permalink: /documentation
  - [Performing speed tests](Performing_speed_tests) - find out what your hardware is capable of
 
 ## Development
- - [Build the latest development version](Build_the_latest_development_version)
+ - [Building development version](Building_development_version)
  - [Cross compiling](Cross_compiling) - tips about cross-compiling (usually for embedded platforms)
  - [Packaging](Packaging) - please read if you create a distributable NZBGet package for other users
  - [Functional testing](Functional_testing)
- - [NServ NNTP Server](NServ_NNTP_Server)
+ - [NServ NNTP server](NServ_NNTP_server)
 
 ## Extensions
  - [Extension scripts](Extension_scripts) - basic information about writing your own scripts.

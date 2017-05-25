@@ -32,7 +32,7 @@ All this allows NZBGet to run on systems with as little RAM as 32 MB or less and
 There is another aspect of efficiency however. If the system is powerful enough and has a lot of resources - can they be used to improve download and post-processing speed? Sure, they can. NZBGet offers a bunch of options to configure the program for systems of different leagues, for example:
 - use memory cache to decrease amount of disk operations;
 - use more threads for downloading (connections) or for par-repair;
-- etc., etc. - see [[Performance tips]] for details.
+- etc., etc. - see [Performance tips]([Performance_tips) for details.
 
 ## Fast deobfuscation
 Many files posted to Usenet nowadays have obfuscated file names, for example:
@@ -106,14 +106,14 @@ If download fails for whatever reason the failed item is put to history from whe
 In all these cases it's preferably to not discard already downloaded pieces but instead retry only the failed ones. The "Retry failed articles" function works granularly and redownloads only missing file pieces (articles).
 
 ## Full-featured API
-**The whole NZBGet functionality is accessible via [[API]].** It's not just for third-party developers. NZBGet itself uses that API very extensively. The built-in web-interface relies fully on the API. That means that **every feature or function you see in web-interface is also available for third-party developers**.
+**The whole NZBGet functionality is accessible via [API](api).** It's not just for third-party developers. NZBGet itself uses that API very extensively. The built-in web-interface relies fully on the API. That means that **every feature or function you see in web-interface is also available for third-party developers**.
 
 Other programs often have a built-in special web-server for web-interface, which generates web-pages and process requests from web-interface. In addition they have API-server. The functions of web-interface and API-servers are often not the same.
 
 In NZBGet there is no such difference. The web-interface consists of a static html-page with (a lot of) javascript-code. NZBGet's built-in web-servers only serves the static web-application content. After the web-page is loaded into browser the javascript-application activates and communicates with NZBGet via API to receive the list of downloads, messages, etc. and to perform edit actions.
 
 ## RSS with duplicate check
-For whose of you who can't or don't want to use additional programs to automate downloads **NZBGet offers very powerful [[RSS]] support**. Example RSS filter:
+For whose of you who can't or don't want to use additional programs to automate downloads **NZBGet offers very powerful [RSS](RSS) support**. Example RSS filter:
 ```
 Reject: age:>10
 Require: 720p

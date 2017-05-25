@@ -17,9 +17,9 @@ Add nzb-file or URL to download queue.
 - **Priority** (int) - priority for nzb-file. 0 for "normal priority", positive values for high priority and negative values for low priority. Downloads with priorities equal to or greater than 900 are downloaded and post-processed even if the program is in paused state (force mode). Default priorities are: -100 (very low), -50 (low), 0 (normal), 50 (high), 100 (very high), 900 (force).
 - **AddToTop** (bool) - "True" if the file should be added to the top of the download queue or "False" if to the end. 
 - **AddPaused** (bool) - "True" if the file should be added in paused state.
-- **DupeKey** (string) - duplicate key for nzb-file. See [[RSS]].
-- **DupeScore** (int) - duplicate score for nzb-file. See [[RSS]].
-- **DupeMode** (string) - duplicate mode for nzb-file. See [[RSS]].
+- **DupeKey** (string) - duplicate key for nzb-file. See [RSS](RSS).
+- **DupeScore** (int) - duplicate score for nzb-file. See [RSS](RSS).
+- **DupeMode** (string) - duplicate mode for nzb-file. See [RSS](RSS).
 - **PPParameters** (array) - **`v16.0`** post-processing parameters. The array consists of structures with following fields:
   - **Name** (string) - name of post-processing parameter.
   - **Value** (string) - value of post-processing parameter.

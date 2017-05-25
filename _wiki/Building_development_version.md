@@ -1,5 +1,7 @@
 ---
-redirect_from: /Build_the_latest_development_version_from_svn
+redirect_from:
+  - /Build_the_latest_development_version_from_svn
+  - /Build_the_latest_development_version
 ---
 **NOTE**: before trying this you should be able to compile the program from sources using the distribution source package. If you can't - fix this first.
 

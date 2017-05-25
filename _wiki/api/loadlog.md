@@ -12,4 +12,4 @@ Loads from disk and returns nzb-log for a specific nzb-file.
 ## Parameters
 * NZBID (int) - id of nzb-file. 
 
-For other parameters and return values see method [[log|API-Method "log"]].
+For other parameters and return values see method [log](log).

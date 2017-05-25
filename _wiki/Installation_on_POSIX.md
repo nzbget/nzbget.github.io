@@ -37,7 +37,7 @@ sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev -y
 NZBGet uses modern C++ features and requires a C++ compiler supporting C++14 ISO standard. The configure-script performs a basic check and fails if C++ compiler doesn't provide required support. In special cases the check can be disabled (not recommended), see configure options below. For details see [Prerequisites for C++ compiler](Prerequisites_for_C++ compiler).
 
 ## Compiling ##
-* download NZBGet source code from [Download Page](download)
+* download NZBGet source code from [Download page](download)
 * untar the nzbget-source via
  ```shell
 tar -zxf nzbget-VERSION-src.tar.gz 

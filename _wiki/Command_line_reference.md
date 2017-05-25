@@ -7,42 +7,42 @@ In the description on this page the character `$` at the beginning of the line r
 ### Contents
 
 * [Common options](#common-options)
-	* [Option --configfile](#option---configfile)
-	* [Option --option](#option---option)
-	* [Option --noconfigfile](#option---noconfigfile)
+	* [Option --configfile](#option-configfile)
+	* [Option --option](#option-option)
+	* [Option --noconfigfile](#option-noconfigfile)
 * [Local commands](#local-commands)
-	* [Command --help](#command---help)
-	* [Command --version](#command---version)
-	* [Command --printconfig](#command---printconfig)
-	* [Command --server](#command---server)
-	* [Command --daemon](#command---daemon)
+	* [Command --help](#command-help)
+	* [Command --version](#command-version)
+	* [Command --printconfig](#command-printconfig)
+	* [Command --server](#command-server)
+	* [Command --daemon](#command-daemon)
 * [Remote commands](#remote-commands)
-	* [Command --quit](#command---quit)
-	* [Command --append](#command---append)
-	* [Command --connect](#command---connect)
-	* [Command --list](#command---list)
+	* [Command --quit](#command-quit)
+	* [Command --append](#command-append)
+	* [Command --connect](#command-connect)
+	* [Command --list](#command-list)
 		* [Files in download queue](#files-in-download-queue)
 		* [Groups in download queue](#groups-in-download-queue)
 		* [Jobs in post-processor queue](#jobs-in-post-processor-queue)
 		* [Items in history](#items-in-history)
 		* [Server status](#server-status)
-	* [Command --pause](#command---pause)
+	* [Command --pause](#command-pause)
 		* [Pause download](#pause-download)
 		* [Pause post-processor](#pause-post-processor)
 		* [Pause scan](#pause-scan)
-	* [Command --unpause](#command---unpause)
+	* [Command --unpause](#command-unpause)
 		* [Unpause download](#unpause-download)
 		* [Unpause postprocessor](#unpause-postprocessor)
 		* [Unpause scan](#unpause-scan)
-	* [Command --rate](#command---rate)
-	* [Command --log](#command---log)
-	* [Command --scan](#command---scan)
-	* [Command --edit](#command---edit)
+	* [Command --rate](#command-rate)
+	* [Command --log](#command-log)
+	* [Command --scan](#command-scan)
+	* [Command --edit](#command-edit)
 		* [Individual files](#individual-files)
 		* [Groups](#groups)
 		* [Post-processor queue](#post-processor-queue)
 		* [History list](#history-list)
-	* [Command --write](#command---write)
+	* [Command --write](#command-write)
 
 # Common options #
 Common options are used in addition to local or remote commands. There are some options that can be used only as additional options for special remote commands. These options are described with commands they belong to.
@@ -254,7 +254,7 @@ Threads running: 5
 Server state: Paused
 ```
 
-The numbers in square braces are IDs of the files. These IDs are needed by command [[#Command_--edit | --edit]].
+The numbers in square braces are IDs of the files. These IDs are needed by command [--edit](#command-edit).
 
 ### Groups in download queue ###
 Groups are nzb-files. Each group can contain one or more individual files. To print download queue as groups use subcommand "G":
@@ -280,7 +280,7 @@ Threads running: 5
 Server state: Paused
 ```
 
-The numbers in square braces are IDs of the files (first and last). These IDs are needed by command [[#Command_--edit | --edit]].
+The numbers in square braces are IDs of the files (first and last). These IDs are needed by command [--edit](#command-edit).
 
 *'NOTE:*' if you reorder individual files it is possible that the files from one group will be mixed with another:
 ```
@@ -303,7 +303,7 @@ Post-Processing List
 -----------------------------------
 ```
 
-The numbers in square braces are IDs of the jobs. These IDs are needed by command [[#Command_--edit | --edit]].
+The numbers in square braces are IDs of the jobs. These IDs are needed by command [--edit](#command-edit).
 
 ### Items in history ###
 To print history use subcommand "H":
@@ -320,7 +320,7 @@ History (recent items first)
 Items: 3
 ```
 
-The numbers in square braces are IDs of the history items. These IDs are needed by command [[#Command_--edit | --edit]].
+The numbers in square braces are IDs of the history items. These IDs are needed by command [--edit](#command-edit).
 
 ### Server status ###
 The subcommands "F" and "G" in addition to file or group lists print server status. This info can be also printed without lists using subcommand "S":

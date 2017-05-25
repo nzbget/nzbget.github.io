@@ -2,14 +2,14 @@
 title: Installation on Linux
 ---
 ## Universal installer for Linux
-NZBGet's [Download Page](download) provides installer for Linux which includes precompiled binaries for many CPU types. These binaries require only Linux kernel 2.6 or later and do not have any other library dependencies. In practice that means the installer works on most Linux devices including desktop PCs, NAS, media players, WLAN routers, etc.
+NZBGet's [Download page](download) provides installer for Linux which includes precompiled binaries for many CPU types. These binaries require only Linux kernel 2.6 or later and do not have any other library dependencies. In practice that means the installer works on most Linux devices including desktop PCs, NAS, media players, WLAN routers, etc.
 
 Please report on forum if the installer doesn't work for you.
 
-**NOTE**: If you prefer to compile yourself see [[Installation on POSIX]].
+**NOTE**: If you prefer to compile yourself see [Installation on POSIX](Installation_on_POSIX).
 
 ## Automatic installation
-- Download the installer package from [Download Page](download).
+- Download the installer package from [Download page](download).
 If your device has a decent version of **wget** you can also download the installer directly on your device with the following command (that's one long command):
  ```
 wget -O - http://nzbget.net/info/nzbget-version-linux.json | \
@@ -54,7 +54,7 @@ or set the TERM variable:
 Now start a web-browser and open URL **<nowiki>http://ip-address-of-linux-machine:6789</nowiki>**. You should see NZBGet web-interface. Default login credentials are username: **nzbget**, password: **tegbzn6789**. Go to settings and check options in the *PATHS*-section.
 
 ## Restoring configuration
-If you want to reuse a configuration file from another NZBGet installation see [[Backup and restore settings]].
+If you want to reuse a configuration file from another NZBGet installation see [Backup and restore settings](Backup_and_restore_settings).
 
 ## Starting on boot
 NZBGet can run in background as daemon (service). When starting NZBGet use command **-D** instead of **-s**:

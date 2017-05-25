@@ -6,7 +6,7 @@ Even more scripts are available on sub-forum [Extension scripts](http://nzbget.s
 
 Most scripts are written in python and work on many platforms including Linux, Mac, Windows.
 
-For information on writing post-processing scripts see [[Extension scripts]].
+For information on writing post-processing scripts see [Extension scripts](Extension_scripts).
 
 ### Contents
 

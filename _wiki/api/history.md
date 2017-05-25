@@ -31,7 +31,7 @@ This method returns an array of structures with following fields:
 - **FileSizeHi** (int) - Initial size of all files in group in bytes, High 32-bits of 64-bit value.
 - **FileSizeMB** (int) - Initial size of all files in group in megabytes.
 - **FileCount** (int) - Initial number of files in group.
-- **RemainingFileCount** (int) - Number of parked files in group. If this number is greater than "0", the history item can be returned to download queue using command "HistoryReturn" of method [[editqueue|API-Method "editqueue"]].
+- **RemainingFileCount** (int) - Number of parked files in group. If this number is greater than "0", the history item can be returned to download queue using command "HistoryReturn" of method [editqueue](editqueue)).
 - **MinPostTime** (int) - Date/time when the oldest file in the item was posted to newsgroup (Time is in C/Unix format).
 - **MaxPostTime** (int) - Date/time when the newest file in the item was posted to newsgroup (Time is in C/Unix format).
 - **TotalArticles** (int) - Total number of articles in all files of the group.
@@ -46,10 +46,10 @@ This method returns an array of structures with following fields:
 - **ParTimeSec** (int) - **`v14.0`** Par-check time in seconds (incl. verification and repair).
 - **RepairTimeSec** (int) - **`v14.0`** Par-repair time in seconds.
 - **UnpackTimeSec** (int) - **`v14.0`** Unpack time in seconds.
-- **MessageCount** (int) - **`v15.0`** Number of messages stored in the item log. Messages can be retrieved with method [[loadlog|API-Method "loadlog"]].
-- **DupeKey** (string) - Duplicate key. See [[RSS]].
-- **DupeScore** (int) - Duplicate score. See [[RSS]].
-- **DupeMode** (string) - Duplicate mode. One of **SCORE**, **ALL**, **FORCE**. See [[RSS]].
+- **MessageCount** (int) - **`v15.0`** Number of messages stored in the item log. Messages can be retrieved with method [loadlog](loadlog).
+- **DupeKey** (string) - Duplicate key. See [RSS](RSS).
+- **DupeScore** (int) - Duplicate score. See [RSS](RSS).
+- **DupeMode** (string) - Duplicate mode. One of **SCORE**, **ALL**, **FORCE**. See [RSS](RSS).
 - **Status** (string) - Total status of the download. One of the predefined text constants such as *SUCCESS/ALL* or *FAILURE/UNPACK*, etc. For the complete list see below.
 - **ParStatus** (string) - Result of par-check/repair:
   - **NONE** - par-check wasn't performed;
@@ -93,7 +93,7 @@ This method returns an array of structures with following fields:
 - **ExtraParBlocks** (int) - **`v16.0`** amount of extra par-blocks received from other duplicates or donated to other duplicates, when duplicate par-scan mode was used (option **ParScan**=*dupe*):
    - **> 0** - has received extra blocks;
    - **< 0** - has donated extra blocks;
-- **Parameters** (struct[]) - Post-processing parameters for group. For description of struct see method [[listgroups|API-Method "listgroups"]].
+- **Parameters** (struct[]) - Post-processing parameters for group. For description of struct see method [listgroups](listgroups).
 - **ServerStats** (struct[]) - Per-server article completion statistics.
 - **Log** (struct[]) - **~~`v13.0`~~** Deprecated, was never really used.
 

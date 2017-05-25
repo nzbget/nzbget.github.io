@@ -1,4 +1,5 @@
 ---
+title: Post-processing scripts
 ---
 ## About post-processing scripts
 After the download of nzb-file is completed NZBGet can call post-processing scripts (pp-scripts). The scripts can perform further processing of downloaded files such es delete unwanted files (*.url, etc.), send an e-mail notification, transfer the files to other application and do any other things. Please note that the par-check/repair and unpack are performed by NZBGet internally and are not part of post-processing scripts. You can activate par-check/repair and unpack without using of any post-processing scripts.
@@ -12,12 +13,12 @@ If you use more than one script for one nzb-file it can be important to set the 
 ## Writing post-processing scripts
 Post-processing scripts are a kind of *Extension scripts*.
 
-**Please read [[Extension scripts]] for general information about extension scripts first!**
+**Please read [Extension scripts](Extension_scripts) for general information about extension scripts first!**
 
 This document describes the unique features of post-processing scripts.
 
 ## Configuration options
-Like other extension scripts the scan scripts get [NZBGet configuration options](https://github.com/nzbget/nzbget/wiki/Extension-scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](https://github.com/nzbget/nzbget/wiki/Extension-scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about the file currently processed is passed as well:
+Like other extension scripts the scan scripts get [NZBGet configuration options](Extension_scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](Extension_scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about the file currently processed is passed as well:
 
 ## Nzb-file information
 The information about nzb-file which is currently processed:
@@ -40,7 +41,7 @@ The information about nzb-file which is currently processed:
    - WARNING/PASSWORD;
    - SUCCESS/ALL;
    - SUCCESS/UNPACK.
-   - For the complete list see description of [[API-Method "history"]].
+   - For the complete list see description of [API-Method "history"](api/history).
    - **NOTE:** one difference to the status returned by method *history* is that *NZBPP_STATUS* assumes all scripts are ended successfully. Even if one of the scripts executed before the current one has failed the status will not be set to *WARNING/SCRIPT* as method *history* will do. For example for a successful download the status would be *SUCCESS/ALL* instead. Because most scripts don't depend on other scripts they shouldn't assume the download has failed if any of the previous scripts (such as a notification script) has failed. The scripts interested in that info still can use parameter *NZBPP_SCRIPTSTATUS*.
 - **NZBPP_SCRIPTSTATUS** - **`v13.0`** Summary status of the scripts executed before the current one:
    - **NONE** - no other scripts were executed yet or all of them have ended with exit code "NONE";

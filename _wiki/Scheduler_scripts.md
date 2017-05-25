@@ -8,12 +8,12 @@ To activate a scheduler script or multiple scripts put them into **ScriptDir**, 
 ## Writing scheduler scripts
 Scheduler scripts are a kind of *Extension scripts*.
 
-**Please read [[Extension scripts]] for general information about extension scripts first!**
+**Please read [Extension scripts](Extension_scripts) for general information about extension scripts first!**
 
 This document describes the unique features of scheduler scripts.
 
 ## Configuration options
-Like other extension scripts the scheduler scripts get [NZBGet configuration options](https://github.com/nzbget/nzbget/wiki/Extension-scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](https://github.com/nzbget/nzbget/wiki/Extension-scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about currently processed task is passed as well.
+Like other extension scripts the scheduler scripts get [NZBGet configuration options](Extension_scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](Extension_scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about currently processed task is passed as well.
 
 ## Schedule
 Users can activate scheduler scripts in two ways:

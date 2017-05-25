@@ -6,11 +6,11 @@ NZBGet can be controlled from console (terminal).
 
 NZBGet can be used in either standalone mode which downloads a single file or as a server which is able to queue up numerous download requests.
 
-### Standalone mode ###
+## Standalone mode
 
     nzbget <nzb-file>
 
-### Server mode ###
+## Server mode
 First start the nzbget-server: 
 
 A) in console mode:
@@ -68,8 +68,8 @@ or to delete files from queue:
 
     nzbget -E D 3 10-15 20-21 16 
 
-### Command line reference ###
-For more information on using the program via command line see [[Command line reference]].
+## Command line reference
+For more information on using the program via command line see [Command line reference](Command_line_reference).
 
-### Running client & server on separate machines ###
+## Running client & server on separate machines
 Since NZBGet communicates via TCP/IP it's possible to have a server running on one computer and control it from another computer.

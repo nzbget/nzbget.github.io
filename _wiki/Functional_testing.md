@@ -18,7 +18,7 @@ The functional testing in NZBGet is controlled by scripts, which do things like:
 # NServ - built-in NNTP server
 NZBGet downloads from Usenet servers. However it would be unreliable and slow to use global Usenet servers for functional testing. Instead we need to do all the testing locally using our set of test files. For this purpose a simple NNTP server called **NServ** was developed.
 
-Technically NServ is integrated into NZBGet as a sub-module. NServ is automatically controlled (started, stopped) by functional testing scripts but it can also be used standalone for other purposes such as debugging NZBGet or for speed tests of NZBGet or even other download clients. For more info see [[NServ NNTP Server]].
+Technically NServ is integrated into NZBGet as a sub-module. NServ is automatically controlled (started, stopped) by functional testing scripts but it can also be used standalone for other purposes such as debugging NZBGet or for speed tests of NZBGet or even other download clients. For more info see [NServ NNTP server](NServ_NNTP_server).
 
 # Testing framework
 Functional tests for NZBGet are written in python language. We are using testing framework [py.test](http://pytest.org) to organize test execution and collect test results. Therefore in order to run functional tests py.test [must be installed](http://docs.pytest.org/en/latest/getting-started.html) on your system.

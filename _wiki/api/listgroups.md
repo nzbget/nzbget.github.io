@@ -59,24 +59,24 @@ This method returns array of structures with following fields:
 - **TotalArticles** (int) - Total number of articles in all files of the group.
 - **SuccessArticles** (int) - Number of successfully downloaded articles.
 - **FailedArticles** (int) - Number of failed article downloads.
-- **Health** (int) - Current health of the group, in permille. 1000 means 100.0%. The health can go down below this valued during download if more article fails. It can never increase (unless merging of groups). Higher values are better. See forum topic [[Download health monitoring|http://nzbget.sourceforge.net/forum/viewtopic.php?f=3&t=886]].
+- **Health** (int) - Current health of the group, in permille. 1000 means 100.0%. The health can go down below this valued during download if more article fails. It can never increase (unless merging of groups). Higher values are better. See forum topic [Download health monitoring](/forum/viewtopic.php?f=3&t=886).
 - **CriticalHealth** (int) - Calculated critical health of the group, in permille. 1000 means 100.0%. The critical health is calculated based on the number and size of par-files. Lower values are better.
 - **DownloadedSizeLo** (int) - **`v14.0`** Amount of downloaded data for group in bytes, Low 32-bits of 64-bit value.
 - **DownloadedSizeHi** (int) - **`v14.0`** Amount of downloaded data for group in bytes, High 32-bits of 64-bit value.
 - **DownloadedSizeMB** (int) - **`v14.0`** Amount of downloaded data for group in megabytes.
 - **DownloadTimeSec** (int) - **`v14.0`** Download time in seconds.
-- **MessageCount** (int) - **`v15.0`** Number of messages stored in the item log. Messages can be retrieved with method [[loadlog|API-Method "loadlog"]].
-- **DupeKey** (string) - Duplicate key. See [[RSS]].
-- **DupeScore** (int) - Duplicate score. See [[RSS]].
-- **DupeMode** (string) - Duplicate mode. One of *SCORE*, *ALL*, *FORCE*. See [[RSS]].
+- **MessageCount** (int) - **`v15.0`** Number of messages stored in the item log. Messages can be retrieved with method [loadlog](loadlog).
+- **DupeKey** (string) - Duplicate key. See [RSS](RSS).
+- **DupeScore** (int) - Duplicate score. See [RSS](RSS).
+- **DupeMode** (string) - Duplicate mode. One of *SCORE*, *ALL*, *FORCE*. See [RSS](RSS).
 - **Parameters** (struct[]) - Post-processing parameters for group. An array of structures with following fields:
    - **Name** (string)- Name of post-processing parameter.
    - **Value** (string) - Value of post-processing parameter.
 - **Deleted** (bool) - **~~`v12.0`~~** Deprecated, use *DeleteStatus* instead.
-- **ServerStats** (struct[]) - Per news-server download statistics. For description see method [[history|API-Method "history"]].
-- **ParStatus**, **UnpackStatus**, **MoveStatus**, **ScriptStatus**, **DeleteStatus**, **MarkStatus**, **ScriptStatuses**, **PostTotalTimeSec**, **ParTimeSec**, **RepairTimeSec**, **UnpackTimeSec** - These fields have meaning only for a group which is being currently post-processed. For description see method [[history|API-Method "history"]].
+- **ServerStats** (struct[]) - Per news-server download statistics. For description see method [history](history).
+- **ParStatus**, **UnpackStatus**, **MoveStatus**, **ScriptStatus**, **DeleteStatus**, **MarkStatus**, **ScriptStatuses**, **PostTotalTimeSec**, **ParTimeSec**, **RepairTimeSec**, **UnpackTimeSec** - These fields have meaning only for a group which is being currently post-processed. For description see method [history](history).
 - **PostInfoText** (string) - Text with short description of current action in post processor. For example: "Verifying file myfile.rar". Only for a group which is being currently post-processed. 
 - **PostStageProgress** (int) - Completing of current stage, in permille. 1000 means 100.0%. Only for a group which is being currently post-processed.
 - **PostTotalTimeSec** (int) - Number of seconds this post-job is being processed (after it first changed the state from PP-QUEUED). Only for a group which is being currently post-processed.
 - **PostStageTimeSec** (int) - Number of seconds the current stage is being processed. Only for a group which is being currently post-processed.
-- **Log** (struct[]) - **~~`v15.0`~~** Array of structs with log-messages. For description of struct see method [[log|API-Method "log"]]. Only for a group which is being currently post-processed. The number of returned entries is limited by parameter *NumberOfLogEntries*. Deprecated, use method [[loadlog|API-Method "loadlog"]] instead.
+- **Log** (struct[]) - **~~`v15.0`~~** Array of structs with log-messages. For description of struct see method [log](log). Only for a group which is being currently post-processed. The number of returned entries is limited by parameter *NumberOfLogEntries*. Deprecated, use method [loadlog](loadlog) instead.

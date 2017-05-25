@@ -15,7 +15,7 @@ NZBGet tries to overcome the limitations by using different techniques. There ar
 CPU is always a limiting factor on mentioned devices. Check the following configuration options.
 
 ### Encrypted communication ###
-Activating the encrypted communication with news server (option **ServerX.Encryption**) makes a huge impact on performance. Use option **ServerX.Cipher** to fine tune the TLS/SSL. Choosing a faster cipher can significantly boost performance. See [[Choosing cipher]] for a more detailed explanation.
+Activating the encrypted communication with news server (option **ServerX.Encryption**) makes a huge impact on performance. Use option **ServerX.Cipher** to fine tune the TLS/SSL. Choosing a faster cipher can significantly boost performance. See [Choosing cipher](Choosing_cipher) for a more detailed explanation.
 
 ### Number of connections ###
 With option **ServerX.Connections** you define the number of simultaneous connection.

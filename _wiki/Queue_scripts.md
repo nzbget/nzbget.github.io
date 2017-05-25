@@ -8,12 +8,12 @@ To activate a queue script or multiple scripts put them into **ScriptDir**, then
 ## Writing queue scripts ##
 Queue scripts are a kind of *Extension scripts*.
 
-**Please read [[Extension scripts]] for general information about extension scripts first!**
+**Please read [Extension scripts](Extension_scripts) for general information about extension scripts first!**
 
 This document describes the unique features of queue scripts.
 
 ## Configuration options ##
-Like other extension scripts the scan scripts get [NZBGet configuration options](https://github.com/nzbget/nzbget/wiki/Extension-scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](https://github.com/nzbget/nzbget/wiki/Extension-scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about the file currently processed is passed as well:
+Like other extension scripts the scan scripts get [NZBGet configuration options](Extension_scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](Extension_scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about the file currently processed is passed as well:
 
 ## Queue event information ##
 - **NZBNA_DIRECTORY** - Destination directory for downloaded files.

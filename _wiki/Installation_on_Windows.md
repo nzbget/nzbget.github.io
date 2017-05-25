@@ -2,7 +2,7 @@
 title: Installation on Windows
 ---
 ## Installation ##
-- Download NZBGet setup for windows from [Download Page](download).
+- Download NZBGet setup for windows from [Download page](download).
 - Run setup and install the program;
 - Start NZBGet via start menu or desktop shortcut;
 - NZBGet puts an icon into the tray area (near clock) and opens a browser window;

@@ -1,4 +1,5 @@
 ---
+title: RSS and duplicate check
 ---
 ### Contents
 - [Filter](#filter)
@@ -7,7 +8,7 @@
   - [Grouping and OR-operator](#grouping-and-or-operator)
   - [Example search strings](#example-search-strings)
   - [Multiline filters](#multiline-filters)
-  - [Rules](https://github.com/nzbget/nzbget/wiki/RSS#rules)
+  - [Rules](#rules)
 - [Duplicate check](#duplicates)
   - [Duplicate keys](#duplicate-keys)
   - [Duplicate scores](#duplicate-scores)
@@ -512,7 +513,7 @@ Accept: homeland
 - When RSS feed is checked for the next time, duplicates with lower scores (when already successfully downloaded) are not downloaded; If a duplicate with higher score is found, it is downloaded.
 
 ### Stop watching
-If you have watched (in the sense "watching TV") the 720p-version before 1080p-version was downloaded and you don't care about 1080p-version anymore you can tell NZBGet to stop watching (in the sense "looking for") the title. Open the history item in web-interface and from actions menu choose "Mark as good". For more about this see [[#History and duplicate check]].
+If you have watched (in the sense "watching TV") the 720p-version before 1080p-version was downloaded and you don't care about 1080p-version anymore you can tell NZBGet to stop watching (in the sense "looking for") the title. Open the history item in web-interface and from actions menu choose "Mark as good". For more about this see [History and duplicate check](#history-and-duplicate-check).
 
 ### Duplicate status
 Although duplicates scores cover most use cases there is also another possibility to check for existence of the title in the history or queue, using field **dupestatus**. That is a computable field, when used in the filter rule the program searches in the history and download queue for the item with the same duplicate key or title. The field contains comma-separated list of following possible statuses (if duplicates were found): **QUEUED**, **DOWNLOADING**, **SUCCESS**, **WARNING**, **FAILURE** or an empty string if there were no matching items found:
@@ -531,7 +532,7 @@ Sometimes you may want to download all available releases for a certain title to
 - **All** - all nzb-files regardless of their scores are downloaded;
 - **Force** - force download and disable all duplicate checks.
 
-For *Score* and *All* apply: nzb-files are not downloaded if there is a successfully downloaded duplicate *marked as good* (see [[#History and duplicate check]]);
+For *Score* and *All* apply: nzb-files are not downloaded if there is a successfully downloaded duplicate *marked as good* (see [History and duplicate check](#history-and-duplicate-check));
 
 *Force*-mode is for use in the add-file-dialog of web-interface - there is a check box "disable duplicate check", which activates this mode. *Score* and *All* are for use in RSS feed filters:
 ```

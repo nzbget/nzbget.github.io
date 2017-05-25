@@ -2,14 +2,14 @@
 title: Installation on FreeBSD
 ---
 ## Installer for FreeBSD ##
-NZBGet's [Download Page](download) provides installer for FreeBSD which includes precompiled binaries for CPU-architecture x86_64. These binaries require only FreeBSD 9.1 or later (but may work on older versions too) and do not have any other library dependencies.
+NZBGet's [Download page](download) provides installer for FreeBSD which includes precompiled binaries for CPU-architecture x86_64. These binaries require only FreeBSD 9.1 or later (but may work on older versions too) and do not have any other library dependencies.
 
 Please report on forum if the installer doesn't work for you.
 
-**NOTE**: If you prefer to compile yourself see [[Installation on POSIX]].
+**NOTE**: If you prefer to compile yourself see [Installation on POSIX](Installation on POSIX).
 
 ## Automatic installation ##
-- Download the installer package from [Download Page](download).
+- Download the installer package from [Download page](download).
 You can download the installer via web-browser or directly on your device with the following command (that's one long command):
  ```
 wget -O - http://nzbget.net/info/nzbget-version-freebsd.json | \
@@ -48,7 +48,7 @@ or set the TERM variable:
 Now start a web-browser and open URL **<nowiki>http://ip-address-of-linux-machine:6789</nowiki>**. You should see NZBGet web-interface. Default login credentials are username: **nzbget**, password: **tegbzn6789**. Go to settings and check options in the *PATHS*-section.
 
 ## Restoring configuration ##
-If you want to reuse a configuration file from another NZBGet installation see [[Backup and restore settings]].
+If you want to reuse a configuration file from another NZBGet installation see [Backup and restore settings](Backup_and_restore_settings).
 
 ## Starting on boot##
 NZBGet can run in background as daemon (service). When starting NZBGet use command **-D** instead of **-s**:
