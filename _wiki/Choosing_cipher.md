@@ -1,4 +1,5 @@
 ---
+redirect_from: /Choosing_a_cipher
 ---
 ## About ciphers ##
 When an encrypted communication with news server (option **ServerX.Encryption**) is active NZBGet and the news server use TLS/SSL protocol to exchange data in a secure way.

@@ -1,4 +1,5 @@
 ---
+permalink: /documentation
 ---
 ## Introduction
  - [Feature highlights](Feature_highlights)

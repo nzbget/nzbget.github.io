@@ -1,4 +1,5 @@
 ---
+redirect_from: /cpp14
 ---
 ## C++14
 As you may know NZBGet is written in C++ language. In the last years C++ has been evolved dramatically. New versions were standardized by ISO as C++11 and lately C++14. These new standards bring many interesting features to the language making it much more pleasure to work with.
