@@ -521,3 +521,27 @@ h1[id] {
 .bs-docs-download .bs-docs-featurette .container {
   max-width: 600px;
 }
+
+/*  Documentaton page */
+
+.bs-docs-wiki .bs-docs-masthead {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.bs-docs-wiki .bs-docs-masthead h1 {
+  font-size: 40px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #fff;
+  text-align: left;
+}
+
+.bs-docs-wiki .bs-docs-featurette {
+  text-align: left;
+  padding-top: 30px;
+}
+
+.bs-docs-wiki {
+  text-align: left;
+}

@@ -1,0 +1,11 @@
+collections:
+  wiki:
+    output: true
+    permalink: /:path
+
+defaults:
+  -
+    scope:
+      path: "_wiki"
+    values:
+      layout: "wiki"
