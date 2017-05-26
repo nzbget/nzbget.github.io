@@ -271,7 +271,6 @@ body {
 
 .bs-docs-featurette + .bs-docs-footer {
   margin-top: 0;
-  border-top: 0;
 }
 
 .bs-docs-featurette-title {
@@ -427,14 +426,11 @@ h1[id] {
   margin:0 auto;
   margin-top: -10px;
   margin-bottom: 40px;
-  border1: 1px solid #e0e0e0;
   border-radius: 2px;
 }
 
 .carousel-inner > .item {
   padding-bottom: 40px;
-  1padding-left: 60px;
-  1padding-right: 70px;
 }
 
 .carousel-caption {
@@ -571,19 +567,17 @@ h1[id] {
   border: 1px solid #ccc;
 }
 
-.docs-content-container {
-  display: table;
-}
-
-.docs-content {
-  display: table-cell;
-  width: 100%;
+@media (min-width:992px) {
+  .docs-content {
+    margin-right: 240px;
+  }
 }
 
 .docs-sidebar {
-  display: table-cell;
-  padding-left: 30px;
-  min-width: 220px;
+  padding-left: 20px;
+  width: 220px;
+  margin-bottom: 20px;
+  float: right;
 }
 
 .docs-sidebar h1 {
