@@ -571,9 +571,19 @@ h1[id] {
   border: 1px solid #ccc;
 }
 
+.docs-content-container {
+  display: table;
+}
+
+.docs-content {
+  display: table-cell;
+  width: 100%;
+}
+
 .docs-sidebar {
+  display: table-cell;
   padding-left: 30px;
-  width: 220px;
+  min-width: 220px;
 }
 
 .docs-sidebar h1 {
@@ -599,14 +609,6 @@ h1[id] {
   display: block;
   font-size: 14px;
   line-height: 22px;
-}
-
-.bs-docs-wiki table.content > tbody > tr > td {
-  border: none !important;
-}
-
-.bs-docs-wiki table.content > tbody > tr > td:first-child {
-  width: 100%;
 }
 
 @media (max-width:991px) {

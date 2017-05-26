@@ -19,18 +19,15 @@
 
     <div class="container">
       <div class="bs-docs-featurette">
-        <table class="content">
-          <tr>
-            <td>
+        <div class="docs-content-container">
+            <div class="docs-content">
               {{ content }}
-            </td>
-            <td>
-              <div class="docs-sidebar">
-                {% include sidebar.html %}
-              </div>
-            </td>
-          </tr>
-        </table>
+            </div>
+            <div class="docs-sidebar">
+              {% include sidebar.html %}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
