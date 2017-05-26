@@ -6,7 +6,7 @@ NZBGet's [Download page](download) provides installer for FreeBSD which includes
 
 Please report on forum if the installer doesn't work for you.
 
-**NOTE**: If you prefer to compile yourself see [Installation on POSIX](Installation on POSIX).
+**NOTE**: If you prefer to compile yourself see [Installation on POSIX](Installation_on_POSIX).
 
 ## Automatic installation ##
 - Download the installer package from [Download page](download).
