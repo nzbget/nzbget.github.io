@@ -32,7 +32,7 @@ All this allows NZBGet to run on systems with as little RAM as 32 MB or less and
 There is another aspect of efficiency however. If the system is powerful enough and has a lot of resources - can they be used to improve download and post-processing speed? Sure, they can. NZBGet offers a bunch of options to configure the program for systems of different leagues, for example:
 - use memory cache to decrease amount of disk operations;
 - use more threads for downloading (connections) or for par-repair;
-- etc., etc. - see [Performance tips]([Performance_tips) for details.
+- etc., etc. - see [Performance tips](Performance_tips) for details.
 
 ## Fast deobfuscation
 Many files posted to Usenet nowadays have obfuscated file names, for example:

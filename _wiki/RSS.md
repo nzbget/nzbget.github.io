@@ -98,6 +98,7 @@ command|A special character (or two) defining how to interpret the parameter (fo
 param|Parameter for command.
 
 ### Commands
+
 Command|Description
 ----|-----------
 `@`|Search for word "param" This is default command, the "@" can be omitted.
@@ -116,7 +117,7 @@ Command|Description
 - Text search is by default performed against words (word-search mode): the field content is separated into words and then each word is checked against pattern.
 - If the search pattern starts and ends with `*` (star) the search is performed against the whole field content (substring-search mode).
 - If the search pattern contains word separator characters (except `*` and `?`) the search is performed on the whole field (the word-search would be obviously never successful in this case). 
-- Following characters assumed to be word separators: !\"#$%&'()*+,-./:;<=>?@[\\]^_`{|}~.
+- Following characters assumed to be word separators: !\"#$%&'()*+,-./:;<=>?@[\\]^_\`{\|}~.
 
 ### Param
 - For field **size** the parameter can have suffixes "K", "KB" (kilobytes), "M", "MB" (megabytes), "G", "GB" (gigabytes). If not specified the bytes are assumed.
@@ -431,14 +432,15 @@ Accept(series:dexter): dexter
 ```
 In this example items become duplicate key like "series=dexter-S08-E12". This is just a shorter form for `dupekey:series=dexter-${season}-${episode}`. There is one small but important distinction though: if feed item doesn't have season or episode numbers then no duplicate is generated.
 
+### Examples
+
 The following examples show differences between three possible ways to add season and episode numbers to duplicate key: 
 
-NZB-Name|Duplicate key created by `dupekey:series=dexter-S${1}-E${2}` with "S##E##"|Duplicate key created by `dupekey:series=dexter-${season}-${episode}`|Duplicate key created by "series:dexter"
+<small>NZB-Name</small>|<small>Duplicate key created by "dupekey:series=dexter-S${1}-E${2}" with "S##E##"</small>|<small>Duplicate key created by "dupekey:series=dexter-${season}-${episode}"</small>|<small>Duplicate key created by "series:dexter"</small>
 --------|----------------------|--------|--------
 Dexter.S08E10.1080p|series=dexter-S08-E10|series=dexter-S08-E10|series=dexter-S08-E10
-Dexter.S08.Whole.Season.720p|series=dexter-${1}-${2}|series=dexter-S08-E00|\<empty>
+Dexter.S08.Season.720p|series=dexter-${1}-${2}|series=dexter-S08-E00|\<empty>
 Dexter.8x10.1080p|series=dexter-${1}-${2}|series=dexter-S00-E00|\<empty>
-
 
 **TIP:** for seasoned TV shows use option `series:show-name`, it gives best results and leaves duplicate key empty in situations where duplicate key cannot be confidently generated.
 
