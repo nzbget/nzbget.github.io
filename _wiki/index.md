@@ -1,6 +1,7 @@
 ---
 title: Documentation
 permalink: /documentation
+layout: wiki-index
 ---
 ## Introduction
  - [Feature highlights](Feature_highlights)
