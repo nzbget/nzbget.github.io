@@ -1,4 +1,5 @@
 ---
+title: Prerequisites for C++ compiler
 redirect_from: /cpp14
 ---
 ## C++14
@@ -6,11 +7,11 @@ As you may know NZBGet is written in C++ language. In the last years C++ has bee
 
 In the meantime major Linux distributions have updated their compilers to GCC 4.9 which supports C++11 and partially C++14 or even to GCC 5, which fully supports C++14. Xcode on OS X includes C++14 compatible compiler. MS Visual Studio 2015 brings a C++14 compiler to Windows world as well.
 
-Moreover after the introducing of universal Linux installer in v15 we now offer precompiled binaries for three major platforms (Windows, Linux, OS X) and soon for FreeBSD (in v17). This makes it less important which compiler is installed on user's machine since only few users compile themselves.
+Moreover after the introducing of universal Linux installer in v15 we now offer precompiled binaries for four major platforms (Windows, Linux, OS X, FreeBSD). This makes it less important which compiler is installed on user's machine since only few users compile themselves.
 
-**Starting from version 17.0 we upgrade the code base of NZBGet to C++14.**
+**Starting from version 17.0 NZBGet source code base has been upgraded to C++14.**
 
-That means you need a C++14 compliant compiler to build NZBGet v17 or newer from sources. Once again (if you forgot) - chances are high that you don't need to compile NZBGet on your own at all. Instead you can download the installer for your platform from [Download page](http://nzbget.net/download) and install NZBGet in a few quick steps.
+That means you need a C++14 compliant compiler to build NZBGet **v17** or newer from sources. Once again (if you forgot) - chances are high that you don't need to compile NZBGet on your own at all. Instead you can download the installer for your platform from [Download page](http://nzbget.net/download) and install NZBGet in a few quick steps.
 
 ## Prerequisites for C++ compiler
 If you still want or need to compile NZBGet one of the following compilers (or newer) is required:
