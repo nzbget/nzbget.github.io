@@ -2,7 +2,7 @@
 title: API-method "loadconfig"
 ---
 ## Syntax
-```C#
+```swift
 struct[] loadconfig() 
 ```
 

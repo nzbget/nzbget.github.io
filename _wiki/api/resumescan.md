@@ -2,7 +2,7 @@
 title: API-method "resumescan"
 ---
 ## Syntax
-```C#
+```swift
 bool resumescan()
 ```
 

@@ -2,8 +2,8 @@
 title: API-method "version"
 ---
 ## Syntax
-```C#
-    string version() 
+```swift
+string version() 
 ```
 Request the version-string of the program.
 

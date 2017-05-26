@@ -2,7 +2,7 @@
 title: API-method "scan"
 ---
 ## Syntax
-```C#
+```swift
 bool scan() 
 ```
 

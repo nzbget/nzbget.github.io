@@ -3,11 +3,11 @@ title: API-method "editqueue"
 ---
 ## Syntax
 **`v18.0`**:
-```C#
+```swift
 bool editqueue(string Command, string Param, int[] IDs) 
 ```
 **~~`v18.0`~~**:
-```C#
+```swift
 bool editqueue(string Command, int Offset, string Param, int[] IDs) 
 ```
 

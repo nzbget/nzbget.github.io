@@ -2,7 +2,7 @@
 title: API-method "shutdown"
 ---
 ## Signature
-```C#
+```swift
 bool shutdown() 
 ```
 Shutdown the program.

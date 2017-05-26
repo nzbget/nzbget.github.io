@@ -2,8 +2,8 @@
 title: API-method "resetservervolume"
 ---
 ## Syntax
-```C#
-bool resetservervolume(int serverid, string counter);
+```swift
+bool resetservervolume(int ServerId, string Sounter);
 ```
 
 Reset download volume statistics for a specified news-server.

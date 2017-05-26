@@ -2,7 +2,7 @@
 title: API-method "reload"
 ---
 ## Syntax
-```C#
+```swift
 bool reload()
 ```
 

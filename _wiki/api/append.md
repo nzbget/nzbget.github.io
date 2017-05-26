@@ -2,10 +2,10 @@
 title: API-method "append"
 ---
 ## Syntax
-```C#
+```swift
 int append(string NZBFilename, string NZBContent, string Category,
     int Priority, bool AddToTop, bool AddPaused, string DupeKey,
-    int DupeScore, string DupeMode, array PPParameters)
+    int DupeScore, string DupeMode, struct[] PPParameters)
 ```
 
 Add nzb-file or URL to download queue.

@@ -2,7 +2,7 @@
 title: API-method "rate"
 ---
 ## Syntax
-```C#
+```swift
 bool rate(int Limit)
 ```
 

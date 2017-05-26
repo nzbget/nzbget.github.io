@@ -2,7 +2,7 @@
 title: API-method "listfiles"
 ---
 ## Syntax
-```C#
+```swift
 struct[] listfiles(int IDFrom, int IDTo, int NZBID) 
 ```
 

@@ -2,7 +2,7 @@
 title: API-method "pausedownload"
 ---
 ## Syntax
-```C#
+```swift
 bool pausedownload() 
 ```
 

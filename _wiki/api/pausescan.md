@@ -2,7 +2,7 @@
 title: API-method "pausescan"
 ---
 ## Syntax
-```C#
+```swift
 bool pausescan() 
 ```
 

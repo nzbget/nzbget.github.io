@@ -2,7 +2,7 @@
 title: API-method "config"
 ---
 ## Syntax
-```C#
+```swift
 struct[] config() 
 ```
 

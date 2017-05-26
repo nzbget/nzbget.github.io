@@ -2,7 +2,7 @@
 title: API-method "pausepost"
 ---
 ## Syntax
-```C#
+```swift
 bool pausepost() 
 ```
 

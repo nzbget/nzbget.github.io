@@ -2,7 +2,7 @@
 title: API-method "resumepost"
 ---
 ## Syntax
-```C#
+```swift
 bool resumepost() 
 ```
 

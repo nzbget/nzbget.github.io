@@ -2,7 +2,7 @@
 title: API-method "log"
 ---
 ## Syntax
-```C#
+```swift
 struct[] log(int IDFrom, int NumberOfEntries) 
 ```
 

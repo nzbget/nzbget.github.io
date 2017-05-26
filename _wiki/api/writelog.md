@@ -2,7 +2,7 @@
 title: API-method "writelog"
 ---
 ## Syntax
-```C#
+```swift
 bool writelog(string Kind, string Text) 
 ```
 

@@ -2,7 +2,7 @@
 title: API-method "scheduleresume"
 ---
 ## Syntax
-```C#
+```swift
 bool scheduleresume(int Seconds)
 ```
 

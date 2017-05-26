@@ -2,7 +2,7 @@
 title: API-method "configtemplates"
 ---
 ## Syntax
-```C#
+```swift
 struct[] configtemplates(bool LoadFromDisk) 
 ```
 Returns NZBGet configuration file template and also extracts configuration sections from all post-processing files. This information is for example used by web-interface to build settings page or page "Postprocess" in download details dialog.

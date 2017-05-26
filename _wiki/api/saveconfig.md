@@ -2,7 +2,7 @@
 title: API-method "saveconfig"
 ---
 ## Syntax
-```C#
+```swift
 bool saveconfig(struct[] Options) 
 ```
 

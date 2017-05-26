@@ -2,7 +2,7 @@
 title: API-method "resumedownload"
 ---
 ## Syntax
-```C#
+```swift
 bool resumedownload() 
 ```
 

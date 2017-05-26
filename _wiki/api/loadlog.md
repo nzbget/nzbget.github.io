@@ -3,7 +3,7 @@ title: API-method "loadlog"
 ---
 **`v15.0`**
 ## Syntax
-```C#
+```swift
 struct[] loadlog(int NZBID, int IDFrom, int NumberOfEntries) 
 ```
 

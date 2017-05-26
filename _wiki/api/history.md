@@ -2,7 +2,7 @@
 title: API-method "history"
 ---
 ## Syntax
-```C#
+```swift
 struct[] history(bool Hidden) 
 ```
 

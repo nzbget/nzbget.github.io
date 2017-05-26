@@ -2,7 +2,7 @@
 title: API-method "servervolumes"
 ---
 ## Syntax
-```C#
+```swift
 struct[] servervolumes()
 ```
 

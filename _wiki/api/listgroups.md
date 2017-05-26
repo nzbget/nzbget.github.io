@@ -2,7 +2,7 @@
 title: API-method "listgroups"
 ---
 ## Syntax
-```C#
+```swift
 struct[] listgroups(int NumberOfLogEntries) 
 ```
 Request for list of downloads (nzb-files).

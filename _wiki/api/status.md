@@ -2,7 +2,7 @@
 title: API-method "status"
 ---
 ## Syntax
-```C#
+```swift
 struct status() 
 ```
 
