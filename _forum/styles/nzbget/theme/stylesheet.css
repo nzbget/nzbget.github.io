@@ -106,6 +106,10 @@ html, body {
 	border: 1px solid #ccc;
 }
 
+.panel {
+	margin-bottom: 10px;
+}
+
 body.simple {
 	min-height: 100%;
 	padding: 0 5px;
@@ -130,6 +134,7 @@ body.simple {
 	border: 1px solid #ccc;
 	border-radius: 2px;
 	font-size: 12px;
+	line-height: normal;
 }
 
 .navbar .search-box .button-search,
@@ -181,8 +186,11 @@ ul.topiclist li {
 	padding: 0;
 }
 
-#postform .panel.bg2 {
-	background-color: #fff;
+#postform .panel.bg2,
+#post div.panel:nth-child(2),
+#agreement div.panel:nth-child(2),
+#register div.panel:nth-child(3) {
+	background-color: inherit;
 	border: none;
 }
 
@@ -242,6 +250,7 @@ li.header dt, li.header dd {
 	color: #555;
 }
 
+
 li.row dd {
 	border-left: none;
 }
@@ -294,15 +303,15 @@ table.zebra-list tr:nth-child(2n) td, ul.zebra-list li:nth-child(2n) {
 }
 
 .pagination li.active span {
-    background: #3E8C25;
-    border-color: #3E8C25;
+    background: #25AF33;
+    border-color: #25AF33;
     color: #FFFFFF;
 	padding: 3px 10px;
 }
 
 .pagination li a:hover, .pagination li a:hover .icon {
-    background: #3AB214;
-    border-color: #3E8C25;
+    background: #25AF33;
+    border-color: #25AF33;
 }
 
 .button, a.button1, a.button2, input.button1, input.button2, input.button3 {
@@ -322,8 +331,8 @@ input.button1:hover, input.button1:focus,
 input.button2:hover, input.button2:focus, 
 input.button3:hover, input.button3:focus {
 	background-image: none;
-	background-color: #3AB214;
-	border-color: #3AB214;
+	background-color: #25AF33;
+	border-color: #25AF33;
 	box-shadow: none;
 	text-shadow: none;
 	color: #fff;
@@ -337,6 +346,12 @@ input.button3:hover, input.button3:focus {
 	color: #333;
 }
 
+.inputbox:hover, .inputbox:focus,
+.navbar .search-box .inputbox:hover, .navbar .search-box .inputbox:focus,
+.search-box .inputbox:hover, .search-box .inputbox:focus {
+	border-color: #25AF33;
+}
+
 .action-bar .button {
 	padding: 3px 10px;
 }
@@ -344,6 +359,12 @@ input.button3:hover, input.button3:focus {
 .action-bar .search-box .inputbox {
 	height: 26px;
 	border-radius: 2px;
+	border-width: 1px;
+	margin-left: 5px;
+}
+
+.action-bar .search-box .inputbox, .action-bar .search-box .button-search {
+	margin-right: 2px;
 }
 
 table.table1 tbody tr:hover {
@@ -391,6 +412,10 @@ p.time::after {
 
 .stat-block.permissions {
 	display: none;
+}
+
+.post {
+	margin-bottom: 10px;
 }
 
 /* responsive.css changes */
