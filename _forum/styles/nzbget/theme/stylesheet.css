@@ -125,12 +125,24 @@ body.simple {
 	border-radius: 3px;
 }
 
+.navbar .search-box .inputbox {
+	height: 26px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	font-size: 12px;
+}
+
+.navbar .search-box .button-search,
+.navbar .search-box .button-search-end {
+	display: none;
+}
+
 a, h3 {
-	color: #555;
+	color: #444;
 }
 
 a:hover, a:focus {
-	color: #555;
+	color: #444;
 }
 
 ul.topiclist li {
@@ -321,9 +333,8 @@ input.button3:hover, input.button3:focus {
 	color: #fff;
 }
 
-.button .icon,
-.button-secondary {
-	color: #555;
+.button .icon, .button-secondary {
+	color: #333;
 }
 
 .action-bar .button {
