@@ -10,6 +10,8 @@
 /* colours.css changes */
 html, body {
 	background-color: #fff;
+	font-size: 12px;
+	color: #555;
 }
 
 body.simple {
@@ -18,9 +20,9 @@ body.simple {
 }
 
 .wrap {
-	max-width: auto;
-	margin: 0 auto;
-	padding: 13px 23px;
+	max-width: inherit;
+	margin: 0;
+	padding: 0;
 	border: none;
 }
 
@@ -29,29 +31,83 @@ body.simple {
 }
 
 .headerbar {
-	background-color: #7C8891;
-	background-image: url("./images/bg_header.gif");
+	background-color: #3e8c25;
+	background-image: none;
+	margin-top: 38px;
+	margin-bottom: 30px;
+	border-radius: 0;
+	padding-bottom: 30px;
+	padding-right: 30px;
+}
+
+.site-description h1 {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 40px;
+	line-height: 30px;
+	font-weight: 500;	
+	margin-left: 72px;
+	margin-top: 35px;
+}
+
+.site-description p {
+	display: none;
 }
 
 .navbar {
-	background-color: #DCDEE2;
+	background-color: #f0f0f0;
+	margin: 20px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+a, h3 {
+	color: #555;
+}
+
+ul.topiclist li {
+	color: #777;
+}
+
+.content h2, .panel h2 {
+	color: #333;
+}
+
+.page-body {
+	padding: 0 20px;
 }
 
 .forabg, .forumbg {
-	background-color: #505C65;
-	background-image: url("./images/bg_list.gif");
+	background-color: #f0f0f0;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 3px;
 }
 
 .copyright a {
 	color: #000000 !important;
 }
 
-li.row {
-	background-color: #E8ECEE;
+.bg1, .bg2, .panel {
+	background-color: #f0f0f0;
+	border-radius: 3px;
+	border: 1px solid #ccc;
 }
 
-li.row:hover {
-	background-color: #EBEFF1;
+li.row, li.row:hover {
+	background-color: #f0f0f0;
+}
+
+li.row {
+	border-top-color: #ccc;
+	border-bottom-color: #ccc;
+}
+
+li.row + li.row {
+	border-top-color: #f0f0f0;
+}
+
+li.row:last-child {
+	border-bottom-color: #f0f0f0;
 }
 
 li.row.bg3 {
@@ -62,6 +118,14 @@ li.row.bg3:hover {
 	background-color: #F4F8FA;
 }
 
+li.header dt, li.header dd {
+	color: #333;
+}
+
+li.row dd {
+	border-left: none;
+}
+
 .site_logo {
 	background-image: none;
 	width: 0;
@@ -69,17 +133,8 @@ li.row.bg3:hover {
 
 /* responsive.css changes */
 @media only screen and (max-width: 920px), only screen and (max-device-width: 920px) {
-	html, body {
-		background-color: #FFF;
-	}
-
-	body {
-		padding-left: 5px;
-		padding-right: 5px;
-	}
 
 	#wrap {
-		width: 850px;
 		padding: 0;
 		border-width: 0;
 		border-radius: 0;
@@ -90,5 +145,21 @@ li.row.bg3:hover {
 @media only screen and (max-width: 860px), only screen and (max-device-width: 860px) {
 	#wrap {
 		width: auto;
+	}
+}
+
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	.navbar {
+		margin: 10px;
+	}
+	.forabg {
+		margin: 0;
+	}
+	.page-body {
+		padding: 10px;
+	}
+	.headerbar {
+		margin-left: 0;
+		margin-right: 0;
 	}
 }
