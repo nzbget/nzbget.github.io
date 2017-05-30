@@ -499,6 +499,14 @@ p.time::after {
 .topic_unread_locked				{ background-image: url("./images/topic_unread_locked.png"); }
 .topic_unread_locked_mine			{ background-image: url("./images/topic_unread_locked_mine.png"); }
 
+.online								{ background-image: url("./images/icon_user_online.png"); }
+.offline							{ background-image: url("./images/icon_user_offline.png"); }
+
+@media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+	.online							{ background-image: none !important; }
+	.offline						{ background-image: none !important; }
+}
+
 dl.row-item dt .list-inner {
     padding-left: 55px;
 }
