@@ -150,14 +150,6 @@ ul.topiclist li {
 	margin-bottom: 15px;
 }
 
-.forabg, .forumbg {
-	background-color: #f0f0f0;
-	background-image: none;
-	border: 1px solid #ccc;
-	border-radius: 3px;
-	padding: 0;
-}
-
 .copyright {
 	line-height: 20px;
 }
@@ -170,15 +162,47 @@ ul.topiclist li {
 	background-color: #f8f8f8;
 }
 
+.forabg, .forumbg {
+	background-color: #fff;
+	background-image: none;
+	border: none;
+	padding: 0;
+}
+
+#postform .panel.bg2 {
+	background-color: #fff;
+	border: none;
+}
+
+ul.forums {
+	background-color: #fff;
+	background-image: none;
+}
+
 .topiclist .header .row-item {
-	padding: 5px;
+	padding: 4px 0px 2px 10px;
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	border-bottom: none;
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+}
+
+li.header dt, li.header dd {
+	font-weight: normal;
 }
 
 .topiclist .row {
 	background-color: #fff;
 	border-radius: 0;
-	border-left: none;
-	border-right: none;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+
+.topiclist .row:last-child {
+	border-bottom: 1px solid #ccc;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
 }
 
 .topiclist .pagination {
@@ -191,15 +215,7 @@ li.row, li.row:hover {
 
 li.row {
 	border-top-color: #ccc;
-	border-bottom-color: #ccc;
-}
-
-li.row + li.row {
-	border-top-color: #f0f0f0;
-}
-
-li.row:last-child {
-	border-bottom-color: #f0f0f0;
+	border-bottom: none;
 }
 
 li.row.bg3 {
@@ -259,6 +275,10 @@ table.zebra-list tr:nth-child(2n) td, ul.zebra-list li:nth-child(2n) {
 
 .dropdown-extended .pointer-inner {
 	border-color: #e0e0e0 transparent;
+}
+
+.pagination li a, .pagination .button .icon {
+	color: #777;
 }
 
 .pagination li.active span {
