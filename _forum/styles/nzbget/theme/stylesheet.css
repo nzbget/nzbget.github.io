@@ -12,6 +12,17 @@ html, body {
 	background-color: #fff;
 	font-size: 12px;
 	color: #555;
+	padding: 0;
+}
+
+.bg3 {
+	background-color: #d0d0d0;
+}
+
+.bg1, .bg2, .panel {
+	background-color: #f0f0f0;
+	border-radius: 3px;
+	border: 1px solid #ccc;
 }
 
 body.simple {
@@ -26,18 +37,71 @@ body.simple {
 	border: none;
 }
 
-.search-header {
-	box-shadow: 0 0 10px #505C65;
+#logo {
+	display: none;
+}
+
+.bs-container {
+	margin-right: auto;
+	margin-left: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	box-sizing: border-box;	
+}
+
+@media (min-width: 768px) {
+	.bs-container {
+		width: 750px;
+	}
+}
+
+@media (min-width: 960px) {
+	.bs-container {
+		width: 945px;
+	}
+}
+
+@media (min-width: 1150px) {
+	.bs-container {
+		width: 1120px;
+	}
+}
+
+.bs-navbar::after {
+	clear: both;
+	content: " ";
+	display: table;
+}
+
+.bs-navbar > li {
+    float: left;
+	display: block;
+}
+
+.bs-navbar > li > a {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+	color: #377e14;
+	font-weight: 500;
+    line-height: 1.42857143;
+	padding: 15px;
+}
+
+.bs-navbar > li > a:hover, .bs-navbar > li > a:focus {
+    background-color: #f9f9f9;
+	text-decoration: none;
 }
 
 .headerbar {
 	background-color: #3e8c25;
 	background-image: none;
-	margin-top: 38px;
-	margin-bottom: 30px;
 	border-radius: 0;
-	padding-bottom: 30px;
-	padding-right: 30px;
+	padding: 20px 15px;
+	margin-bottom: 30px;
+}
+
+.headerbar .inner {
+	padding: 0 15px;
 }
 
 .site-description h1 {
@@ -45,11 +109,26 @@ body.simple {
 	font-size: 40px;
 	line-height: 30px;
 	font-weight: 500;	
-	margin-left: 72px;
-	margin-top: 35px;
+	margin-top: 20px;
+	margin-bottom: 10px;
 }
 
 .site-description p {
+	display: none;
+}
+
+.headerbar .search-box {
+	margin-top: 20px;
+	margin-right: 0;
+	box-shadow: none;
+	border-radius: 0;
+}
+
+.headerbar .search-box .inputbox {
+	border-radius: 2px;
+}
+
+.headerbar .search-box .button-search, .headerbar .search-box .button-search-end {
 	display: none;
 }
 
@@ -92,14 +171,12 @@ ul.topiclist li {
 	border-radius: 3px;
 }
 
-.copyright a {
-	color: #000000 !important;
+.copyright {
+	line-height: 20px;
 }
 
-.bg1, .bg2, .panel {
-	background-color: #f0f0f0;
-	border-radius: 3px;
-	border: 1px solid #ccc;
+.copyright a {
+	color: #000000 !important;
 }
 
 .post.bg1 {
@@ -147,12 +224,6 @@ li.row dd {
 
 li.header dt {
 	font-weight: normal;
-	*margin-left: 50px;
-}
-
-.site_logo {
-	background-image: none;
-	width: 0;
 }
 
 .tabs .tab > a, .tabs .tab > a:hover {
@@ -252,6 +323,41 @@ input.button3:hover, input.button3:focus {
 	border-radius: 2px;
 }
 
+table.table1 tbody tr:hover {
+    background-color: #f0f0f0;
+}
+
+table.table1 tbody tr.bg3:hover {
+    background-color: #d0d0d0;
+}
+
+table.table1 thead th {
+	color: #555;
+	font-weight: bold;
+}
+
+div.rules {
+	border-radius: 3px;
+	padding: 15px;
+}
+
+.action-bar.compact {
+	margin-top: 10px;
+	margin-bottom: 5px;
+	display: none;
+}
+
+p.time {
+	font-size: 12px;
+	float: none;
+	display: inline-block;
+	margin-bottom: 15px;
+}
+
+p.time::after {
+	content: ". ";
+}
+
 /* responsive.css changes */
 @media only screen and (max-width: 920px), only screen and (max-device-width: 920px) {
 
@@ -270,20 +376,40 @@ input.button3:hover, input.button3:focus {
 }
 
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
+
 	.navbar {
 		margin: 10px;
 	}
+
+	.headerbar + .navbar {
+		margin-top: 20px;
+	}
+
 	.forabg {
 		margin: 0;
 	}
+
 	.page-body {
 		padding: 10px;
+		padding-top: 1px;
+		margin-top: -1px;
 	}
+
 	.headerbar {
 		margin-left: 0;
 		margin-right: 0;
 	}
+
+	.site-description {
+    	text-align: left;
+	}
+
+	.site-description h1 {
+		margin-left: 0;
+	    overflow: visible;
+	}	
 }
+
 /* Icons... */
 .site_logo							{ background-image: url("./images/site_logo.png"); }
 
