@@ -64,6 +64,10 @@ a, h3 {
 	color: #555;
 }
 
+a:hover, a:focus {
+	color: #555;
+}
+
 ul.topiclist li {
 	color: #777;
 }
@@ -74,6 +78,11 @@ ul.topiclist li {
 
 .page-body {
 	padding: 0 20px;
+}
+
+.action-bar  {
+	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .forabg, .forumbg {
@@ -91,6 +100,16 @@ ul.topiclist li {
 	background-color: #f0f0f0;
 	border-radius: 3px;
 	border: 1px solid #ccc;
+}
+
+.post.bg1 {
+	background-color: #f8f8f8;
+}
+
+.topiclist .row.bg1, .topiclist .row.bg2 {
+	border-radius: 0;
+	border-left: none;
+	border-right: none;
 }
 
 li.row, li.row:hover {
@@ -126,9 +145,111 @@ li.row dd {
 	border-left: none;
 }
 
+li.header dt {
+	font-weight: normal;
+	*margin-left: 50px;
+}
+
 .site_logo {
 	background-image: none;
 	width: 0;
+}
+
+.tabs .tab > a, .tabs .tab > a:hover {
+    background: none;
+    color: #666;
+	border: 1px solid #ccc;
+	border-bottom: none;
+}
+
+.tabs .tab.activetab > a {
+    background: #f0f0f0;
+}
+
+.navigation a, .navigation a:hover {
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	border-right: none;
+	border-bottom: none;
+}
+
+.navigation .active-subsection a {
+	background: #F9F9F9;
+}
+
+.navigation li:last-child a {
+	border-bottom: 1px solid #ccc;
+}
+
+table.zebra-list tr:nth-child(2n+1) td, ul.zebra-list li:nth-child(2n+1) {
+    background-color: #e0e0e0;
+}
+
+table.zebra-list tr:nth-child(2n) td, ul.zebra-list li:nth-child(2n) {
+    background-color: #e8e8e8;
+}
+
+.dropdown-extended .header {
+	background-color: #e0e0e0;
+	background-image: none;
+}
+
+.dropdown-extended .pointer-inner {
+	border-color: #e0e0e0 transparent;
+}
+
+.pagination li.active span {
+    background: #3E8C25;
+    border-color: #3E8C25;
+    color: #FFFFFF;
+	padding: 3px 10px;
+}
+
+.pagination li a:hover, .pagination li a:hover .icon {
+    background: #3AB214;
+    border-color: #3E8C25;
+}
+
+.button, a.button1, a.button2, input.button1, input.button2, input.button3 {
+	border-radius: 2px;
+	color: #222;
+	background-image: none;
+	background-color: #EFEFEF;
+	border: 1px solid #ccc;
+	box-shadow: none;
+	text-shadow: none;
+	padding: 3px 10px;
+}
+
+.button:hover, .button:focus,
+a.button1:hover, a.button2:hover,
+input.button1:hover, input.button1:focus,
+input.button2:hover, input.button2:focus, 
+input.button3:hover, input.button3:focus {
+	background-image: none;
+	background-color: #3AB214;
+	border-color: #3AB214;
+	box-shadow: none;
+	text-shadow: none;
+	color: #fff;
+}
+
+.button-secondary:focus, .button-secondary:hover, .button:focus .icon, .button:hover .icon {
+	color: #fff;
+}
+
+.button .icon,
+.button-secondary {
+	color: #555;
+}
+
+.action-bar .button {
+	padding: 3px 10px;
+}
+
+.action-bar .search-box .inputbox {
+	height: 26px;
+	border-radius: 2px;
 }
 
 /* responsive.css changes */
