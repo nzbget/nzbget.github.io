@@ -1,0 +1,94 @@
+/*  phpBB3 Style Sheet
+    --------------------------------------------------------------
+	Style name:			prosilver Special Edition
+	Based on style:		prosilver (the default phpBB 3.2.x style)
+	Original author:	Tom Beddard ( http://www.subblue.com/ )
+	Modified by:		phpBB Limited ( https://www.phpbb.com/ )
+    --------------------------------------------------------------
+*/
+
+/* colours.css changes */
+html, body {
+	background-color: #fff;
+}
+
+body.simple {
+	min-height: 100%;
+	padding: 0 5px;
+}
+
+.wrap {
+	max-width: auto;
+	margin: 0 auto;
+	padding: 13px 23px;
+	border: none;
+}
+
+.search-header {
+	box-shadow: 0 0 10px #505C65;
+}
+
+.headerbar {
+	background-color: #7C8891;
+	background-image: url("./images/bg_header.gif");
+}
+
+.navbar {
+	background-color: #DCDEE2;
+}
+
+.forabg, .forumbg {
+	background-color: #505C65;
+	background-image: url("./images/bg_list.gif");
+}
+
+.copyright a {
+	color: #000000 !important;
+}
+
+li.row {
+	background-color: #E8ECEE;
+}
+
+li.row:hover {
+	background-color: #EBEFF1;
+}
+
+li.row.bg3 {
+	background-color: #F0F4F6;
+}
+
+li.row.bg3:hover {
+	background-color: #F4F8FA;
+}
+
+.site_logo {
+	background-image: none;
+	width: 0;
+}
+
+/* responsive.css changes */
+@media only screen and (max-width: 920px), only screen and (max-device-width: 920px) {
+	html, body {
+		background-color: #FFF;
+	}
+
+	body {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+	#wrap {
+		width: 850px;
+		padding: 0;
+		border-width: 0;
+		border-radius: 0;
+		box-shadow: none;
+	}
+}
+
+@media only screen and (max-width: 860px), only screen and (max-device-width: 860px) {
+	#wrap {
+		width: auto;
+	}
+}
