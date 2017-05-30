@@ -53,19 +53,19 @@ html, body {
 
 @media (min-width: 768px) {
 	.bs-container {
-		width: 750px;
+		width: 730px;
 	}
 }
 
 @media (min-width: 960px) {
 	.bs-container {
-		width: 945px;
+		width: 925px;
 	}
 }
 
 @media (min-width: 1150px) {
 	.bs-container {
-		width: 1120px;
+		width: 1115px;
 	}
 }
 
