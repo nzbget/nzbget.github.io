@@ -585,6 +585,7 @@ h1[id] {
   width: 230px;
   margin-bottom: 20px;
   float: right;
+  display: none;
 }
 
 .docs-sidebar h1 {
@@ -624,12 +625,20 @@ h1[id] {
 		max-width: 1090px;
 		margin: 0 auto;
 	}
+  .docs-content {
+    margin-left: 20px;
+    margin-right: 260px;
+  }
 }
 
 @media only screen and (max-width: 1149px) {
 	.bs-container {
 		padding: 0 30px;
 	}
+  .docs-content {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }
 
 @media only screen and (max-width: 960px) {
@@ -638,26 +647,21 @@ h1[id] {
 	}
 }
 
+@media only screen and (min-width: 920px) {
+  .docs-content {
+    margin-right: 230px;
+  }
+  .docs-sidebar {
+    display: block;
+  }
+}
+
 @media only screen and (max-width:700px) {
 	.bs-container {
 		padding: 0 10px;
 	}
-}
-
-@media (min-width: 960px) {
   .docs-content {
-    margin-right: 230px;
-  }
-}
-
-@media (max-width: 959px) {
-  .docs-sidebar {
-    display: none;
-  }
-}
-
-@media (min-width: 1150px) {
-  .docs-content {
-    margin-right: 260px;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
