@@ -407,13 +407,10 @@ div.rules strong, div.rules br {
 	display: none;
 }
 
-div.time {
-	margin-bottom: 15px;
-}
-
 div.time > span {
 	display: inline-block;
 	margin-right: 15px;
+	margin-bottom: 15px;
 }
 
 .stat-block.permissions {
