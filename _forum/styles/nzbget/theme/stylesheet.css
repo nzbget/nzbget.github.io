@@ -142,6 +142,10 @@ body.simple {
 	display: none;
 }
 
+#page-footer .navbar {
+	display: none;
+}
+
 a, h3 {
 	color: #444;
 }
@@ -399,15 +403,13 @@ div.rules strong, div.rules br {
 	display: none;
 }
 
-p.time {
-	font-size: 12px;
-	float: none;
-	display: inline-block;
+div.time {
 	margin-bottom: 15px;
 }
 
-p.time::after {
-	content: ". ";
+div.time > span {
+	display: inline-block;
+	margin-right: 15px;
 }
 
 .stat-block.permissions {
