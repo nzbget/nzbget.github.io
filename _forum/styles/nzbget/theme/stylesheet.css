@@ -10,7 +10,7 @@ html, body {
 /* NZBGet Page Header */
 
 .bs-docs-masthead {
-	padding: 20px 15px;
+	padding: 20px 0;
 	text-align: center;
 	background-color: #3e8c25;
 	margin-bottom: 10px;
@@ -26,14 +26,6 @@ html, body {
 	margin: 15px 0px 5px 0px;
 }
 
-.bs-container {
-	margin-right: auto;
-	margin-left: auto;
-	padding-left: 15px;
-	padding-right: 15px;
-	box-sizing: border-box;	
-}
-
 @media (max-width: 700px) {
 	.bs-docs-masthead {
 		padding: 1px 5px;
@@ -41,22 +33,8 @@ html, body {
 	}
 }
 
-@media (min-width: 768px) {
-	.bs-container {
-		width: 730px;
-	}
-}
-
-@media (min-width: 960px) {
-	.bs-container {
-		width: 925px;
-	}
-}
-
-@media (min-width: 1150px) {
-	.bs-container {
-		width: 1115px;
-	}
+.bs-navbar {
+	margin-left: -15px;
 }
 
 .bs-navbar::after {
@@ -105,16 +83,41 @@ body.simple {
 	padding: 0 5px;
 }
 
-.wrap {
+#wrap, .bs-container {
 	max-width: inherit;
 	margin: 0;
 	padding: 0;
 	border: none;
 }
 
+@media only screen and (min-width: 1150px) {
+	#wrap, .bs-container {
+		max-width: 1090px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 1150px) {
+	#wrap, .bs-container {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	#wrap, .bs-container {
+		padding: 0 20px;
+	}
+}
+
+@media only screen and (max-width:700px) {
+	#wrap, .bs-container {
+		padding: 0 10px;
+	}
+}
+
 .navbar {
 	background-color: #fff;
-	margin: 20px;
+	margin: 15px 0 20px;
 	border: 1px solid #ccc;
 	border-radius: 3px;
 }
@@ -165,8 +168,9 @@ h2.memberlist-title {
 	display: none;
 }
 
-.page-body {
-	padding: 0 20px;
+#page-header, #page-body {
+	padding: 0;
+	margin: 0;
 }
 
 .action-bar  {
@@ -421,44 +425,13 @@ div.time > span {
 	margin-bottom: 10px;
 }
 
-/* responsive.css changes */
-@media only screen and (max-width: 920px), only screen and (max-device-width: 920px) {
-
-	#wrap {
-		padding: 0;
-		border-width: 0;
-		border-radius: 0;
-		box-shadow: none;
-	}
-}
-
-@media only screen and (max-width: 860px), only screen and (max-device-width: 860px) {
-	#wrap {
-		width: auto;
-	}
-}
-
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
-
-	.navbar {
-		margin: 10px;
-	}
 
 	.headerbar + .navbar {
 		margin-top: 20px;
 	}
 
-	.forabg {
-		margin: 0;
-	}
-
-	.page-body {
-		padding: 10px;
-		padding-top: 1px;
-		margin-top: -1px;
-	}
-
-	.headerbar {
+	.headerbar, .navbar, .forabg, .forumbg, .post, .panel {
 		margin-left: 0;
 		margin-right: 0;
 	}

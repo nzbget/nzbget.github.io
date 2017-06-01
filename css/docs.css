@@ -90,6 +90,9 @@ body {
   border-color: #f9f9f9;
 }
 
+.nav.navbar-nav {
+  margin-left: -15px;
+}
 
 /*
  * Footer
@@ -527,16 +530,19 @@ h1[id] {
 /*  Documentaton page */
 
 .bs-docs-wiki .bs-docs-masthead {
-  padding-top: 20px;
-  padding-bottom: 20px;
+	padding: 20px 0;
+	text-align: center;
+	background-color: #3e8c25;
+	margin-bottom: 10px;
 }
 
-.bs-docs-wiki .bs-docs-masthead h1 {
-  font-size: 40px;
-  line-height: 30px;
-  font-weight: 500;
-  color: #fff;
-  text-align: left;
+.bs-docs-wiki  .bs-docs-masthead h1 {
+	font-size: 40px;
+	line-height: 40px;
+	font-weight: 500;
+	color: #fff;
+	text-align: left;
+	margin: 15px 0px 5px 0px;
 }
 
 .bs-docs-wiki .bs-docs-featurette {
@@ -606,16 +612,39 @@ h1[id] {
   line-height: 22px;
 }
 
-@media (min-width: 768px) {
+.bs-container {
+	max-width: inherit;
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+@media only screen and (min-width: 1150px) {
 	.bs-container {
-		width: 730px;
+		max-width: 1090px;
+		margin: 0 auto;
+	}
+}
+
+@media only screen and (max-width: 1149px) {
+	.bs-container {
+		padding: 0 30px;
+	}
+}
+
+@media only screen and (max-width: 960px) {
+	.bs-container {
+		padding: 0 20px;
+	}
+}
+
+@media only screen and (max-width:700px) {
+	.bs-container {
+		padding: 0 10px;
 	}
 }
 
 @media (min-width: 960px) {
-  .container {
-    width: 925px;
-  }
   .docs-content {
     margin-right: 230px;
   }
@@ -628,9 +657,6 @@ h1[id] {
 }
 
 @media (min-width: 1150px) {
-  .container {
-    width: 1115px;
-  }
   .docs-content {
     margin-right: 260px;
   }
