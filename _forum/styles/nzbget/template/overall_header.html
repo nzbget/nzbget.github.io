@@ -99,7 +99,16 @@
 
 <main class="bs-docs-masthead">
 	<div class="bs-container">
-		<h1>NZBGet : Forum</h1>
+		<h1>NZBGet :
+			<!-- IF S_IN_MCP -->{L_MCP}
+			<!-- ELSEIF S_IN_UCP && PAGE_TITLE == "Register"-->Registration
+			<!-- ELSEIF S_IN_UCP && PAGE_TITLE == "Login"-->Login
+			<!-- ELSEIF S_IN_UCP -->{L_UCP}
+			<!-- ELSEIF PAGE_TITLE == "Index page"-->Forum
+			<!-- ELSEIF PAGE_TITLE == "Post a new topic"-->{FORUM_NAME}
+			<!-- ELSEIF PAGE_TITLE == "Post a reply"-->{TOPIC_TITLE}
+			<!-- ELSE -->{PAGE_TITLE}
+			<!-- ENDIF --></h1>
 	</div>
 </main>
 

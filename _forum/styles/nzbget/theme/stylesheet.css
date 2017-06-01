@@ -1,13 +1,3 @@
-/*  phpBB3 Style Sheet
-    --------------------------------------------------------------
-	Style name:			prosilver Special Edition
-	Based on style:		prosilver (the default phpBB 3.2.x style)
-	Original author:	Tom Beddard ( http://www.subblue.com/ )
-	Modified by:		phpBB Limited ( https://www.phpbb.com/ )
-    --------------------------------------------------------------
-*/
-
-/* colours.css changes */
 html, body {
 	background-color: #fff;
 	font-size: 12px;
@@ -142,6 +132,14 @@ body.simple {
 	display: none;
 }
 
+#page-header .navbar {
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-radius: 0;
+	padding: 0 0 10px 0;
+}
+
 #page-footer .navbar {
 	display: none;
 }
@@ -160,6 +158,11 @@ ul.topiclist li {
 
 .content h2, .panel h2 {
 	color: #333;
+}
+
+h2.forum-title, h2.topic-title, h2.posting-title, h2.solo, h2.ucp-title,
+h2.memberlist-title {
+	display: none;
 }
 
 .page-body {
@@ -193,7 +196,8 @@ ul.topiclist li {
 #postform .panel.bg2,
 #post div.panel:nth-child(2),
 #agreement div.panel:nth-child(2),
-#register div.panel:nth-child(3) {
+#register div.panel:nth-child(3),
+form[action='./search.php'] div.panel:nth-child(3) {
 	background-color: inherit;
 	border: none;
 }
