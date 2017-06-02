@@ -274,6 +274,11 @@
 		<!-- ENDIF -->
 
 		<div class="pagination">
+			<!-- IF U_WATCH_FORUM_LINK and not S_IS_BOT -->
+				<a href="{U_WATCH_FORUM_LINK}" title="{S_WATCH_FORUM_TITLE}" data-ajax="toggle_link" data-toggle-class="icon <!-- IF S_WATCHING_FORUM -->fa-check-square-o<!-- ELSE -->fa-square-o<!-- ENDIF --> fa-fw" data-toggle-text="{S_WATCH_FORUM_TOGGLE}" data-toggle-url="{U_WATCH_FORUM_TOGGLE}">
+					<span>{S_WATCH_FORUM_TITLE}</span>
+				</a> &bull; 
+			<!-- ENDIF -->
 			<!-- IF not S_IS_BOT and U_MARK_TOPICS and .topicrow --><a href="{U_MARK_TOPICS}" data-ajax="mark_topics_read">{L_MARK_TOPICS_READ}</a> &bull; <!-- ENDIF -->
 			{TOTAL_TOPICS}
 			<!-- IF .pagination -->
