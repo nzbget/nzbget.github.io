@@ -26,6 +26,7 @@
 
 </div>
 
+<!-- IF FALSE -->
 	<div class="copyright">
 		<!-- EVENT overall_footer_copyright_prepend -->
 		{CREDIT_LINE}
@@ -35,11 +36,28 @@
 		<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
 		<!-- IF U_ACP --><br /><strong><a href="{U_ACP}">{L_ACP}</a></strong><!-- ENDIF -->
 	</div>
+<!-- ENDIF -->
 
 <div>
 	<a id="bottom" class="anchor" accesskey="z"></a>
 	<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
 </div>
+
+<footer class="bs-docs-footer" role="contentinfo">
+	<p>{CREDIT_LINE}</p>
+	<p>Forum Hosting by <a href="http://www.tuxfamily.org">TuxFamily.org</a></p>
+    <ul class="bs-docs-footer-links muted">
+      <li><a href="/download">Download</a></li>
+      <li>&middot;</li>
+      <li><a href="/documentation">Documentation</a></li>
+      <li>&middot;</li>
+      <li><a href="http://forum.nzbget.net">Forum</a></li>
+      <li>&middot;</li>
+      <li><a href="https://github.com/nzbget/nzbget">GitHub</a></li>
+      <li>&middot;</li>
+      <li><a href="/donation">Donate</a></li>
+    </ul>
+</footer>
 
 <script type="text/javascript" src="{T_JQUERY_LINK}"></script>
 <!-- IF S_ALLOW_CDN --><script type="text/javascript">window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script><!-- ENDIF -->

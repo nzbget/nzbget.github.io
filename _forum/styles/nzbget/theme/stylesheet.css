@@ -62,7 +62,48 @@ html, body {
 	text-decoration: none;
 }
 
-/* END OF PAGE HEADER */
+/*
+ * Footer
+ *
+ * Separated section of content at the bottom of all pages, save the homepage.
+ */
+
+.bs-docs-footer {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	color: #777;
+	text-align: center;
+	border-top: 1px solid #e5e5e5;
+}
+.bs-docs-footer, .bs-docs-footer p, .bs-docs-footer-links {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 14px;
+	line-height: 1.42857143;
+	margin: 0;
+}
+.bs-docs-footer a {
+	color: #428bca;
+}
+.bs-docs-footer a:hover, .bs-docs-footer a:focus {
+	color: #2a6496;
+}
+.bs-docs-footer ul {
+	margin-bottom: 10px;
+}
+.bs-docs-footer-links {
+	margin-top: 20px;
+	padding-left: 0;
+	color: #999;
+}
+.bs-docs-footer-links li {
+	display: inline;
+	padding: 0 2px;
+}
+.bs-docs-footer-links li:first-child {
+	padding-left: 0;
+}
+
+/* END OF COMMON STYLES */
 
 .bg3 {
 	background-color: #d0d0d0;

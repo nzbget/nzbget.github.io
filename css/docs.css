@@ -119,13 +119,9 @@ body {
 .bs-docs-footer-links li:first-child {
   padding-left: 0;
 }
-
-@media (min-width: 768px) {
-  .bs-docs-footer p {
-    margin-bottom: 0;
-  }
+.bs-docs-footer p {
+  margin-bottom: 0;
 }
-
 
 
 /*
