@@ -86,30 +86,19 @@ body.simple {
 #wrap, .bs-container {
 	max-width: inherit;
 	margin: 0;
-	padding: 0;
+	padding: 0 20px;
 	border: none;
 }
 
 @media only screen and (min-width: 1150px) {
 	#wrap, .bs-container {
-		max-width: 1090px;
+		max-width: 1110px;
 		margin: 0 auto;
+		padding: 0;
 	}
 }
 
-@media only screen and (max-width: 1150px) {
-	#wrap, .bs-container {
-		padding: 0 30px;
-	}
-}
-
-@media only screen and (max-width: 960px) {
-	#wrap, .bs-container {
-		padding: 0 20px;
-	}
-}
-
-@media only screen and (max-width:700px) {
+@media only screen and (max-width: 700px) {
 	#wrap, .bs-container {
 		padding: 0 10px;
 	}

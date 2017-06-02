@@ -547,7 +547,7 @@ h1[id] {
 
 .bs-docs-wiki .bs-docs-featurette {
   text-align: left;
-  padding-top: 30px;
+  padding-top: 10px;
 }
 
 .bs-docs-wiki {
@@ -581,8 +581,8 @@ h1[id] {
 }
 
 .docs-sidebar {
-  padding-left: 40px;
-  width: 230px;
+  padding-left: 25px;
+  width: 205px;
   margin-bottom: 20px;
   float: right;
   display: none;
@@ -591,6 +591,7 @@ h1[id] {
 .docs-sidebar h1 {
   font-size: 20px;
   color: #666;
+  margin-top: 0;
 }
 
 .docs-sidebar h2 {
@@ -616,41 +617,19 @@ h1[id] {
 .bs-container {
 	max-width: inherit;
 	margin: 0;
-	padding: 0;
+	padding: 0 20px;
 	border: none;
 }
 
 @media only screen and (min-width: 1150px) {
 	.bs-container {
-		max-width: 1090px;
+		max-width: 1110px;
 		margin: 0 auto;
-	}
-  .docs-content {
-    margin-left: 20px;
-    margin-right: 260px;
-  }
-}
-
-@media only screen and (max-width: 1149px) {
-	.bs-container {
-		padding: 0 30px;
-	}
-  .docs-content {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-}
-
-@media only screen and (max-width: 960px) {
-	.bs-container {
-		padding: 0 20px;
+		padding: 0;
 	}
 }
 
-@media only screen and (min-width: 920px) {
-  .docs-content {
-    margin-right: 230px;
-  }
+@media only screen and (min-width: 868px) {
   .docs-sidebar {
     display: block;
   }
@@ -660,8 +639,4 @@ h1[id] {
 	.bs-container {
 		padding: 0 10px;
 	}
-  .docs-content {
-    margin-left: 0px;
-    margin-right: 0px;
-  }
 }
