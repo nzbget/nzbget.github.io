@@ -81,19 +81,12 @@ html, body {
 	line-height: 1.42857143;
 	margin: 0;
 }
-.bs-docs-footer a {
-	color: #428bca;
-}
-.bs-docs-footer a:hover, .bs-docs-footer a:focus {
-	color: #2a6496;
-}
 .bs-docs-footer ul {
 	margin-bottom: 10px;
 }
 .bs-docs-footer-links {
 	margin-top: 20px;
 	padding-left: 0;
-	color: #999;
 }
 .bs-docs-footer-links li {
 	display: inline;
@@ -177,11 +170,11 @@ body.simple {
 	display: none;
 }
 
-a, h3 {
+h3 {
 	color: #444;
 }
 
-a:hover, a:focus {
+a, a:hover, a:focus {
 	color: #444;
 }
 

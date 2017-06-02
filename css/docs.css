@@ -110,7 +110,9 @@ body {
 .bs-docs-footer-links {
   margin-top: 20px;
   padding-left: 0;
-  color: #999;
+}
+.bs-docs-footer a {
+	color: #444;
 }
 .bs-docs-footer-links li {
   display: inline;
