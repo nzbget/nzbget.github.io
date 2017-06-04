@@ -448,6 +448,14 @@ div.time > span {
 	margin-bottom: 10px;
 }
 
+.badge {
+	background-color: #25AF33;
+}
+
+.icon.icon-red, a:hover .icon.icon-red {
+	color: #25AF33;
+}
+
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 
 	.headerbar + .navbar {
