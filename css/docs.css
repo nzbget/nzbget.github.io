@@ -108,6 +108,7 @@ body {
   border-top: 1px solid #e5e5e5;
 }
 .bs-docs-footer-links {
+	font-size: 14px;
   margin-top: 20px;
   padding-left: 0;
 }
@@ -123,6 +124,7 @@ body {
 }
 .bs-docs-footer p {
   margin-bottom: 0;
+	font-size: 13px;
 }
 
 
