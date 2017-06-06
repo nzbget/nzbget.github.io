@@ -508,11 +508,11 @@ Accept: homeland
 
 ### How duplicate scores work
 - In addition to duplicate key each nzb-file in download queue has field "duplicate score";
-- If RSS feed has multiple items with the same duplicate key they all are added to queue;
+- If RSS feed has multiple items with the same duplicate key they all are added;
 - The program chooses the item with the highest score and downloads it;
-- All other items for the same duplicate key remains paused; they will be used as backup if the first download fail;
-- If download has failed and NZBGet needs to download a backup, it will look for a duplicate having highest score from the remaining nzb-files;
-- When RSS feed is checked for the next time, duplicates with lower scores (when already successfully downloaded) are not downloaded; If a duplicate with higher score is found, it is downloaded.
+- All other items for the same duplicate key are moved into history as duplicate backups; they will be used if the first download fail;
+- If download has failed and NZBGet needs to download a backup, it looks in the history for a duplicate having highest score from the remaining nzb-files;
+- When RSS feed is checked for the next time, duplicates with lower scores (when already successfully downloaded) are not downloaded (but put into history); If a duplicate with higher score is found, it is downloaded.
 
 ### Stop watching
 If you have watched (in the sense "watching TV") the 720p-version before 1080p-version was downloaded and you don't care about 1080p-version anymore you can tell NZBGet to stop watching (in the sense "looking for") the title. Open the history item in web-interface and from actions menu choose "Mark as good". For more about this see [History and duplicate check](#history-and-duplicate-check).
@@ -591,15 +591,15 @@ Explanation:
 The dupekey generation part will produce different keys for different date formats even if they represent the same date ("2013.09.20" vs "2013-09-20"). The regular expression could be improved to handle this but this is usually not necessary because most posters use common format "yyyy.mm.dd".
 
 ## History and duplicate check
-When a new nzb-file is added the program need to check if this same nzb-file or the same title is already queued or if it was downloaded before. Since the same titles may appear in RSS feeds any time later, the information about downloaded files must be stored for a long time.
+When a new nzb-file is added the program needs to check if this same nzb-file or the same title is already queued or if it was downloaded before. Since the same titles may appear in RSS feeds any time later, the information about downloaded files must be stored for a long time.
 
-In order to reduce memory usage and data transfer to web-interface there is a program option **KeepHistory** saying how long items must be kept in history (30 days by default). This short period of time is however not sufficient for a proper duplicate check. Because of this after expiration of KeepHistory-interval the items are not removed from history completely. Instead almost all information associated with history items is discarded and only few fields required for duplicate check are kept (title, duplicate key/score, status and few others).
+In order to reduce memory usage and data transfer to web-interface there is a program option **KeepHistory** saying how long items must be kept in history (30 days by default). This short period of time is however not sufficient for a proper duplicate check. Because of this, after expiration of KeepHistory-interval the items are not removed from history completely. Instead almost all information associated with history items is discarded and only few fields required for duplicate check are kept (title, duplicate key/score, status and few others).
 
 Normal history items take about 2 KB memory each, reduced items require about 200 Bytes. A lot of them can be efficiently stored without problem even on devices with limited RAM.
 
-Reduced history items are not shown in web-interface on history tab by default. But there is a button "Old" to show them. Such items are marked with badge **DUP**. They can be searched and deleted like normal history items if necessary. All other history functions such as command "Post-process again" or statistics data are not available for dup-history-items.
+Reduced history items are not shown in web-interface on history tab by default. But there is a button "Hidden" to show them. Such items are marked with badge **Hidden**. They can be searched and deleted like normal history items if necessary. All other history functions such as command "Post-process again" or statistics data are not available for hidden history items.
 
-**TIP:** if history gets corrupted, this has fatal consequences for duplicate check. You should make regular backups of queue-directory (option *QueueDir*), which also contains history. The program must not run during backup. A script used to start or shutdown NZBGet is a good place for a backup command:
+**TIP:** if history gets corrupted, this has fatal consequences to duplicate check. You should make regular backups of queue-directory (option *QueueDir*), which also contains history. The program must not run during backup. A script used to start or shutdown NZBGet is a good place for a backup command:
 ```shell
 #!/bin/sh
 zip -r queue-$(date +%Y%m%d_%H%M%S).zip /path/to/queuedir
@@ -609,4 +609,13 @@ nzbget -D
 ### Mark as good/bad
 In history dialog in actions menu there are two commands **Mark as good** and **Mark as bad** directly linked to duplicate handling.
 - **Mark as good**: when this command is executed on a history item, the item become marked as "good". If any duplicates will be added (from RSS or other sources) they will be ignored. Normally, when there is no good-item for duplicate but if a success-item exist, all added duplicates are put to history with dupe-status as backups. This is not happening when a good-item exist. Another effect of marking an item as good: all existing dupe-items are removed from recent history. They are put into dup-history (old-history) and can be viewed in web-interface by clicking on button **Old** in the history list.
-- **Mark as bad**: this command is available only for history items with success download status. You can use it if you find out the the downloaded file is not good (wrong language, bad quality, etc.) and you want download another version of the title. After marking an item as bad, if there are records with dupe-status for the same title, they are moved back from history to download queue and one of them become unpaused whereas other remain paused (backups). If there are no backup duplicates in history the title will be watched in RSS feeds and will be downloaded when it becomes available.
+- **Mark as bad**: this command is available only for history items with success download status. You can use it if you find out the downloaded file is not good (wrong language, bad quality, etc.) and you want download another version of the title. After marking an item as bad, if there are records with dupe-status for the same title, they are moved back from history to download queue and one of them become unpaused whereas other remain paused (backups). If there are no backup duplicates in history the title will be watched in RSS feeds and will be downloaded when it becomes available.
+
+### History statuses
+Regarding duplicate check the following statuses of history items are relevant:
+- **Success** - the nzb successfully downloaded and post-processes. The duplicates will be downloaded only if having higher duplicate score or force duplicate mode.
+- **Failure** - the nzb has failed. If there are duplicates one of them will be downloaded (must have been already moved from history to queue). Otherwise the feeds will be watched for the same title and the one with the highest score will be downloaded.
+- **Dupe** - the nzb was deleted by duplicate check, because there is another item in queue. The item with status "Dupe" maybe used automatically if the item which is in queue fails.
+- **Copy** - the nzb was deleted by duplicate check because this nzb-file already exists in download queue or in history. Here the nzb is the exactly same copy of another nzb. This status can occur only if you try to add the same nzb again. The exact content of nzb is compared here (via article IDs).
+- **Good** - the nzb was marked as good by user using command *Mark as good* in history dialog. Any new arrived duplicates will be ignored (not added to queue nor to history).
+- **Bad** - the nzb was marked as bad by user using command *Mark as bad* in history dialog. The item is process like item with **Failure** status.
