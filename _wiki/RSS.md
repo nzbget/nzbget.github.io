@@ -586,9 +586,38 @@ A(dupekey:tv=Jay.Leno-${1}): Jay Leno $([0-9]+\.[0-9]+\.[0-9]+)
 ```
 Explanation:
 - Download only HD versions (720p or 1080p);
-- Download Jay Leno TV show, only titles having date stamp (like "2013.09.20" or "2013-09-20");
+- Download Jay Leno TV show, only titles having date stamp (like "2013.09.20");
 - Generate duplicate key consisting of TV show name and air date. It produces keys like "tv=Jay.Leno-2013.09.20".
 The dupekey generation part will produce different keys for different date formats even if they represent the same date ("2013.09.20" vs "2013-09-20"). The regular expression could be improved to handle this but this is usually not necessary because most posters use common format "yyyy.mm.dd".
+
+### Daily TV shows (different date formats)
+If the same show can be posted with different date formats (for example **30.05.2017** and **2017.05.30**) we need to generate duplicate keys where date is normalized to the same format. This is necessary for duplicate check to identify the items as the same title.
+
+The following filter should capture all three formats: **30.05.2017**, **2017.05.30** and **30.05.17**:
+```
+# 30.05.2017
+A(dupekey:tv=show.name-${2}.${3}.${4}): $(\.([0-9]{2})\.([0-9]{2})\.([0-9]{4})\.) show.name
+
+# 2017.05.30
+A(dupekey:tv=show.name-${4}.${3}.${2}): $(\.([0-9]{4})\.([0-9]{2})\.([0-9]{2})\.) show.name
+
+# 30.05.17
+A(dupekey:tv=show.name-${2}.${3}.20${4}): $(\.([0-9]{2})\.([0-9]{2})\.([0-9]{2})\.) show.name
+```
+
+Pay attention to the different order of match-variables for each date format. Append additional `20` if necessary to extend year to four digits.
+
+If you need to capture both two-digits year formats **30.05.17** and **17.05.30** that is a bigger problem as the regex cannot determine where is the year (well, in this example it's clear the year can't be "30" but something like **16.05.17** is not that obvious. At best use directly `17` in the regex instead of `([0-9]{2})`:
+
+```
+# 30.05.17
+A(dupekey:tv=show.name-${2}.${3}.2017): $(\.([0-9]{2})\.([0-9]{2})\.17\.) show.name
+```
+
+**TIP:** To test how dupekeys are generated hover mouse on status-field in feed results of the feed filter dialog in web-interface.
+
+## Feed scripts
+Sometimes you may need a more sophisticated processing of feed items, not achievable with built-in filters. In such case there is a possibility to process the feed with an external script. Use option **FeedX.Extension** to assign a script to the feed. When the feed is processed NZBGet saved the feed content into an xml-file and executes the extension script. The script can read and modify the xml-file. When the script terminates NZBGet loads the modified xml-file from disk and processes it further. See [Feed scripts](/Feed_scripts) for details.
 
 ## History and duplicate check
 When a new nzb-file is added the program needs to check if this same nzb-file or the same title is already queued or if it was downloaded before. Since the same titles may appear in RSS feeds any time later, the information about downloaded files must be stored for a long time.
