@@ -75,7 +75,7 @@ permalink: 404.html
 		else if (path && path.indexOf('_') > -1)
 		{
 			// replace underscores with hyphens
-			newPath = path.replace('_', '-').toLowerCase();
+			newPath = path.replace(/_/g, '-').toLowerCase();
 		}
 		else if (path && path.toLowerCase() !== path)
 		{
