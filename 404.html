@@ -72,6 +72,16 @@ permalink: 404.html
 			// redirect to new forum subdomain
 			newPath = 'http://forum.nzbget.net/' + path.substr(6);
 		}
+		else if (path && path.indexOf('_') > -1)
+		{
+			// replace underscores with hyphens
+			newPath = path.replace('_', '-').toLowerCase();
+		}
+		else if (path && path.toLowerCase() !== path)
+		{
+			// convert to lower case
+			newPath = path.toLowerCase();
+		}
 
 		if (newPath) {
 			// redirect to new address
