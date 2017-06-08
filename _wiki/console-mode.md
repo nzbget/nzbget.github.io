@@ -69,7 +69,7 @@ or to delete files from queue:
     nzbget -E D 3 10-15 20-21 16 
 
 ## Command line reference
-For more information on using the program via command line see [Command line reference](Command_line_reference).
+For more information on using the program via command line see [Command line reference](command-line-reference).
 
 ## Running client & server on separate machines
 Since NZBGet communicates via TCP/IP it's possible to have a server running on one computer and control it from another computer.

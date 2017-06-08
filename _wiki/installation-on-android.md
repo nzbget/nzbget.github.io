@@ -21,4 +21,4 @@ All steps to perform on your Android device:
 Most scripts are written in Python. Unfortunately there is no Python for Android. That means most scripts will not work. Bash scripts may work but you may need to install BusyBox from Play store. You also must configure option **ScriptDir** to system partition (scripts cannot be launched from sdcard). Getting post-processing scripts to cooperate is a work in progress. Please post your questions and solutions in forum topic [\[New Feature\] Android installer](http://forum.nzbget.net/viewtopic.php?f=10&t=2061).
 
 ## Installation on Android Emulator
-The steps documented above will not work in Android Emulator. Installation there requires more manual work. Please see [Installation on Android emulator](Installation_on_Android_emulator) for details.
+The steps documented above will not work in Android Emulator. Installation there requires more manual work. Please see [Installation on Android emulator](installation-on-android-emulator) for details.

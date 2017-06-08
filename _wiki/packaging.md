@@ -4,7 +4,7 @@
 This document provides information for creators of binary NZBGet packages.
 
 ## Branches and releases ##
-New features and fixes are added to NZBGet on daily basis. The actual source code can be obtained via source control repository as explained in [Building development version](Building_development_version). This most actual version is called **development** version (short **devel** or **develop**) or **git version**. Development code may contain serious bugs and is therefore not recommended for average users.
+New features and fixes are added to NZBGet on daily basis. The actual source code can be obtained via source control repository as explained in [Building development version](building-development-version). This most actual version is called **development** version (short **devel** or **develop**) or **git version**. Development code may contain serious bugs and is therefore not recommended for average users.
 
 Implementing of one feature may take several days or even weeks. A short test of functionality is then performed on several platforms. If the program seems to work fine a new **testing** release is made available for public. Testing releases are provided from [Download page](download) and a new announcement is published on forum. Testing releases are good for real use and are recommended for experienced users familiar with NZBGet. Testing releases may have serious bugs as well but this happen rare.
 

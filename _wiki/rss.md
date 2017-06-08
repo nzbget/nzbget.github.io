@@ -617,7 +617,7 @@ A(dupekey:tv=show.name-${2}.${3}.2017): $(\.([0-9]{2})\.([0-9]{2})\.17\.) show.n
 **TIP:** To test how dupekeys are generated hover mouse on status-field in feed results of the feed filter dialog in web-interface.
 
 ## Feed scripts
-Sometimes you may need a more sophisticated processing of feed items, not achievable with built-in filters. In such case there is a possibility to process the feed with an external script. Use option **FeedX.Extension** to assign a script to the feed. When the feed is processed NZBGet saved the feed content into an xml-file and executes the extension script. The script can read and modify the xml-file. When the script terminates NZBGet loads the modified xml-file from disk and processes it further. See [Feed scripts](/Feed_scripts) for details.
+Sometimes you may need a more sophisticated processing of feed items, not achievable with built-in filters. In such case there is a possibility to process the feed with an external script. Use option **FeedX.Extension** to assign a script to the feed. When the feed is processed NZBGet saved the feed content into an xml-file and executes the extension script. The script can read and modify the xml-file. When the script terminates NZBGet loads the modified xml-file from disk and processes it further. See [Feed scripts](feed-scripts) for details.
 
 ## History and duplicate check
 When a new nzb-file is added the program needs to check if this same nzb-file or the same title is already queued or if it was downloaded before. Since the same titles may appear in RSS feeds any time later, the information about downloaded files must be stored for a long time.

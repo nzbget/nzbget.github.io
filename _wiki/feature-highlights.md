@@ -32,7 +32,7 @@ All this allows NZBGet to run on systems with as little RAM as 32 MB or less and
 There is another aspect of efficiency however. If the system is powerful enough and has a lot of resources - can they be used to improve download and post-processing speed? Sure, they can. NZBGet offers a bunch of options to configure the program for systems of different leagues, for example:
 - use memory cache to decrease amount of disk operations;
 - use more threads for downloading (connections) or for par-repair;
-- etc., etc. - see [Performance tips](Performance_tips) for details.
+- etc., etc. - see [Performance tips](performance-tips) for details.
 
 ## Fast deobfuscation
 Many files posted to Usenet nowadays have obfuscated file names, for example:
@@ -113,7 +113,7 @@ Other programs often have a built-in special web-server for web-interface, which
 In NZBGet there is no such difference. The web-interface consists of a static html-page with (a lot of) javascript-code. NZBGet's built-in web-servers only serves the static web-application content. After the web-page is loaded into browser the javascript-application activates and communicates with NZBGet via API to receive the list of downloads, messages, etc. and to perform edit actions.
 
 ## RSS with duplicate check
-For whose of you who can't or don't want to use additional programs to automate downloads **NZBGet offers very powerful [RSS](RSS) support**. Example RSS filter:
+For whose of you who can't or don't want to use additional programs to automate downloads **NZBGet offers very powerful [RSS](rss) support**. Example RSS filter:
 ```
 Reject: age:>10
 Require: 720p
@@ -122,6 +122,6 @@ Accept: game of thrones S03E##
 Accept: dexter S08E##
 ```
 
-One big issue you may have when using RSS in other programs is a large amount of duplicate downloads. it's because same titles are usually posted to Usenet by more than one posters. **NZBGet has a powerful [duplicate handling](RSS#duplicates) to avoid multiple downloads of the same title**.
+One big issue you may have when using RSS in other programs is a large amount of duplicate downloads. it's because same titles are usually posted to Usenet by more than one posters. **NZBGet has a powerful [duplicate handling](rss#duplicates) to avoid multiple downloads of the same title**.
 
 Not only it does that but it also handles failed downloads and automatically falls back to other releases of the same title if necessary.

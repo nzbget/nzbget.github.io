@@ -8,12 +8,12 @@ To activate a scan script or multiple scripts put them into **ScriptDir**, then 
 ## Writing scan scripts
 Scan scripts are a kind of *Extension scripts*.
 
-**Please read [Extension scripts](Extension_scripts) for general information about extension scripts first!**
+**Please read [Extension scripts](extension-scripts) for general information about extension scripts first!**
 
 This document describes the unique features of scan scripts.
 
 ## Configuration options
-Like other extension scripts the scan scripts get [NZBGet configuration options](Extension_scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](Extension_scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about the file currently being scanned is passed as well:
+Like other extension scripts the scan scripts get [NZBGet configuration options](extension-scripts#nzbget-configuration-options) (env. vars with prefix **NZBOP_**) and [Script configuration options](extension-scripts#script-configuration-options) (env. vars with prefix **NZBPO_**) passed. In addition the information about the file currently being scanned is passed as well:
 
 ## File information
 - **NZBNP_DIRECTORY** - Path to directory, where file is located. It is a directory specified by the option **NzbDir** or a subdirectory.
@@ -24,9 +24,9 @@ Like other extension scripts the scan scripts get [NZBGet configuration options]
 - **NZBNP_PRIORITY** - Priority of nzb-file. The script can change this setting (see later).
 - **NZBNP_TOP** - Flag indicating that the file will be added to the top of queue: 0 or 1. The script can change this setting (see later).
 - **NZBNP_PAUSED** - Flag indicating that the file will be added as paused: 0 or 1. The script can change this setting (see later).
-- **NZBNP_DUPEKEY** - Duplicate key (see [RSS](RSS#duplicates)). The script can change this setting (see later).
-- **NZBNP_DUPESCORE** - Duplicate score (see [RSS](RSS#duplicates)). The script can change this setting (see later).
-- **NZBNP_DUPEMODE** - Duplicate mode, one of *SCORE, ALL, FORCE* (see [RSS](RSS#duplicates)). The script can change this setting (see later).
+- **NZBNP_DUPEKEY** - Duplicate key (see [RSS](rss#duplicates)). The script can change this setting (see later).
+- **NZBNP_DUPESCORE** - Duplicate score (see [RSS](rss#duplicates)). The script can change this setting (see later).
+- **NZBNP_DUPEMODE** - Duplicate mode, one of *SCORE, ALL, FORCE* (see [RSS](rss#duplicates)). The script can change this setting (see later).
 
 ## Control commands
 Scan scripts can change nzb-name, category, priority, post-processing parameters and top-/paused-flags of the nzb-file by printing special messages into standard output (which is processed by NZBGet).

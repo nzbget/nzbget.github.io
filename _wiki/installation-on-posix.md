@@ -4,7 +4,7 @@ title: Installation on POSIX
 ## Prerequisites ##
 NZBGet is a cross-platform program which works on many platforms including many POSIX systems.
 
-This article explains how to compile NZBGet from sources on a POSIX system. For cross compiling tips please refer to [Cross compiling](Cross_compiling). Linux users can use universal installer which includes precompiled binaries for many CPU architectures - see [Installation on Linux](Installation_on_Linux).
+This article explains how to compile NZBGet from sources on a POSIX system. For cross compiling tips please refer to [Cross compiling](cross-compiling). Linux users can use universal installer which includes precompiled binaries for many CPU architectures - see [Installation on Linux](installation-on-linux).
 
 NZBGet absolutely needs the following libraries: 
 * libstdc++ (usually part of compiler)
@@ -34,7 +34,7 @@ sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev -y
 ```
 
 ## Prerequisites for C++ compiler ##
-NZBGet uses modern C++ features and requires a C++ compiler supporting C++14 ISO standard. The configure-script performs a basic check and fails if C++ compiler doesn't provide required support. In special cases the check can be disabled (not recommended), see configure options below. For details see [Prerequisites for C++ compiler](Prerequisites_for_C++_compiler).
+NZBGet uses modern C++ features and requires a C++ compiler supporting C++14 ISO standard. The configure-script performs a basic check and fails if C++ compiler doesn't provide required support. In special cases the check can be disabled (not recommended), see configure options below. For details see [Prerequisites for C++ compiler](prerequisites-for-c++-compiler).
 
 ## Compiling ##
 * download NZBGet source code from [Download page](download)
@@ -147,4 +147,4 @@ After the download of nzb-file is completed NZBget can call post-process-scripts
 
 NZBGet distribution comes with two example scripts.
 
-For more information see [Post-processing scripts](Post-processing_scripts) and [Catalog of post-processing scripts](Catalog_of_post-processing_scripts).
+For more information see [Post-processing scripts](post-processing-scripts) and [Catalog of post-processing scripts](catalog-of-post-processing-scripts).

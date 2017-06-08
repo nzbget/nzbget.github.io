@@ -179,11 +179,11 @@ See post-processing script [EMail.py](https://github.com/nzbget/nzbget/blob/deve
 
 ## Extension script kinds
 Further reading:
-- [Post-processing scripts](Post-processing_scripts)
-- [Scan scripts](Scan_scripts)
-- [Queue scripts](Queue_scripts)
-- [Scheduler scripts](Scheduler_scripts)
-- [Feed scripts](Feed scripts)
+- [Post-processing scripts](post-processing-scripts)
+- [Scan scripts](scan-scripts)
+- [Queue scripts](queue-scripts)
+- [Scheduler scripts](scheduler-scripts)
+- [Feed scripts](feed-scripts)
 
 ## Tips
 ### Testing NZBGet version
@@ -200,7 +200,7 @@ if NZBGetVersion[0:5] < '11.1':
 ```
 
 ### Communication with NZBGet via command line
-NZBGet can be controlled via command line using remote commands. For documentation on available commands see [Command line reference](Command_line_reference).
+NZBGet can be controlled via command line using remote commands. For documentation on available commands see [Command line reference](command-line-reference).
 
 When calling NZBGet you need to know two things:
 - the location of NZBGet binary;

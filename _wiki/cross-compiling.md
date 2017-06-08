@@ -1,10 +1,10 @@
 ---
 ---
 ## Alternative to cross-compiling ##
-Before you try to cross-compile consider using the universal Linux installer which works on many platforms. See [Installation on Linux](Installation_on_Linux).
+Before you try to cross-compile consider using the universal Linux installer which works on many platforms. See [Installation on Linux](installation-on-Linux).
 
 ## Prerequisites ##
-You must have a working cross compiling environment. NZBGet also requires a C++ compiler supporting C++14 ISO standard, see [Prerequisites for C++ compiler](Prerequisites_for_C++_compiler) for details.
+You must have a working cross compiling environment. NZBGet also requires a C++ compiler supporting C++14 ISO standard, see [Prerequisites for C++ compiler](prerequisites-for-C++-compiler) for details.
 
 Before your start cross compiling NZBGet compile libxml2 first. NZBGet requires this library and the compiling of libxml2 is a good test to make sure your cross compiling environment is setup properly. If you can't build libxml2 please refer to HOW-TOs and other infos for the toolchain you use.
 
@@ -66,7 +66,7 @@ nzbget version: 15.0
 If you get errors like "missing libraries" or a general "file not found", then you should check if you use the proper toolchain, which is suited for your device and is compatible with your firmware version. Don't forget to upload and install libxml2.so.
 
 ## Adding features ##
-Now you can reconfigure NZBGet without **--disable**-swicthes. You will most likely get errors that the required libaries were not found since you have not built them yet. Please refer to [Installation on POSIX](Installation_on_POSIX) for the info what libraries are needed for NZBGet.
+Now you can reconfigure NZBGet without **--disable**-swicthes. You will most likely get errors that the required libaries were not found since you have not built them yet. Please refer to [Installation on POSIX](installation-on-posix) for the info what libraries are needed for NZBGet.
 
 ## Installing ##
 When compiled natively NZBGet is usually installed using command "make install", which installs the compiled binary file and supporting files in default directories. To create the snappshot of files required for installation on the target platform use parameter "DESTDIR" with command "make install":

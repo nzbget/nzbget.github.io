@@ -69,7 +69,7 @@ $ make install
 ```
 
 ### Using GCC 4.9 with NZBGet
-Now you can compile NZBGet as described in [Installation on POSIX](Installation_on_POSIX). However since we didn't install GCC into standard directory you have to tell `configure` and `make` where to find compiler binaries.
+Now you can compile NZBGet as described in [Installation on POSIX](installation-on-posix). However since we didn't install GCC into standard directory you have to tell `configure` and `make` where to find compiler binaries.
 
 #### Building NZBGet
 So instead of executing `./configure` and `make` you should do:

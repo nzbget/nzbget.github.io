@@ -1,6 +1,6 @@
 ---
 ---
-NZBGet contains a built-in [NNTP server](NServ_NNTP_server) which can be used to perform download speed tests independent from your connection line speed. That may be useful to determine hardware capabilities.
+NZBGet contains a built-in [NNTP server](nserv-nntp-server) which can be used to perform download speed tests independent from your connection line speed. That may be useful to determine hardware capabilities.
 
 This guide is oriented on Windows but it is applicable to other OS`es with path changes.
 
@@ -79,7 +79,7 @@ The download should begin and you can now observe the download speed.
 
    To minimize that effect when testing NZBGet you can pause download, add nzb to queue, close the browser, bring the console window of NZBGet to the front and resume download by pressing "P" or via click on tray icon.
 
-3. Take a look at [Performance tips](Performance_tips) for NZBGet.
+3. Take a look at [Performance tips](performance-tips) for NZBGet.
 
 4. Share your results with hardware details on [NZBGet forum](http://forum.nzbget.net/viewtopic.php?f=10&t=2707).
 
