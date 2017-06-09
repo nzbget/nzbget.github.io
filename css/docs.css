@@ -494,7 +494,8 @@ h1[id] {
 
 /*  Download page */
 
-.bs-docs-download .bs-docs-masthead h1 {
+.bs-docs-download .bs-docs-masthead h1,
+.bs-docs-info .bs-docs-masthead h1 {
   font-size: 60px;
   line-height: 60px;
   font-weight: 500;
@@ -525,6 +526,10 @@ h1[id] {
 .bs-docs-download .bs-docs-masthead .container,
 .bs-docs-download .bs-docs-featurette .container {
   max-width: 600px;
+}
+
+.bs-docs-info .bs-docs-masthead h1 {
+  text-align: center;
 }
 
 /*  Documentaton page */
