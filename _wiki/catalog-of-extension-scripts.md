@@ -1,8 +1,9 @@
 ---
-title: Catalog of post-processing scripts
+title: Catalog of extension scripts
+redirect_from: catalog-of-post-processing-scripts
 ---
 This documents lists few interesting post-processing and other extension scripts written for NZBGet.
-Even more scripts are available on sub-forum [Extension scripts](http://nzbget.sourceforge.net/forum/viewforum.php?f=8).
+Even more scripts are available on [Sub-forum Extension scripts](http://nzbget.sourceforge.net/forum/viewforum.php?f=8).
 
 Most scripts are written in python and work on many platforms including Linux, Mac, Windows.
 

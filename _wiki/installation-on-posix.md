@@ -147,4 +147,4 @@ After the download of nzb-file is completed NZBget can call post-process-scripts
 
 NZBGet distribution comes with two example scripts.
 
-For more information see [Post-processing scripts](post-processing-scripts) and [Catalog of post-processing scripts](catalog-of-post-processing-scripts).
+For more information see [Post-processing scripts](post-processing-scripts) and [Catalog of extension scripts](catalog-of-extension-scripts).

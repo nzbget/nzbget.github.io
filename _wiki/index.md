@@ -24,7 +24,7 @@ layout: wiki-index
 ## Usage
  - [Quick filter](quick-filter)
  - [Keyboard shortcuts](keyboard_shortcuts)
- - [Catalog of post-processing scripts](catalog-of-post-processing-scripts), also check sub-forum [Extension scripts](http://nzbget.net/forum/viewforum.php?f=8)
+ - [Catalog of extension scripts](catalog-of-extension-scripts), also check sub-forum [Extension scripts](http://nzbget.net/forum/viewforum.php?f=8)
  - [RSS and duplicate check](rss) - how to automate your downloads with RSS feeds
  - [VideoSort](https://github.com/nzbget/VideoSort) - sorting for downloaded video files
  - [Console mode](console-mode) - about using in terminal
