@@ -47,8 +47,8 @@ permalink: 404.html
 
 			<div id="suggestions">
 			<a href="/">Front Page</a> &mdash;
+			<a href="/documentation">Documentation</a>
 			<a href="https://github.com/nzbget/nzbget">GitHub Project</a> &mdash;
-			<a href="https://github.com/nzbget/nzbget/wiki">Documentation</a>
 			</div>
 		</div>
 		<div id="loading">
@@ -60,15 +60,14 @@ permalink: 404.html
 	<script language="javascript">
 		"use strict";
 
-{% include redirects.js %}
-		
 		var url = window.location.href;
 		var re = /^https?:\/\/[a-z0-9\.\-:]*\/(.*)$/;
 		var m = re.exec(url);
 		var path = m ? m[1] : null;
-		var newPath = redirects[path];
+		var newPath;
 
-		if (path && path.indexOf('forum') === 0) {
+		if (path && path.indexOf('forum') === 0)
+		{
 			// redirect to new forum subdomain
 			newPath = 'http://forum.nzbget.net/' + path.substr(6);
 		}
@@ -83,10 +82,13 @@ permalink: 404.html
 			newPath = path.toLowerCase();
 		}
 
-		if (newPath) {
+		if (newPath)
+		{
 			// redirect to new address
 			window.location.href = newPath;
-		} else {
+		}
+		else
+		{
 			// show 404 page content
 			document.body.style.background = '#f1f1f1';
 			document.getElementById('loading').style.display = 'none';
