@@ -21,3 +21,14 @@
 <!-- Favicons -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png">
 <link rel="shortcut icon" href="/images/favicon.ico">
+
+<!-- Redirection: HTTP->HTTPS -->
+<script language="javascript">
+	"use strict";
+	var url = window.location.href;
+	if (url.indexOf('http://nzbget.net') === 0)
+	{
+		// redirect to "https://"
+		window.location.href = 'https://' + url.substr(7);
+	}
+</script>
