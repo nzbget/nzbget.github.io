@@ -1,7 +1,7 @@
 ---
 title: Crash dump
 ---
-# About crash dumps
+## About crash dumps
 NZBGet contains bugs. Some of them causes program crashes. The bugs have to be
 found and eliminated. NZBGet supports two instruments to help with this:
 
@@ -14,8 +14,6 @@ Sometimes this is enough to find the bug.
 state into a file. The memory dump can then be loaded into debugger and analyzed.
 It includes the information about call stack (similar to the call stack trace above)
 but also includes values of all program variables, which is a big help.
-
-# Creating crash dumps
 
 NZBGet supports creating of crash dumps on Windows and Linux.
 

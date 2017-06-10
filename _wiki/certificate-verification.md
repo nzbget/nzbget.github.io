@@ -1,11 +1,11 @@
 ---
 ---
-# What is certificate verification
+## What is certificate verification
 When connecting to news servers (for downloading) or web servers (for fetching of rss feeds and nzb-files) the authenticity of servers must be validated using server security certificates. If the check fails that means the connection cannot be trusted and must be closed with an error message explaining the security issue.
 
 Older versions of NZBGet did not check server certificates and security was reduced. Starting from v19 NZBGet checks server certificates when option **CertCheck** is activated. Official NZBGet installation packages offered on NZBGet download page (for Windows, Mac OS X, Linux and FreeBSD) all have certificate verification enabled by default. If you update from older NZBGet version the verification will be automatically activated after you go to settings page and save settings (the new option **CertCheck** will be written into your config file).
 
-# CA root certificate store
+## CA root certificate store
 Each certificate is digitally signed by a certificate authority. There is a global list of trusted authorities. In order to perform certificate verification the program needs access to the certificates of trusted authorities -  **CA root certificate store**. In NZBGet it's location is set via option **CertStore**.
 
 Official NZBGet installation packages include the certificate store file and do not require additional configuration.
@@ -18,7 +18,7 @@ Mozilla maintains an up-to-date list of root certificates but in their own forma
 
     CertStore=/user/me/nzbget/cacert.pem
 
-# Dealing with certificate verification failures
+## Dealing with certificate verification failures
 When certificate verification is enabled an invalid server certificate produces an error message in NZBGet such as:
 
 > TLS certificate verification failed for secure.eu.thundernews.com: certificate hostname mismatch (*.sslusenet.com)
@@ -29,12 +29,12 @@ or
 
 The connection to server will be closed and download will not work. This is to protect you from hacker attacks.
 
-## Quick "fix" (merely a workaround)
+### Quick "fix" (merely a workaround)
 Unfortunately many Usenet providers have improper configuration on their servers and the errors like shown above are not that uncommon, even if there is no hacker attack in place. You should inform the server owner about the issue.
 
 A quick "fix" on your side is to disable certificate verification ("CertCheck=no"). This restores the old NZBGet behaviour (v18 and older) but you should know that your connection is insecure and you might be connecting to attacker's server without your awareness. Certain failures can be fixed in a better way, read on.
 
-## Hostname mismatch
+### Hostname mismatch
 Each certificate is issued for a certain host and the hostname is embedded into the certificate. It's easy for an attacker to obtain a valid certificate for a host he has admin access to (for example some web server) and then send it to the client. To detect this the client (NZBGet) must check if the hostname of the certificate matches the hostname the client wants to connect to.
 
 Many Highwinds resellers don't have their own certificates and the verification often fails with message like:
@@ -54,7 +54,7 @@ You can try the following hosts: news.sslusenet.com, us.sslusenet.com, de.ssluse
 
 **NOTE:** Changing of host in server settings resets downloaded volume statistics for that news server. The total downloaded volumes (for all servers) remains preserved.
 
-## Self signed certificate
+### Self signed certificate
 As was explained above each certificate is digitally signed by a certificate authority. There is a global list of trusted authorities. Obtaining a certificate signed by a trusted authority costs money and some (small) Usenet providers or web sites may sign their certificates themselves. When NZBGet detects such a certificate the connection fails with a message similar to:
 
 > TLS certificate verification failed for usenet.argeweb.nl: self signed certificate

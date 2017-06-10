@@ -6,7 +6,7 @@ If you gonna use keyboard you should activate option **SetFocus** in **Settings 
 
 Hover mouse on a button to see its keyboard shortcut in a tooltip.
 
-### Functions of the top bar
+## Functions of the top bar
 
    - `Shift+D` - switch to downloads tab;
    - `Shift+H` - switch to history tab;
@@ -20,7 +20,7 @@ Hover mouse on a button to see its keyboard shortcut in a tooltip.
    - `Shift+F` - switch to search box field;
    - `Shift+C` - clear search box field;
 
-### Commands on **Downloads** tab
+## Commands on *Downloads* tab
 
    - `A` - add downloads;
    - `E` or `Enter` - edit selected downloads;
@@ -32,7 +32,7 @@ Hover mouse on a button to see its keyboard shortcut in a tooltip.
    - `Left`, `Right` - switch to previous/next page in downloads list (pagination);
    - `Shift+Left`, `Shift+Right` - switch to first/last page in downloads list (pagination).
 
-### Commands on **History** tab
+## Commands on *History* tab
 
    - `D` or `Delete` or `Command+Backspace` - delete selected history records;
    - `P` - post-process again selected records;
@@ -49,7 +49,7 @@ Hover mouse on a button to see its keyboard shortcut in a tooltip.
    - `Left`, `Right` - switch to previous/next page in history list (pagination);
    - `Shift+Left`, `Shift+Right` - switch to first/last page in history list (pagination).
 
-### Commands on **Messages** tab
+## Commands on *Messages* tab
    - `D` or `Delete` or `Command+Backspace` - clear (delete all) messages;
    - `A` - show all records;
    - `T` - show only detail messages;
@@ -59,11 +59,11 @@ Hover mouse on a button to see its keyboard shortcut in a tooltip.
    - `Left`, `Right` - switch to previous/next page in message list (pagination);
    - `Shift+Left`, `Shift+Right` - switch to first/last page in message list (pagination).
 
-### Modal dialogs
+## Modal dialogs
 
    - `Enter` - click on the primary button (`Save`, `Submit`, etc.);
    - `Escape` - cancel dialog.
 
-### Search box (at the top of the page)
+## Search box (at the top of the page)
 
    - `Escape` or `Enter` - remove focus from search box.
