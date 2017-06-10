@@ -25,18 +25,18 @@ sh nzbget-latest-bin-linux.run
  ```
 
 ## Customized installation
-- By default NZBGet is installed into directory **nzbget** in the current directory. You can specify another directory using parameter **--destdir**:
+- By default NZBGet is installed into directory **nzbget** in the current directory. You can specify another directory using parameter **-\-destdir**:
  ```
 sh nzbget-latest-bin-linux.run --destdir /path/to/install/nzbget
  ```
 
-- CPU architecture is detected automatically by installer. If that doesn't work or if you want to prepare the installation for usage on another computer the target CPU architecture can be specified with parameter **--arch <CPU-ARCH>**:
+- CPU architecture is detected automatically by installer. If that doesn't work or if you want to prepare the installation for usage on another computer the target CPU architecture can be specified with parameter **-\-arch \<CPU-ARCH>**:
  ```
 sh nzbget-latest-bin-linux.run --arch armhf
  ```
 
- Use parameter **-h** to get the list of supported CPU architectures.
-- If you want to extract all files included within installer use parameter **--unpack**. All files including binaries for all CPU architectures will be unpacked and no post-install configuration will be performed.
+    Use parameter **-h** to get the list of supported CPU architectures.
+- If you want to extract all files included within installer use parameter **-\-unpack**. All files including binaries for all CPU architectures will be unpacked and no post-install configuration will be performed.
 
 ## Test
 Test the installation by starting NZBGet in console server mode. In this mode it prints status to current terminal window and you can see any errors if they happen on start:
@@ -73,4 +73,4 @@ Some systems (for example Synology NAS) provide an easy way to configure schedul
 ## Updates ##
 When installed via universal installer NZBGet supports automatic updates via web-interface: *Settings -> SYSTEM -> Check for updates*.
 
-In a case automatic update doesn't work the update can be made manually by downloading installer for a newer version and running it with parameter **-- destdir \</path/to/nzbget/directory>**, your existing configuration will be preserved.
+In a case automatic update doesn't work the update can be made manually by downloading installer for a newer version and running it with parameter **\-\-destdir \</path/to/nzbget/directory>**, your existing configuration will be preserved.

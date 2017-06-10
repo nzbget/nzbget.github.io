@@ -73,17 +73,17 @@ make install-strip
 
 ### Configure-options ###
 You may run configure with additional arguments: 
-- **--disable-curses** - to make without curses-support. Use this option if you can not use curses/ncurses. 
-- **--disable-parcheck** - to make without parcheck-support.
-- **--with-tlslib=(GnuTLS, OpenSSL)** - to select which TLS/SSL library should be used for encrypted server connections. 
-- **--disable-tls** - to make without TLS/SSL support. Use this option if you can not neither GnuTLS nor OpenSSL. 
-- **--enable-debug** - to build in debug-mode, if you want to see and log debug-messages;
-- **--disable-cpp-check** - disable check for C++11/C++14 compiler features. The build will most likely fail during compiling though.
+- **-\-disable-curses** - to make without curses-support. Use this option if you can not use curses/ncurses. 
+- **-\-disable-parcheck** - to make without parcheck-support.
+- **-\-with-tlslib=(GnuTLS, OpenSSL)** - to select which TLS/SSL library should be used for encrypted server connections. 
+- **-\-disable-tls** - to make without TLS/SSL support. Use this option if you can not neither GnuTLS nor OpenSSL. 
+- **-\-enable-debug** - to build in debug-mode, if you want to see and log debug-messages;
+- **-\-disable-cpp-check** - disable check for C++11/C++14 compiler features. The build will most likely fail during compiling though.
 
 ### Optional package: par-check ###
 NZBGet can check and repair downloaded files for you. For this purpose it uses par2-module (based on par2cmdline) which is integrated into nzbget's source code tree.
 
-If for some reason you have troubles compiling units belonging to par2-module you can make nzbget without support for par-check using option **--disable-parcheck**:
+If for some reason you have troubles compiling units belonging to par2-module you can make nzbget without support for par-check using option **-\-disable-parcheck**:
 ```shell
 ./configure --disable-parcheck
 ```
@@ -93,13 +93,13 @@ For curses-outputmode you need ncurses or curses on your system. If you do not h
     --with-libcurses-includes=/path/to/curses/includes
     --with-libcurses-libraries=/path/to/curses/libraries
 
-If you are not able to use curses or ncurses or do not want them you can make the program without support for curses using option **--disable-curses**:
+If you are not able to use curses or ncurses or do not want them you can make the program without support for curses using option **-\-disable-curses**:
 ```shell
 ./configure --disable-curses 
 ```
 
 ### Optional package: TLS ###
-To enable encrypted server connections (TLS/SSL) you need to build the program with TLS/SSL support. NZBGet can use two libraries: GnuTLS or OpenSSL. Configure-script checks which library is installed and use it. If both are available it gives the precedence to OpenSSL. You may override that with the option **--with-tlslib=(GnuTLS, OpenSSL)**. For example to build whith GnuTLS: 
+To enable encrypted server connections (TLS/SSL) you need to build the program with TLS/SSL support. NZBGet can use two libraries: GnuTLS or OpenSSL. Configure-script checks which library is installed and use it. If both are available it gives the precedence to OpenSSL. You may override that with the option **-\-with-tlslib=(GnuTLS, OpenSSL)**. For example to build whith GnuTLS: 
 ```shell
 ./configure --with-tlslib=GnuTLS
 ```
@@ -112,7 +112,7 @@ Following configure-parameters may be useful:
     --with-openssl-includes=/path/to/openssl/includes
     --with-openssl-libraries=/path/to/openssl/libraries
 
-If none of these libraries is available you can make the program without TLS/SSL support using option **--disable-tls**:
+If none of these libraries is available you can make the program without TLS/SSL support using option **-\-disable-tls**:
 ```shell
 ./configure --disable-tls
 ```

@@ -137,7 +137,7 @@ dexter ( 720p | 1080p )
 ```
 In this example titles having word "dexter" and either 720p or 1080p (or both) are matching.
 
-**IMPORTANT:** braces and |-character must be surrounded with spaces.
+**IMPORTANT:** braces and `|`-character must be surrounded with spaces.
 
 **Good:**
 ```
@@ -214,7 +214,7 @@ Each feed item (nzb-file) is checked against these rules starting from the first
 - The first rule `Reject: age:>10` says that items older than 10 days must be rejected. Reject rules are final: if the item matches search string (`age:>10`) the item is rejected (not added to queue) and no other rules are checked for that item. If the rule doesn't match the item is considered good and other rules are checked then.
 - The second rule `Require: 720p` checks if item title has word "720p". If the rule matches the item is considered good and other rules are checked then. If the rule doesn't match the item is rejected (this is final) and no other rules checked for the item. Require-rules can be usually rewritten as Reject-rules by negating the search term:
 `Reject: -720p`. If the search string consist of more than one term the negating can be difficult. Besides the require-rules often look more natural and are easier to read.
-- The third rule `*# this is comment*` is just skipped. You can use comments to describe complex parts of filters or to temporary comment out a rule for debugging.
+- The third rule `# this is comment` is just skipped. You can use comments to describe complex parts of filters or to temporary comment out a rule for debugging.
 - The fourth rule `Accept: game of thrones S03E##` causes items having words "game of thrones" and a word matching to pattern "S03E##" to be accepted. Accepted items are added to queue. No other rules are checked for such items. If search string doesn't match the rule is skipped and further rules are checked for the item.
 - The fifth rule `Accept: dexter S08E##` is similar to fourth but checks for other title.
 
@@ -231,7 +231,7 @@ There are many ways to achieve the same effect. The four rules from our example 
 Accept: game of thrones S03E## age:<10 720p
 Accept: dexter S08E## age:<10 720p
 ```
-However if you need to accept many shows writing `*age:<10 720p*` for each show isn't very practical.
+However if you need to accept many shows writing `age:<10 720p` for each show isn't very practical.
 
 **Options-Rule**
 One rule not shown in our example is *options-rule*. It sets options on feed items if the search string matches. In the following example if the title contains words "hdtv", "720p" or "1080p" the option "category" is set to "HD" for that item.
@@ -260,7 +260,7 @@ Accept (A)|declares Accept-rule. Rules are accept-rules by default, the "A:" can
 Reject (R)|declares Reject-rule. If the feed item matches to the rule the item is considered bad and no further rules are checked.
 Require (Q)|declares Require-rule. If the feed item DOES NOT match to the rule the item is considered bad and no further rules are checked.
 Options (O)|declares Options-rule. If the feed item matches to the rule the options declared in the rule are set for the item. The item is neither accepted nor rejected via this rule but can be accepted later by one of Accept-rules. In this case the item will have its options already set (unless the Accept-rule overrides them).
-#|lines starting with # are considered comments and are ignored. You can use comments to explain complex rules or to temporary disable rules for debugging.
+#|lines starting with `#` are considered comments and are ignored. You can use comments to explain complex rules or to temporary disable rules for debugging.
 
 ### Options
 *Options* allow to set properties on nzb-file. It's a comma-separated list of property names with their values.
