@@ -48,5 +48,5 @@ layout: wiki-index
  - [API](api) - how to communicate with NZBGet from other applications or scripts
 
 ## More
- - [Releases (ChangeLog)](https://github.com/nzbget/nzbget/releases)
+ - [History (ChangeLog)](history)
  - [Forum](https://forum.nzbget.net)
