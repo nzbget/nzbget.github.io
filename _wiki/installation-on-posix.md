@@ -19,10 +19,10 @@ For curses-output-mode:
 * [libncurses](http://invisible-island.net/ncurses)
 
 For encrypted connections (TLS/SSL): 
-* [GnuTLS](http://www.gnu.org/software/gnutls)
+* [GnuTLS](https://gnutls.org)
 
  or 
-* [OpenSSL](http://www.openssl.org)
+* [OpenSSL](https://www.openssl.org)
 
 All these libraries are included in modern Linux distributions and should be available as installable packages. Please note that you also need the developer packages for these libraries too, they package names have often suffix "dev" or "devel". On other systems you may need to download the libraries at the given URLs and compile them (see hints below).
 

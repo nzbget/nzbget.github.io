@@ -44,9 +44,9 @@ layout: wiki-index
     - [Scan scripts](scan-scripts)
     - [Queue scripts](queue-scripts)
     - [Scheduler scripts](scheduler-scripts)
-    - [Feed scripts](teed-scripts)
+    - [Feed scripts](feed-scripts)
  - [API](api) - how to communicate with NZBGet from other applications or scripts
 
 ## More
  - [Releases (ChangeLog)](https://github.com/nzbget/nzbget/releases)
- - [Forum](forum)
+ - [Forum](https://forum.nzbget.net)
