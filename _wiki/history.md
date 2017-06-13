@@ -14,60 +14,22 @@ title: Release history
 <script src="/js/markdown.min.js"></script>
 
 <script language="javascript">
-    "use strict";
+    'use strict';
 
-    function requestJSON(url, callback) {
-        $.ajax({
-            url: url,
-            complete: function(xhr) {
-                callback.call(null, xhr.responseJSON);
-            }
-        });
-    }
+    {% include history.js %}
 
     function loaded(data)
-    {
-        data.sort(function(a, b) {
-            var an = a.name;
-            var bn = b.name;
-            if (an.substr(1, 1) === '.') an = '0' + an;
-            if (bn.substr(1, 1) === '.') bn = '0' + bn;
-            return an < bn ? 1 : -1;
-        });
-
-        var MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
-        for (var i = 0; i < data.length; i++)
-        {
-            var rel = data[i];
-            if (!rel.prerelease)
-            {
-                var dat = new Date(rel.created_at);
-                var datStr = '' + dat.getDate() + ' ' + MONTH_NAMES[dat.getMonth()] + ' ' + dat.getFullYear();
-                $('#hist-content').append($('<h2>').text(rel.name).append($('<small>').text(' - ' + datStr)));
-
-                var desc = rel.body;
-                desc = desc.replace(/\(https:\/\/github.com\/nzbget\/nzbget\/wiki\/(.+)\)/g,
-                    function(match, p1) {
-                        p1 = p1.toLowerCase().replace(/_/g, '-');
-                        return '(https://nzbget.net/' + p1 + ')';
-                    });
-                desc = markdown.toHTML(desc);
-                desc = desc.replace(/\(#([\d]+)/g, '(<a href="https://github.com/nzbget/nzbget/issues/$1">#$1</a>');
-                desc = desc.replace(/,\s?#([\d]+)/g, ', <a href="https://github.com/nzbget/nzbget/issues/$1">#$1</a>');
-
-                $('#hist-content').append(desc);
-            }
-        }
-
+    {   
+        History.sort(data);
+        History.buildPage(data, '#hist-content', false, true);
         $('#hist-loading').hide();
         $('#hist-content').removeClass('hide');
     }
 
     function buildPageFromGitHub() {
-        requestJSON('https://api.github.com/repos/nzbget/nzbget/releases',
+        History.load('https://api.github.com/repos/nzbget/nzbget/releases',
             function(data) {
-                requestJSON('https://api.github.com/repos/nzbget/nzbget/releases?page=2',
+                History.load('https://api.github.com/repos/nzbget/nzbget/releases?page=2',
                 function(data2) {
                     Array.prototype.push.apply(data, data2);
                     loaded(data);
@@ -88,7 +50,7 @@ title: Release history
             {name: '9.0', created_at: '2015-06-02T12:27:26Z', body: '- many new features.'}];
         loaded(data);
     }
-    //window.onload = buildPageFromLocalTest;
+    window.onload = buildPageFromLocalTest;
 {% else %}
     window.onload = buildPageFromGitHub;
 {% endif %}

@@ -24,14 +24,14 @@
 	<h2>Latest stable release</h2>
 	<h4>Version: {{site.data.version.stable-version}}</h4>
 	<h4>Release Date: {{site.data.version.stable-date-text}}</h4>
-	<h4><a href="{{site.data.version.stable-release-notes}}">Release Notes</a></h4>
+	<h4><a href="#" onclick="showReleaseNotes('{{site.data.version.stable-version}}', 'v{{site.data.version.stable-version}}', '{{site.data.version.stable-date-text}}')" data-toggle="modal">Release Notes</a></h4>
 {% if site.data.version.testing-version > site.data.version.stable-version %}
 	<p>Stable releases are recommended for new users and for users not having much time for possible error handling.</p>
 
 	<h2>Latest testing release</h2>
 	<h4>Version: {{site.data.version.testing-version}}-{{site.data.version.testing-revision}}</h4>
 	<h4>Release Date: {{site.data.version.testing-date-text}}</h4>
-	<h4><a href="{{site.data.version.testing-release-notes}}">Release Notes</a></h4>
+	<h4><a href="#" onclick="showReleaseNotes('{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}', 'v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}', '{{site.data.version.testing-date-text}}')" data-toggle="modal">Release Notes</a></h4>
 	<p>Testing releases are recommended for experienced users familiar with NZBGet.</p>
 {% endif %}
 	
@@ -90,7 +90,48 @@
   
 </div>
 
+<div id="ReleaseNotesDialog" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Release Notes</h4>
+            </div>
+            <div class="modal-body" id="ReleaseNotesDialog_History">
+                <p>Loading release notes...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% include footer.html %}
+
+<script src="/js/markdown.min.js"></script>
+
+<script language="javascript">
+    'use strict';
+
+{% include history.js %}
+
+		function showReleaseNotes(versionTitle, versionTag, date)
+		{
+			function loaded(data)
+			{   
+				$('#ReleaseNotesDialog_History').text('');
+				History.buildPage([data], '#ReleaseNotesDialog_History', true, false);
+				var testing = versionTitle.indexOf('testing') > -1;
+				$('#ReleaseNotesDialog_History').append($('<p class="release-notes-history-link"><a href="' +
+					(testing ? 'https://github.com/nzbget/nzbget/releases' : '/history') +
+					'">Change Log for all releases</a></p>'));
+			}
+
+			$('#ReleaseNotesDialog h4').html('NZBGet ' + versionTitle + ' <small> &bull; ' + date + '</small>');
+			$('#ReleaseNotesDialog_History').text('Loading release notes...');
+			$('#ReleaseNotesDialog').modal('show');
+
+			History.load('https://api.github.com/repos/nzbget/nzbget/releases/tags/' + versionTag, loaded);
+		}
+</script>
 
 <a href="https://github.com/nzbget/nzbget"><img style="position: absolute; top: 50px; right: 0; border: 0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
 
