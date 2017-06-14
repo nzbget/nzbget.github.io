@@ -626,6 +626,12 @@ h1[id] {
 	border: none;
 }
 
+.release-notes-history-link {
+  text-align: center;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
 @media only screen and (min-width: 1150px) {
 	.bs-container {
 		max-width: 1110px;
