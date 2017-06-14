@@ -108,28 +108,30 @@
 
 <script src="/js/markdown.min.js"></script>
 
+{% include changelog.html %}
+
 <script language="javascript">
     'use strict';
-
-{% include history.js %}
 
 		function showReleaseNotes(versionTitle, versionTag, date)
 		{
 			function loaded(data)
 			{   
 				$('#ReleaseNotesDialog_History').text('');
-				History.buildPage([data], '#ReleaseNotesDialog_History', true, false);
+				ChangeLog.buildPage([data], '#ReleaseNotesDialog_History', false);
 				var testing = versionTitle.indexOf('testing') > -1;
 				$('#ReleaseNotesDialog_History').append($('<p class="release-notes-history-link"><a href="' +
-					(testing ? 'https://github.com/nzbget/nzbget/releases' : '/history') +
-					'">Change Log for all releases</a></p>'));
+					(testing ? '/history-testing' : '/history') +
+					'">View change log for previous ' + (testing ? 'testing' : 'stable') + ' releases</a></p>'));
 			}
 
 			$('#ReleaseNotesDialog h4').html('NZBGet ' + versionTitle + ' <small> &bull; ' + date + '</small>');
 			$('#ReleaseNotesDialog_History').text('Loading release notes...');
 			$('#ReleaseNotesDialog').modal('show');
 
-			History.load('https://api.github.com/repos/nzbget/nzbget/releases/tags/' + versionTag, loaded);
+			ChangeLog.load('https://api.github.com/repos/nzbget/nzbget/releases/tags/' + versionTag, loaded);
+
+			return false;
 		}
 </script>
 

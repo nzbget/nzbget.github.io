@@ -632,6 +632,11 @@ h1[id] {
   margin-top: 20px;
 }
 
+#hist-content hr {
+  max-width: 350px;
+  margin-left: 0;
+}
+
 @media only screen and (min-width: 1150px) {
 	.bs-container {
 		max-width: 1110px;
