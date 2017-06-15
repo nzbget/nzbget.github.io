@@ -16,13 +16,11 @@ title: Release notes
 	window.onload = function() {
         function loaded(data)
         {   
-            ChangeLog.buildPage([data], '#hist-content', false);
+            ChangeLog.buildPage([data], '#hist-content', true);
             $('#hist-content').append($('<p class="release-notes-history-link"><a href="/history">View change log for previous stable releases</a></p>'));
             $('#hist-loading').hide();
             $('#hist-content').removeClass('hide');
         }
-
-        $('#hist-content').html('<h4>NZBGet {{site.data.version.stable-version}} <small> &bull; {{site.data.version.stable-date-text}}</small></h4>');
 
         ChangeLog.load('https://api.github.com/repos/nzbget/nzbget/releases/tags/v{{site.data.version.stable-version}}', loaded);
     }

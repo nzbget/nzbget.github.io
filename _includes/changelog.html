@@ -27,7 +27,7 @@ var ChangeLog = (new function()
 			{
 				var dat = new Date(rel.created_at);
 				var datStr = '' + dat.getDate() + ' ' + MONTH_NAMES[dat.getMonth()] + ' ' + dat.getFullYear();
-				$(destDiv).append($('<h2>').text(rel.name).append($('<small>').text(' - ' + datStr)));
+				$(destDiv).append($('<h2>').text(rel.name).append($('<small>').html(' &bull; ' + datStr)));
 			}
 
 			var desc = rel.body;
