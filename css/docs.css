@@ -627,9 +627,12 @@ h1[id] {
 }
 
 .release-notes-history-link {
-  text-align: center;
   font-weight: 700;
   margin-top: 20px;
+}
+
+.modal .release-notes-history-link {
+  text-align: center;
 }
 
 #hist-content hr {

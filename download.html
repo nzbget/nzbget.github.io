@@ -24,14 +24,14 @@
 	<h2>Latest stable release</h2>
 	<h4>Version: {{site.data.version.stable-version}}</h4>
 	<h4>Release Date: {{site.data.version.stable-date-text}}</h4>
-	<h4><a href="#" onclick="showReleaseNotes('{{site.data.version.stable-version}}', 'v{{site.data.version.stable-version}}', '{{site.data.version.stable-date-text}}')" data-toggle="modal">Release Notes</a></h4>
+	<h4><a href="/history-latest" onclick="showReleaseNotes(event, '{{site.data.version.stable-version}}', 'v{{site.data.version.stable-version}}', '{{site.data.version.stable-date-text}}')">Release Notes</a></h4>
 {% if site.data.version.testing-version > site.data.version.stable-version %}
 	<p>Stable releases are recommended for new users and for users not having much time for possible error handling.</p>
 
 	<h2>Latest testing release</h2>
 	<h4>Version: {{site.data.version.testing-version}}-{{site.data.version.testing-revision}}</h4>
 	<h4>Release Date: {{site.data.version.testing-date-text}}</h4>
-	<h4><a href="#" onclick="showReleaseNotes('{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}', 'v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}', '{{site.data.version.testing-date-text}}')" data-toggle="modal">Release Notes</a></h4>
+	<h4><a href="/history-latest-testing" onclick="showReleaseNotes(event, '{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}', 'v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}', '{{site.data.version.testing-date-text}}')">Release Notes</a></h4>
 	<p>Testing releases are recommended for experienced users familiar with NZBGet.</p>
 {% endif %}
 	
@@ -113,8 +113,10 @@
 <script language="javascript">
     'use strict';
 
-		function showReleaseNotes(versionTitle, versionTag, date)
+		function showReleaseNotes(event, versionTitle, versionTag, date)
 		{
+			event.preventDefault();
+
 			function loaded(data)
 			{   
 				$('#ReleaseNotesDialog_History').text('');
@@ -130,8 +132,6 @@
 			$('#ReleaseNotesDialog').modal('show');
 
 			ChangeLog.load('https://api.github.com/repos/nzbget/nzbget/releases/tags/' + versionTag, loaded);
-
-			return false;
 		}
 </script>
 
