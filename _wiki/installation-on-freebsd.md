@@ -10,11 +10,9 @@ Please report on forum if the installer doesn't work for you.
 
 ## Automatic installation ##
 - Download the installer package from [Download page](download).
-You can download the installer via web-browser or directly on your device with the following command (that's one long command):
+You can download the installer via web-browser or directly on your device with the following command:
  ```
-wget -O - http://nzbget.net/info/nzbget-version-freebsd.json | \
-    sed -n "s/^.*testing-download.*: \"\(.*\)\".*/\1/p" | \
-    wget --no-check-certificate -i - -O nzbget-latest-bin-freebsd.run
+wget https://nzbget.net/download/nzbget-latest-bin-freebsd.run
  ```
 
 - If the above command fails use your web-browser to download the installer package, then put it on your device.

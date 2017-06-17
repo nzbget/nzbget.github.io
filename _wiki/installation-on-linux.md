@@ -10,11 +10,9 @@ Please report on forum if the installer doesn't work for you.
 
 ## Automatic installation
 - Download the installer package from [Download page](download).
-If your device has a decent version of **wget** you can also download the installer directly on your device with the following command (that's one long command):
+If your device has a decent version of **wget** you can also download the installer directly on your device with the following command:
  ```
-wget -O - http://nzbget.net/info/nzbget-version-linux.json | \
-    sed -n "s/^.*stable-download.*: \"\(.*\)\".*/\1/p" | \
-    wget --no-check-certificate -i - -O nzbget-latest-bin-linux.run
+wget https://nzbget.net/download/nzbget-latest-bin-linux.run
  ```
 
 - If the above command fails use your web-browser to download the installer package, then put it on your device.
