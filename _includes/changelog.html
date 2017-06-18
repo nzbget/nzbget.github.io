@@ -16,6 +16,39 @@ var ChangeLog = (new function()
 		});
 	}
 
+	function transformNotes(desc)
+	{
+		// correct URLs to old wiki 
+		desc = desc.replace(/\(https:\/\/github.com\/nzbget\/nzbget\/wiki\/(.+)\)/g,
+			function(match, p1) {
+				p1 = p1.toLowerCase().replace(/_/g, '-');
+				return '(https://nzbget.net/' + p1 + ')';
+			});
+
+		// show all quoted texts in bold (without quotes)
+		desc = desc.replace(/[\"\“\”]/g, '**');
+
+		// paths
+		desc = desc.replace(/\\/g, '\\\\');
+
+		// fix underscore parsing
+		desc = desc.replace(/\_/g, '\\_');
+
+		// convert nzbget.net links HTTP->HTTPS
+		desc = desc.replace(/http:\/\/nzbget/g, 'https://nzbget');
+
+		// format URLs as links
+		desc = desc.replace(/([^\(])(https:\/\/[a-zA-Z_\\\-0-9\/\.]+)/g, '$1[$2]($2)');
+
+		desc = markdown.toHTML(desc);
+
+		// links to GitHub issues
+		desc = desc.replace(/\(#([\d]+)/g, '(<a href="https://github.com/nzbget/nzbget/issues/$1">#$1</a>');
+		desc = desc.replace(/,\s?#([\d]+)/g, ', <a href="https://github.com/nzbget/nzbget/issues/$1">#$1</a>');
+
+		return desc;
+	}
+
 	function buildPage(data, destDiv, withHeaders)
 	{
 		var MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -25,21 +58,19 @@ var ChangeLog = (new function()
 			var rel = data[i];
 			if (withHeaders)
 			{
-				var dat = new Date(rel.created_at);
+				var pubDate = new Date(rel.published_at);
+				var creDate = new Date(rel.created_at);
+
+				// use "Published Date" as release date,
+				// except of historical releases where "Published Date" refer to date
+				// when releases were migrated to GitHub. For such releases use "Created Date".
+				var dat = pubDate - creDate > 10 ? creDate : pubDate;
+
 				var datStr = '' + dat.getDate() + ' ' + MONTH_NAMES[dat.getMonth()] + ' ' + dat.getFullYear();
 				$(destDiv).append($('<h2>').text(rel.name).append($('<small>').html(' &bull; ' + datStr)));
 			}
 
-			var desc = rel.body;
-			desc = desc.replace(/\(https:\/\/github.com\/nzbget\/nzbget\/wiki\/(.+)\)/g,
-				function(match, p1) {
-					p1 = p1.toLowerCase().replace(/_/g, '-');
-					return '(https://nzbget.net/' + p1 + ')';
-				});
-			desc = markdown.toHTML(desc);
-			desc = desc.replace(/\(#([\d]+)/g, '(<a href="https://github.com/nzbget/nzbget/issues/$1">#$1</a>');
-			desc = desc.replace(/,\s?#([\d]+)/g, ', <a href="https://github.com/nzbget/nzbget/issues/$1">#$1</a>');
-
+			var desc = transformNotes(rel.body);
 			$(destDiv).append(desc);
 		}
 	}
@@ -125,15 +156,15 @@ var ChangeLog = (new function()
 	// development version (predefined log entries)
 	this.loadAndBuildPage = function(which, callback) {
 		var data = [
-			{name: '19.0-testing-r1991', created_at: '2017-05-13T12:27:26Z', prerelease: true, body: '- unpack during downloading (#371);\n- renaming of obfuscated file names during downloading (#360).'},
-			{name: '18.1', created_at: '2017-05-27T11:28:07Z', body: '- fixed: crash during download, caused by a race condition (#356);\n- fixed: sleep mode did not work on Windows (#350).'},
-			{name: '19.0-testing-r1929', created_at: '2017-04-01T12:27:26Z', prerelease: true, body: '- extensions scripts can now be executed from settings page (#50);\n- added support for ECC certificates in built-in web-server (#353).'},
-			{name: '18.0', created_at: '2017-02-08T16:59:17Z', body: '- don&#39;t many nice new features.'},
-			{name: '18.0-testing-r1826', created_at: '2017-01-14T12:27:26Z', prerelease: true, body: '- fixed one bug;\n-fixed another bug.'},
-			{name: '0.3.0', created_at: '2007-11-10T12:27:26Z', body: '- a lot of new features;\n - see [Keyboard shortcuts](https://github.com/nzbget/nzbget/wiki/Keyboard-shortcuts);\n - see [Keyboard shortcuts](https://github.com/nzbget/nzbget/wiki/Keyboard-shortcuts);'},
-			{name: '0.3.1', created_at: '2007-12-18T12:27:26Z', body: '- a lot of new features.'},
-			{name: '17.1', created_at: '2016-09-02T12:27:26Z', body: '- many new features.'},
-			{name: '9.0', created_at: '2015-06-02T12:27:26Z', body: '- many new features.'}];
+			{name: '19.0-testing-r1991', created_at: '2017-05-13T12:27:26Z', published_at: '2017-05-13T12:27:26Z', prerelease: true, body: '- unpack during downloading (#371);\n- renaming of obfuscated file names during downloading (#360);\n- see http://nzbget.net/Certificate_verification for details;\n- see http://nzbget.net/certificate-verification for details;\n- paths (for example "NzbDir=N:\\").'},
+			{name: '18.1', created_at: '2017-05-27T11:28:07Z', published_at: '2017-05-27T11:28:07Z', body: '- fixed: crash during download, caused by a race condition (#356);\n- fixed: sleep mode did not work on Windows (#350).'},
+			{name: '19.0-testing-r1929', created_at: '2017-04-01T12:27:26Z', published_at: '2017-04-01T12:27:26Z', prerelease: true, body: '- extensions scripts can now be executed from settings page (#50);\n- added support for ECC certificates in built-in web-server (#353);\n- see [Certificate verification](http://nzbget.net/certificate-verification).'},
+			{name: '18.0', created_at: '2017-02-08T16:59:17Z', published_at: '2017-02-08T16:59:17Z', body: '- don&#39;t many nice new features.'},
+			{name: '18.0-testing-r1826', created_at: '2017-01-14T12:27:26Z', published_at: '2017-01-14T12:27:26Z', prerelease: true, body: '- fixed one bug;\n-fixed another bug.'},
+			{name: '0.3.0', created_at: '2007-11-10T12:27:26Z', published_at: '2007-11-10T12:27:26Z', body: '- a lot of new features;\n - see [Keyboard shortcuts](https://github.com/nzbget/nzbget/wiki/Keyboard-shortcuts);\n - see [Keyboard shortcuts](https://github.com/nzbget/nzbget/wiki/Keyboard-shortcuts);'},
+			{name: '0.3.1', created_at: '2007-12-18T12:27:26Z', published_at: '2007-12-18T12:27:26Z', body: '- a lot of new features.'},
+			{name: '17.1', created_at: '2016-09-02T12:27:26Z', published_at: '2016-09-02T12:27:26Z', body: '- many new features.'},
+			{name: '9.0', created_at: '2015-06-02T12:27:26Z', published_at: '2015-06-02T12:27:26Z', body: '- many new features.'}];
 		loaded(data, which);
 		if (callback) callback();
 	}
