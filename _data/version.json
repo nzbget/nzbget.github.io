@@ -1,11 +1,11 @@
 {
-	"stable-version": "18.1",
-	"stable-date": "2017-04-08",
-	"stable-date-text": "8 April 2017",
-	"stable-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v18.1",
+	"stable-version": "19.0",
+	"stable-date": "2017-06-25",
+	"stable-date-text": "25 June 2017",
+	"stable-release-notes": "http://nzbget.net/history-latest",
 	"testing-version": "19.0",
 	"testing-revision": "r2021",
 	"testing-date": "2017-06-17",
 	"testing-date-text": "17 June 2017",
-	"testing-release-notes": "https://github.com/nzbget/nzbget/releases/tag/v19.0-r2021"
+	"testing-release-notes": "http://nzbget.net/history-latest-testing"
 }
