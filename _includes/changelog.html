@@ -18,6 +18,13 @@ var ChangeLog = (new function()
 
 	function transformNotes(desc)
 	{
+		// remove extra description for GitHub releases area
+		var p = desc.indexOf('\n---');
+		if (p > -1)
+		{
+			desc = desc.substring(0, p);
+		}
+
 		// correct URLs to old wiki 
 		desc = desc.replace(/\(https:\/\/github.com\/nzbget\/nzbget\/wiki\/(.+)\)/g,
 			function(match, p1) {
