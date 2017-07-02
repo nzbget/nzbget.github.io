@@ -50,7 +50,12 @@ You see, ping knows that "secure.eu.thundernews.com" (hostname obtained from the
 
 Instead of disabling certificate check completely we can configure NZBGet to connect to "de.sslusenet.com" directly instead of using hostname provided in reseller's documentation. The certificate hostname check will succeed and we can keep high level of security.
 
-You can try the following hosts: news.sslusenet.com, us.sslusenet.com, de.sslusenet.com, nl.sslusenet.com, iad.sslusenet.com, usenetnow-eu.sslusenet.com, usenetnow-fr.sslusenet.com, wwwspace-eu.sslusenet.com, wwwspace-us.sslusenet.com, fastusenet-us.sslusenet.com, frugalusenet-eu.sslusenet.com, frugalusenet-us.sslusenet.com, blocknews-eu.sslusenet.com, blocknews-fr.sslusenet.com, blocknews-us.sslusenet.com. Not all of them may work with your login though.
+Even if the ping-command doesn't reveal the real host you still can try the following hosts
+which work for most Highwinds resellers:
+- us.sslusenet.com (located in USA);
+- de.sslusenet.com (located in Germany);
+- nl.sslusenet.com (located in Netherlands);
+- news.sslusenet.com (routes you to one of the three above using geo-locating).
 
 **NOTE:** Changing of host in server settings resets downloaded volume statistics for that news server. The total downloaded volumes (for all servers) remains preserved.
 
