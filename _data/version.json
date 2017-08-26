@@ -3,9 +3,9 @@
 	"stable-date": "2017-07-08",
 	"stable-date-text": "8 July 2017",
 	"stable-release-notes": "http://nzbget.net/history-latest",
-	"testing-version": "19.1",
-	"testing-revision": "r2031",
-	"testing-date": "2017-07-02",
-	"testing-date-text": "2 July 2017",
+	"testing-version": "20.0",
+	"testing-revision": "r2075",
+	"testing-date": "2017-08-26",
+	"testing-date-text": "26 August 2017",
 	"testing-release-notes": "http://nzbget.net/history-latest-testing"
 }
