@@ -36,7 +36,7 @@ layout: wiki-index
  - [Cross compiling](cross-compiling) - tips about cross-compiling (usually for embedded platforms)
  - [Packaging](packaging) - please read if you create a distributable NZBGet package for other users
  - [Functional testing](functional-testing)
- - [NServ NNTP server](nserv-nttp-sserver)
+ - [NServ NNTP server](nserv-nttp-server)
 
 ## Extensions
  - [Extension scripts](extension-scripts) - basic information about writing your own scripts.
