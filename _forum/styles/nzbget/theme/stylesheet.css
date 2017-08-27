@@ -457,6 +457,11 @@ div.time > span {
 	color: #25AF33;
 }
 
+.content ul, .content ol {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
 @media only screen and (max-width: 700px), only screen and (max-device-width: 700px) {
 
 	.headerbar + .navbar {
