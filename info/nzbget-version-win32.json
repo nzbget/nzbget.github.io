@@ -7,6 +7,6 @@ NZBGet.VersionInfo = {
 	"stable-signature": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}.sig.txt",
 	"testing-version": "{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}",
 	"testing-date": "{{site.data.version.testing-date}}", 
-	"testing-download": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-win32-setup.exe",
+	"testing-download": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-windows-setup.exe",
 	"testing-signature": "https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}.sig.txt"
 }

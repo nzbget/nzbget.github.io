@@ -3,9 +3,11 @@
 	"stable-date": "2017-07-08",
 	"stable-date-text": "8 July 2017",
 	"stable-release-notes": "http://nzbget.net/history-latest",
+	"stable-update-rate": "0,1,2,5,10,20,40,70,100",
 	"testing-version": "20.0",
-	"testing-revision": "r2075",
-	"testing-date": "2017-08-26",
-	"testing-date-text": "26 August 2017",
-	"testing-release-notes": "http://nzbget.net/history-latest-testing"
+	"testing-revision": "r2108",
+	"testing-date": "2017-09-18",
+	"testing-date-text": "18 September 2017",
+	"testing-release-notes": "http://nzbget.net/history-latest-testing",
+	"testing-update-rate": "0,5,20,50,100"
 }

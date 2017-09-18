@@ -4,8 +4,10 @@ NZBGet.VersionInfo = {
 	"stable-version": "{{site.data.version.stable-version}}",
 	"stable-date": "{{site.data.version.stable-date}}",
 	"stable-release-notes": "{{site.data.version.stable-release-notes}}",
+	"stable-update-rate": "{{site.data.version.stable-update-rate}}",
 	"testing-version": "{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}",
 	"testing-date": "{{site.data.version.testing-date}}", 
 	"testing-release-notes": "{{site.data.version.testing-release-notes}}",
+	"testing-update-rate": "{{site.data.version.testing-update-rate}}",
 	"devel-release-notes": "https://github.com/nzbget/nzbget/commits/develop"
 }
