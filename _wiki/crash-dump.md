@@ -36,7 +36,7 @@ can configure other folder if necessary, as explained in MSDN-article linked abo
 
 ### Step 2. Install debug version of NZBGet
 - Download debug version of NZBGet: [latest stable](https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-win32-debug-setup.exe) or
-[latest testing](https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-win32-debug-setup.exe). You need at least v19.0-testing-r2019.
+[latest testing](https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-windows-debug-setup.exe). You need at least v19.1.
 - Install it over your existing NZBGet installation. Your configuration will be preserved.
 - Start NZBGet, open settings page in web-interface and set option **CrashTrace=no** 
 in section *LOGGING*.
