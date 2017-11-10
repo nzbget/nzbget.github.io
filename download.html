@@ -67,6 +67,15 @@
 	<p>FreeBSD 9.1 and later, x86 (64 Bit).</p>
 	<p>Manual: <a href="/installation-on-freebsd">Installation on FreeBSD</a>.</p>
 
+	<h3>Android</h3>
+{% if site.data.version.android-revision == "" %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/android/releases/download/v{{site.data.version.android-version}}/nzbget-android-{{site.data.version.android-version}}-bin.apk">nzbget-android-{{site.data.version.android-version}}-bin.apk</a></p>
+{% else %}
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/android/releases/download/v{{site.data.version.android-version}}-{{site.data.version.android-revision}}/nzbget-android-{{site.data.version.android-version}}-testing-{{site.data.version.android-revision}}-bin.apk">nzbget-android-{{site.data.version.android-version}}-testing-{{site.data.version.android-revision}}-bin.apk</a></p>
+{% endif %}
+	<p>Android 2.3.3 and later, x86, ARM.</p>
+	<p>Manual: <a href="/installation-on-android">Installation on Android</a>.</p>
+
 	<h3>Other POSIX systems</h3>
 	<p>Check the package repository of your OS. If you can't find NZBGet there or if you want a newer version please install from source code.</p>
 	<p>Manuals: <a href="/installation-on-posix">Installation on POSIX</a>, <a href="/cross-compiling">Cross-compiling</a>.</p>
