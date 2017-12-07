@@ -107,7 +107,7 @@ At least one of the post-processing scripts has failed.
   - **SUCCESS/HEALTH** - Download was successful, download health is 100.0%. No par-check was made (there are no par-files). No unpack was made (there are no archive files or unpack was disabled for that download or globally).
   - **SUCCESS/GOOD** - The download was marked as good by user using command *Mark as good* in history dialog.
   - **SUCCESS/MARK** - **`v15.0`** The download was marked as success by user using command *Mark as success* in history dialog.
-  - **WARNING/SCRIPT** - Downloaded successfully. Par-check and unpack were either successful or were not performed.
+  - **WARNING/SCRIPT** - Downloaded successfully. Par-check and unpack were either successful or were not performed. At least one post-processing script has failed.
   - **WARNING/SPACE** - Unpack has failed due to not enough space on the drive.
   - **WARNING/PASSWORD** - Unpack has failed because the password was not provided or was wrong.
   - **WARNING/DAMAGED** - Par-check is required but is disabled in settings (option **ParCheck**=*Manual*).
