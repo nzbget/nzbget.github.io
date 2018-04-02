@@ -26,11 +26,14 @@ For encrypted connections (TLS/SSL):
 
 All these libraries are included in modern Linux distributions and should be available as installable packages. Please note that you also need the developer packages for these libraries too, they package names have often suffix "dev" or "devel". On other systems you may need to download the libraries at the given URLs and compile them (see hints below).
 
+It is also recommended to install **pkg-config** to help the configure-script find
+dependencies.
+
 You also need a working C++ compiler.
 
 **Example:** The following command installs all packages required to compile NZBGet on Debian/Ubuntu:
 ```shell
-sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev -y
+sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev pkg-config -y
 ```
 
 ## Prerequisites for C++ compiler ##
