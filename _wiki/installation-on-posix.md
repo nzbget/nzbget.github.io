@@ -54,6 +54,7 @@ cd nzbget-VERSION
 ./configure 
  ```
 maybe you have to tell configure, where to find some libraries, see Configure-options below.
+Extra flags are needed on FreeBSD, see section **Troubleshooting: Make and GNU Make** below.
 * compile it via
  ```shell
 make 
@@ -118,6 +119,23 @@ Following configure-parameters may be useful:
 If none of these libraries is available you can make the program without TLS/SSL support using option **-\-disable-tls**:
 ```shell
 ./configure --disable-tls
+```
+
+### Troubleshooting: Make and GNU Make ###
+For CPU optimized code NZBGet needs to compile different units with different complier
+flags. That requires dynamic changing of compiler flags within makefile. Unfortunately not every `make` supports this, in particular default `make` on FreeBSD fails to build NZBGet
+with message
+```
+make[3]: don't know how to make CXXFLAGS+=. Stop
+```
+A solution here is to use "GNU make" instead. Install it with:
+```shell
+pkg install gmake
+```
+
+When launching NZBGet configure script pass alternative path to `make`:
+```shell
+./configure MAKE=/usr/local/bin/gmake
 ```
 
 ## Configuring ##
