@@ -33,7 +33,7 @@ You also need a working C++ compiler.
 
 **Example:** The following command installs all packages required to compile NZBGet on Debian/Ubuntu:
 ```shell
-sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev pkg-config -y
+sudo apt-get install build-essential libncurses5-dev libssl-dev libxml2-dev zlib1g-dev pkg-config -y
 ```
 
 ## Prerequisites for C++ compiler ##
