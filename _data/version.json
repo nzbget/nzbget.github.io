@@ -11,5 +11,5 @@
 	"testing-release-notes": "http://nzbget.net/history-latest-testing",
 	"testing-update-rate": "0,5,20,50,100",
 	"android-version": "1.1",
-	"android-revision": "r13"
+	"android-revision": ""
 }
