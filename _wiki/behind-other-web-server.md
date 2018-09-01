@@ -61,6 +61,9 @@ server {
 
 You can replace "nzbget" (all three occurrences) with anything you like.
 
+Attempts to upload large nzb-files to NZBGet running behing nginx may silently
+fail due to packet limits set in nginx (explicitly or defaults). Check option `client_max_body_size` in nginx config.
+
 ## Lighttpd ##
 Example configuration:
 ```
