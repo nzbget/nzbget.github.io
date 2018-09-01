@@ -68,12 +68,22 @@
 	<p>Manual: <a href="/installation-on-freebsd">Installation on FreeBSD</a>.</p>
 
 	<h3>Android</h3>
+	<h4>Daemon</h4>
+<!--
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.stable-version}}/nzbget-{{site.data.version.stable-version}}-bin-android.run">nzbget-{{site.data.version.stable-version}}-bin-android.run</a></p>
+{% if site.data.version.testing-version > site.data.version.stable-version %}
+-->
+	<p><a class="btn btn-outline" href="https://github.com/nzbget/nzbget/releases/download/v{{site.data.version.testing-version}}-{{site.data.version.testing-revision}}/nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-android.run">nzbget-{{site.data.version.testing-version}}-testing-{{site.data.version.testing-revision}}-bin-android.run</a></p>
+{% endif %}
+	<p>Android 5.0 and later, x86, ARM.</p>
+	<p>Use installer and frontend app to install the daemon automatically. See manual below for details.</p>
+	<h4>Installer and frontend app</h4>
 {% if site.data.version.android-revision == "" %}
 	<p><a class="btn btn-outline" href="https://github.com/nzbget/android/releases/download/v{{site.data.version.android-version}}/nzbget-android-{{site.data.version.android-version}}-bin.apk">nzbget-android-{{site.data.version.android-version}}-bin.apk</a></p>
 {% else %}
 	<p><a class="btn btn-outline" href="https://github.com/nzbget/android/releases/download/v{{site.data.version.android-version}}-{{site.data.version.android-revision}}/nzbget-android-{{site.data.version.android-version}}-testing-{{site.data.version.android-revision}}-bin.apk">nzbget-android-{{site.data.version.android-version}}-testing-{{site.data.version.android-revision}}-bin.apk</a></p>
 {% endif %}
-	<p>Android 2.3.3 and later, x86, ARM.</p>
+	<p>Android 5.0 and later, x86, ARM.</p>
 	<p>Manual: <a href="/installation-on-android">Installation on Android</a>.</p>
 
 	<h3>Other POSIX systems</h3>
