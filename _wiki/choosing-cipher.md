@@ -15,19 +15,28 @@ NZBGet provides an option **ServerX.Cipher** to manually select a cipher.
 **Example:** on my SAT Receiver Vu+ choosing cipher RC4 has increased the speed from 2500KB/s to 3800KB/s. This should give you an idea how important the option is.
 
 ## Summary ##
-Many users have followed these instructions. All tests show that the encryption/hash combination **RC4/MD5** is the fastest on all machines. To use this cipher in NZBGet set option **ServerX.Cipher** to:
+Many users have followed these instructions. Most tests show that the encryption/hash combination **RC4/MD5** is the fastest on all machines (**NOTE:** this is summary from original article written in 2015, for updates see below). To use this cipher in NZBGet set option **ServerX.Cipher** to:
 * If NZBGet was compiled to use **OpenSSL**:
 
- ```
+     ```
 Server1.Cipher=RC4-MD5
  ```
 * If NZBGet was compiled to use **GnuTLS**:
 
- ```
+     ```
 Server1.Cipher=NONE:+VERS-TLS-ALL:+ARCFOUR-128:+RSA:+MD5:+COMP-ALL
 ```
 
 If you want to learn more please read the whole article.
+
+### Update 2019
+Modern Intel and ARM processors include hardware support for AES cipher. On such
+processors NZBGet shows much better performance when using AES than RC4. For
+example see this [benchmark](https://github.com/nzbget/nzbget/issues/448#benchmark-tls).
+
+To use this cipher in NZBGet set option **ServerX.Cipher** to `AES128-SHA` or
+`AES256-SHA`. These cipher strings are for usage with **OpenSSL**. For **GnuTLS** please
+consult their documentation.
 
 ## OpenSSL ##
 ### What ciphers are available ###
