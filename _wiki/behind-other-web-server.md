@@ -40,6 +40,29 @@ In the fist line "\<Location /nzbget>" you can replace "/nzbget" with anything e
 
 If you omit it the web-interface will not load and will hang with "Loading... please wait..." message.
 
+## Apache with mTLS and authentication delegation ##
+Example configuration:
+```
+LoadModule proxy_module modules/mod_proxy.so
+LoadModule proxy_http_module modules/mod_proxy_http.so
+LoadModule headers_module modules/mod_headers.so
+...
+SSLVerifyClient require
+...
+<Location /nzbget>
+  order deny,allow
+  deny from all
+  allow from all
+  Header set HTTP_USER %{SSL_CLIENT_S_DN_CN}s
+  ProxyPass http://localhost:6789
+  ProxyPassReverse http://localhost:6789
+</Location>
+```
+
+Apache SSL must be configured and running. `SSLVerifyClient` is configured to repuired a client's certificate on SSL connection estabishement.  
+
+In Settings/SECURITY, the parameter should contain the header name value (here, `HTTP_USER`). Then, in this example, the CN part of the client certificate subject will be forwarded in the header to NZBget server and used as the user name.
+
 ## Nginx ##
 Example configuration:
 ```
