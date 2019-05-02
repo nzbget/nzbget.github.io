@@ -1,7 +1,7 @@
 {
-	"stable-version": "20.0",
-	"stable-date": "2018-06-06",
-	"stable-date-text": "6 June 2018",
+	"stable-version": "21.0",
+	"stable-date": "2019-05-02",
+	"stable-date-text": "2 May 2019",
 	"stable-release-notes": "http://nzbget.net/history-latest",
 	"stable-update-rate": "0,1,2,5,10,20,40,70,100",
 	"testing-version": "21.0",
