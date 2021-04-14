@@ -81,8 +81,6 @@ The download should begin and you can now observe the download speed.
 
 3. Take a look at [Performance tips](performance-tips) for NZBGet.
 
-4. Share your results with hardware details on [NZBGet forum](http://forum.nzbget.net/viewtopic.php?f=10&t=2707).
-
 ### Using cache
 When you run the client and server on the same computer you should activate cache in NNTP server to reduce CPU usage of the server. Add parameter `-c <cache-dir>` when starting NNTP server:
 ```

@@ -4,8 +4,6 @@ title: Installation on Linux
 ## Universal installer for Linux
 NZBGet's [Download page](download) provides installer for Linux which includes precompiled binaries for many CPU types. These binaries require only Linux kernel 2.6 or later and do not have any other library dependencies. In practice that means the installer works on most Linux devices including desktop PCs, NAS, media players, WLAN routers, etc.
 
-Please report on forum if the installer doesn't work for you.
-
 **NOTE**: If you prefer to compile yourself see [Installation on POSIX](installation-on-posix).
 
 ## Automatic installation
@@ -63,8 +61,6 @@ You will not see any output of this command.
 Add this line to the init scripts of your system. Also add a shutdown line to the shutdown scripts:
 
     <nzbget-directory>/nzbget -Q
-
-See forum topic [Start NZBGet on system boot](http://forum.nzbget.net/viewtopic.php?f=8&t=2709) for boot script examples.
 
 Some systems (for example Synology NAS) provide an easy way to configure scheduler tasks executed on system boot (on Synology: Control Panel ->Task Scheduler). In that case you can add command `<nzbget-directory>/nzbget -D` there and do not need to work with boot scripts.
 

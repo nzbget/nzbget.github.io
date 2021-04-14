@@ -526,7 +526,6 @@ Example:
 ```
 O(dupescore+:-10000): dupestatus:success | dupestatus:downloading
 ```
-Search the forum for "dupestatus" for more examples and discussion.
 
 ## Duplicate modes
 Sometimes you may want to download all available releases for a certain title to later manually choose the best one. Nzb-files in queue have a special property to achieve this - duplicate mode, which can have one of three possible values:

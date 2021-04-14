@@ -4,8 +4,6 @@ title: Installation on FreeBSD
 ## Installer for FreeBSD ##
 NZBGet's [Download page](download) provides installer for FreeBSD which includes precompiled binaries for CPU-architecture x86_64. These binaries require only FreeBSD 9.1 or later (but may work on older versions too) and do not have any other library dependencies.
 
-Please report on forum if the installer doesn't work for you.
-
 **NOTE**: If you prefer to compile yourself see [Installation on POSIX](installation-on-posix).
 
 ## Automatic installation ##

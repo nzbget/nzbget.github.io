@@ -33,8 +33,6 @@ Most scripts require *Python*. You need to download Python from [www.python.org]
 
 Put scripts into ppscripts-folder (option *ScriptDir*). The scripts should then appear in NZBGet web-interface.
 
-Check [Catalog of extension scripts](catalog-of-extension-scripts) and [Forum](forum).
-
 ## Restoring configuration ##
 If you want to reuse a configuration file from another NZBGet installation see [Backup and restore settings](backup-and-restore-settings).
 

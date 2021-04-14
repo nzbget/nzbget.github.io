@@ -24,7 +24,6 @@ layout: wiki-index
 ## Usage
  - [Quick filter](quick-filter)
  - [Keyboard shortcuts](keyboard_shortcuts)
- - [Catalog of extension scripts](catalog-of-extension-scripts), also check sub-forum [Extension scripts](http://nzbget.net/forum/viewforum.php?f=8)
  - [RSS and duplicate check](rss) - how to automate your downloads with RSS feeds
  - [VideoSort](https://github.com/nzbget/VideoSort) - sorting for downloaded video files
  - [Console mode](console-mode) - about using in terminal
@@ -34,7 +33,6 @@ layout: wiki-index
 ## Development
  - [Building development version](building-development-version)
  - [Cross compiling](cross-compiling) - tips about cross-compiling (usually for embedded platforms)
- - [Packaging](packaging) - please read if you create a distributable NZBGet package for other users
  - [Functional testing](functional-testing)
  - [NServ NNTP server](nserv-nntp-server)
 
@@ -49,4 +47,3 @@ layout: wiki-index
 
 ## More
  - [History (ChangeLog)](history)
- - [Forum](https://forum.nzbget.net)

@@ -6,7 +6,7 @@ This document provides information for creators of binary NZBGet packages.
 ## Branches and releases ##
 New features and fixes are added to NZBGet on daily basis. The actual source code can be obtained via source control repository as explained in [Building development version](building-development-version). This most actual version is called **development** version (short **devel** or **develop**) or **git version**. Development code may contain serious bugs and is therefore not recommended for average users.
 
-Implementing of one feature may take several days or even weeks. A short test of functionality is then performed on several platforms. If the program seems to work fine a new **testing** release is made available for public. Testing releases are provided from [Download page](download) and a new announcement is published on forum. Testing releases are good for real use and are recommended for experienced users familiar with NZBGet. Testing releases may have serious bugs as well but this happen rare.
+Implementing of one feature may take several days or even weeks. A short test of functionality is then performed on several platforms. If the program seems to work fine a new **testing** release is made available for public. Testing releases are provided from [Download page](download). Testing releases are good for real use and are recommended for experienced users familiar with NZBGet. Testing releases may have serious bugs as well but this happen rare.
 
 When all features planned for a new program version are implemented and several testing releases were published and no serious bugs were reported since the latest testing version a new program version is made available for public as **stable** release. Stable releases usually don't have serious bugs and are recommended for new users as well for users who don't have much time for frequent updates and are not ready to confront with possible bugs.
 
@@ -150,6 +150,3 @@ echo "Starting NZBGet...";
 Automatic updates are implemented in:
 - Linux version, available via universal Linux installer - [install-update.sh](https://github.com/nzbget/nzbget/blob/develop/linux/install-update.sh);
 - Windows version - [install-update.bat](https://github.com/nzbget/nzbget/blob/develop/windows/install-update.bat).
-
-## More info ##
-Should you have any questions please feel free to ask them on [Forum](forum).
