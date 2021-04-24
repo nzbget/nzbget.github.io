@@ -5,11 +5,11 @@
 	"stable-release-notes": "http://nzbget.net/history-latest",
 	"stable-update-rate": "0,1,2,5,10,20,40,70,100",
 	"testing-version": "21.1",
-	"testing-revision": "r2311",
-	"testing-date": "2019-06-22",
-	"testing-date-text": "22 June 2019",
+	"testing-revision": "r2329",
+	"testing-date": "2021-04-23",
+	"testing-date-text": "23 April 2021",
 	"testing-release-notes": "http://nzbget.net/history-latest-testing",
-	"testing-update-rate": "0,5,20,50,100",
+	"testing-update-rate": "0,0,0,1,2,3,5,10,20,30,40,70,100",
 	"android-version": "2.0",
 	"android-revision": "r36"
 }
