@@ -1,9 +1,9 @@
 {
-	"stable-version": "21.0",
-	"stable-date": "2019-05-02",
-	"stable-date-text": "2 May 2019",
+	"stable-version": "21.1",
+	"stable-date": "2021-06-03",
+	"stable-date-text": "3 June 2021",
 	"stable-release-notes": "http://nzbget.net/history-latest",
-	"stable-update-rate": "0,1,2,5,10,20,40,70,100",
+	"stable-update-rate": "0,0,0,1,2,3,5,10,20,30,40,70,100",
 	"testing-version": "21.1",
 	"testing-revision": "r2329",
 	"testing-date": "2021-04-23",
